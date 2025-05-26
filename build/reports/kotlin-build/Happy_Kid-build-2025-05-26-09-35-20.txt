@@ -1,0 +1,552 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Build failed: [Execution failed for task ':app:kaptDebugKotlin'.]
+
+Time metrics:
+  Total Gradle task time: 46.27 s
+  Spent time before task action: 0.97 s
+  Task action before worker execution: 0.62 s
+    Backup output: 0.10 s
+  Run compilation in Gradle worker: 15.69 s
+    Clear jar cache: 0.00 s
+    Connect to Kotlin daemon: 0.51 s
+    Calculate output size: 0.00 s
+    Run compilation: 15.16 s
+      Incremental compilation in daemon: 15.03 s
+        Calculate initial dirty sources set: 1.10 s
+          Compute classpath changes: 0.50 s
+            Load current classpath snapshot: 0.34 s
+              Remove duplicate classes: 0.01 s
+            Shrink current classpath snapshot: 0.15 s
+              Get lookup symbols: 0.05 s
+              Find referenced classes: 0.03 s
+              Find transitively referenced classes: 0.07 s
+            Compute changed and impacted set: 0.01 s
+              Compute class changes: 0.01 s
+                Compute Kotlin class changes: 0.01 s
+          Analyze Java file changes: 0.02 s
+          Detect removed classes: 0.55 s
+        Update caches: 0.30 s
+        Sources compilation round: 12.76 s
+          Compiler initialization time: 0.98 s
+          Compiler code analysis: 11.77 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.07 s
+          Shrink current classpath snapshot incrementally: 0.06 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.04 s
+  Classpath entry snapshot transform: 0.77 s
+    Load classes (paths only): 0.01 s
+    Snapshot classes: 0.71 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.39 s
+      Snapshot Java classes: 0.22 s
+    Save classpath entry snapshot: 0.04 s
+
+Size metrics:
+  Total size of the cache directory: 739.5 KB
+    ABI snapshot size: 11.6 KB
+  Increase memory usage: 102.1 MB
+  Total memory usage at the end of build: 125.0 MB
+  Total compiler iteration: 2
+    Number of lines analyzed: 9454
+    Analysis lines per second: 998
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 4
+    Size of jar classpath entry: 1,020.4 KB
+    Size of jar classpath entry's snapshot: 1.0 MB
+  Number of times classpath changes are computed: 1
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 108
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 60.8 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache misses when loading classpath entry snapshots: 108
+  Start time of task action: 2025-05-26T01:34:56
+
+
+Total time for Kotlin tasks: 18.51 s (39.3 % of all tasks time)
+Time   |% of Kotlin time|Task                                                                                                                                                                       
+17.74 s|95.8 %          |:app:kaptGenerateStubsDebugKotlin                                                                                                                                          
+0.42 s |2.3 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a333003617c51adfa97fac631acf3fe3\transformed\jetified-accompanist-permissions-0.32.0-api.jar
+0.33 s |1.8 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar                            
+0.02 s |0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\b7b7a0b3a77880735dacc0c89bb64696\transformed\jetified-kotlin-stdlib-jdk8-1.9.0.jar          
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6b7ac0fea91ad46a5df01d2f0a181fe6\transformed\jetified-kotlin-stdlib-jdk7-1.9.0.jar          
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 17.74 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: ToBeComputedByIncrementalCompiler
+  [ClasspathSnapshot] Shrunk current classpath snapshot for diffing, retained 176 / 27530 classes
+  [ClasspathSnapshot] Loaded shrunk previous classpath snapshot for diffing, found 176 classes
+  [ClasspathSnapshot] Changed set = ProgramSymbolSet(classes = [], classMembers = {}, packageMembers = {})
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt)
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.AlphabetScreenKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$HappyKidDatabaseCallback.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\HappyKidDatabase.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\HappyKidDatabase.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\AlphabetScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\AlphabetScreenKt.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\AlphabetScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\ui\screens\AlphabetScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\AlphabetScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\AlphabetScreenKt.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\AlphabetScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\util\WindowsDeviceUtils.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\util\WindowsDeviceUtils.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\util\WindowsPerformanceSettings.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\util\WindowsMemorySettings.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\util\WindowsDeviceUtils.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\util\WindowsPerformanceSettings.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\util\WindowsMemorySettings.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\util\WindowsMemorySettings.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\util\WindowsPerformanceSettings.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\audio\AudioManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\audio\AudioManager.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\audio\AudioManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\audio\AudioManager.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\audio\AudioManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\audio\AudioManager$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\audio\AudioManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\audio\AudioManager.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\audio\AudioManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\di\DatabaseModule.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\di\DatabaseModule.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\di\DatabaseModule.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\di\DatabaseModule.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\di\DatabaseModule.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\di\DatabaseModule.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\di\DatabaseModule.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\HappyKidApplication.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\HappyKidApplication.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\HappyKidApplication.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\HappyKidApplication.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\HappyKidApplication.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\HappyKidApplication$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\HappyKidApplication.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\HappyKidApplication.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\HappyKidApplication.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\manager\FontManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\manager\FontManager.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\manager\FontManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\manager\FontManager.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\manager\FontManager.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\manager\FontManager.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\manager\FontManager.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\repository\PhonicsRepository.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\permission\PermissionManager.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\tracing\LetterFormationGuide.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\model\PhonicsProgress.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\viewmodel\SpeechViewModel.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\haptic\HapticFeedbackManager.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\AlphabetScreen.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\di\TracingModule.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\repository\PhonicsProgressRepository.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\PhonicsTypeConverters.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\util\WindowsDeviceUtils.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\viewmodel\PhonicsViewModel.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\audio\AudioManager.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\di\DatabaseModule.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\components\TracingCanvas.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\PhonicsScreen.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\model\PhonicsWord.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\util\WindowsTouchOptimizer.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\di\PhonicsModule.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\di\SpeechModule.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\speech\SpeechRecognitionManager.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\util\WindowsPerformanceProfiler.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\PhonicsDao.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\tracing\TracingTouchDetector.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\components\PhonicsCanvas.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\PhonicsProgressDao.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\HappyKidApplication.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\model\TracingProgress.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\TracingProgressDao.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\manager\FontManager.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\components\SpeechButton.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchOptimizer, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.HappyKidApplication, names = [touchOptimizer, performanceProfiler])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase, names = [phonicsDao, phonicsProgressDao, tracingProgressDao])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.util.WindowsPerformanceProfiler, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.model.PhonicsProgress.Companion, names = [createSuccessfulSession, createAssistedSession])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.permission.PermissionManager.Companion, names = [MICROPHONE_PERMISSION])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.BuildConfig, names = [VERSION_NAME, ENABLE_PERFORMANCE_MONITORING, BUILD_TIMESTAMP, ENABLE_TOUCH_OPTIMIZATION])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.model.TracingProgress, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.audio.AudioManager, names = [demonstrateRhyming, pronounceWord, playPhonicsInstructions, provideReadingSupport, playEncouragement, pronouncePhonemes, speak, demonstrateBlending, providePronunciationFeedback, playSpeechPrompt])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.tracing.TracingTouchDetector, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.ui.screens, names = [PhonicsScreen, AlphabetScreen, HomeScreen])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.di.DatabaseModule, names = [provideTracingProgressDao])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.model.PhonicsWord, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.speech.SpeechRecognitionManager, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.ui.components, names = [SpeechStatusIndicator, TracingCanvas, SpeechButton, PhonicsCanvas, MicrophonePermissionPrompt])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.permission.PermissionManager, names = [Companion, MICROPHONE_PERMISSION])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion, names = [MIGRATION_2_3, MIGRATION_3_4])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.haptic.HapticFeedbackManager, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.model.PhonicsWord.Companion, names = [getDefaultCVCWords, getDefaultSightWords])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.model.TracingProgress.Companion, names = [createInitial, calculateProgressScore, getDifficultyDescription, isSessionSuccessful, generateMilestone])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.manager.FontManager, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.viewmodel.SpeechViewModel, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.model.PhonicsProgress, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidDestinations, names = [PHONICS_ROUTE, SPEECH_ROUTE])
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult.VocalEffortDetected)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.StrokeType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.PhonicsRepository)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LetterPracticeCount)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.WordAccuracyAverage)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.haptic.HapticRecommendations)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.haptic.HapticFeedbackManager)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult.TryAgain)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.LetterStroke)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.LetterFormationGuideFactory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.util.WindowsPerformanceProfile)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.TracingMetrics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.components.PhonicsActivityType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.permission.PermissionState)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.PhonicsProgress)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchOptimizer)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.di.TracingModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.TracingProgressDao)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.PhonicsPerformanceMetrics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ReadingLevel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LetterAccuracyAverage)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.permission.PermissionManager)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchSettings)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.di.PhonicsModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.PhonicsStats)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.SpeechViewModel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.PhonicsProgressRepository)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.TracingPoint)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.util.WindowsPerformanceProfiler)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.StrokeDirection)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.TracingProgress)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.WordCategory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.TracingTouchDetector)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.PhonicsWord)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.speech.SpeechRecognitionManager)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.PhonicsStats)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.LetterFormationGuide)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.WordFamilyStats)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.ActivityPerformance)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ReadingSession)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.util.WindowsBuildMetrics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.LetterBounds)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchMetrics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.PhonicsProgressDao)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.PhonicsActivityType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.TracingSessionSummary)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.di.SpeechModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.TracingPerformanceMetrics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.PhonicsViewModel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.haptic.HapticPattern)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.tracing.TracingStroke)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.WordAccuracyStats)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.WordPracticeCount)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.PhonicsTypeConverters)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.manager.FontManager)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult.Success)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.TracingStats)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.PhonicsDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.permission.PermissionManager.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult.VocalEffortDetected)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.StrokeType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.PhonicsRepository)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.LetterPracticeCount)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.WordAccuracyAverage)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.SpeechViewModel.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.haptic.HapticRecommendations)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.haptic.HapticFeedbackManager)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.PhonicsWord.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult.TryAgain)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.LetterStroke)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.LetterFormationGuideFactory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsPerformanceProfile)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.TracingMetrics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.components.PhonicsActivityType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.TracingTouchDetector.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.permission.PermissionState)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.PhonicsProgress)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchOptimizer)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.di.TracingModule)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.TracingProgressDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.PhonicsPerformanceMetrics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ReadingLevel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.LetterAccuracyAverage)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.permission.PermissionManager)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.TracingProgress.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchSettings)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.di.PhonicsModule)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.PhonicsStats)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.SpeechViewModel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.haptic.HapticFeedbackManager.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.PhonicsProgressRepository)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.TracingPoint)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsPerformanceProfiler)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.StrokeDirection)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.TracingProgress)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.WordCategory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.TracingTouchDetector)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.PhonicsWord)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.speech.SpeechRecognitionManager)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.PhonicsStats)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.LetterFormationGuide)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.WordFamilyStats)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.ActivityPerformance)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ReadingSession)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsBuildMetrics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.LetterBounds)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchMetrics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.PhonicsProgressDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.PhonicsActivityType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsPerformanceProfiler.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.TracingSessionSummary)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.di.SpeechModule)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.TracingPerformanceMetrics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.PhonicsProgress.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.speech.SpeechRecognitionManager.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.PhonicsViewModel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.haptic.HapticPattern)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.tracing.TracingStroke)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.WordAccuracyStats)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.WordPracticeCount)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.PhonicsTypeConverters)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.manager.FontManager.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.speech.SpeechResult.Success)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.TracingStats)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.PhonicsDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.util.WindowsTouchOptimizer.Companion)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\viewmodel\FontViewModel.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\FontViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\FontViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\viewmodel\FontViewModel.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\FontViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\viewmodel\FontViewModel.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\FontViewModel.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\viewmodel\FontViewModel.kt <- dirty member com.happykid.toddlerabc.manager#FontManager
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsChangedClasspath), retained 248 / 27530 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 17.74 s
+  Spent time before task action: 0.97 s
+  Task action before worker execution: 0.62 s
+    Backup output: 0.10 s
+  Run compilation in Gradle worker: 15.69 s
+    Clear jar cache: 0.00 s
+    Connect to Kotlin daemon: 0.51 s
+    Calculate output size: 0.00 s
+    Run compilation: 15.16 s
+      Incremental compilation in daemon: 15.03 s
+        Calculate initial dirty sources set: 1.10 s
+          Compute classpath changes: 0.50 s
+            Load current classpath snapshot: 0.34 s
+              Remove duplicate classes: 0.01 s
+            Shrink current classpath snapshot: 0.15 s
+              Get lookup symbols: 0.05 s
+              Find referenced classes: 0.03 s
+              Find transitively referenced classes: 0.07 s
+            Compute changed and impacted set: 0.01 s
+              Compute class changes: 0.01 s
+                Compute Kotlin class changes: 0.01 s
+          Analyze Java file changes: 0.02 s
+          Detect removed classes: 0.55 s
+        Update caches: 0.30 s
+        Sources compilation round: 12.76 s
+          Compiler initialization time: 0.98 s
+          Compiler code analysis: 11.77 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.07 s
+          Shrink current classpath snapshot incrementally: 0.06 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.04 s
+Size metrics:
+  Total size of the cache directory: 739.5 KB
+    ABI snapshot size: 11.6 KB
+  Increase memory usage: 102.1 MB
+  Total memory usage at the end of build: 125.0 MB
+  Total compiler iteration: 2
+    Number of lines analyzed: 9454
+    Analysis lines per second: 998
+  Number of times classpath changes are computed: 1
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 108
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 60.8 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache misses when loading classpath entry snapshots: 108
+  Start time of task action: 2025-05-26T01:34:56
+GC metrics:
+  G1 Young Generation:
+    GC count: 15
+    GC time: 0.11 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:kaptDebugKotlin' finished in 7.88 s
+Time metrics:
+  Total Gradle task time: 7.88 s
+
+Task ':app:processDebugMainManifest' finished in 4.49 s
+Time metrics:
+  Total Gradle task time: 4.49 s
+
+Task ':app:checkDebugAarMetadata' finished in 4.09 s
+Time metrics:
+  Total Gradle task time: 4.09 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 3.61 s
+Time metrics:
+  Total Gradle task time: 3.61 s
+
+Task ':app:mergeDebugResources' finished in 3.60 s
+Time metrics:
+  Total Gradle task time: 3.60 s
+
+Task ':app:processDebugResources' finished in 2.89 s
+Time metrics:
+  Total Gradle task time: 2.89 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.67 s
+Time metrics:
+  Total Gradle task time: 0.67 s
+
+Task ':app:mergeDebugAssets' finished in 0.46 s
+Time metrics:
+  Total Gradle task time: 0.46 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a333003617c51adfa97fac631acf3fe3\transformed\jetified-accompanist-permissions-0.32.0-api.jar' finished in 0.42 s
+Time metrics:
+  Classpath entry snapshot transform: 0.42 s
+    Snapshot classes: 0.41 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.39 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 133.1 KB
+    Size of jar classpath entry's snapshot: 10.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar' finished in 0.33 s
+Time metrics:
+  Classpath entry snapshot transform: 0.33 s
+    Load classes (paths only): 0.01 s
+    Snapshot classes: 0.30 s
+      Load contents of classes: 0.01 s
+      Snapshot Java classes: 0.22 s
+    Save classpath entry snapshot: 0.02 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 885.4 KB
+    Size of jar classpath entry's snapshot: 1.0 MB
+
+Task ':app:generateDebugBuildConfig' finished in 0.20 s
+Time metrics:
+  Total Gradle task time: 0.20 s
+
+Task ':app:processDebugManifest' finished in 0.18 s
+Time metrics:
+  Total Gradle task time: 0.18 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.17 s
+
+Task ':app:packageDebugResources' finished in 0.09 s
+Time metrics:
+  Total Gradle task time: 0.09 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.05 s
+Time metrics:
+  Total Gradle task time: 0.05 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:javaPreCompileDebug' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\b7b7a0b3a77880735dacc0c89bb64696\transformed\jetified-kotlin-stdlib-jdk8-1.9.0.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Save classpath entry snapshot: 0.02 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 963 B
+    Size of jar classpath entry's snapshot: 4 B
+
+Task ':app:parseDebugLocalResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:generateDebugAssets' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:preBuild' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:generateDebugResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6b7ac0fea91ad46a5df01d2f0a181fe6\transformed\jetified-kotlin-stdlib-jdk7-1.9.0.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 958 B
+    Size of jar classpath entry's snapshot: 4 B
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+

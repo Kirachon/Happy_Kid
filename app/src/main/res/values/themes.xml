@@ -1,0 +1,168 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for Happy_Kid -->
+    <style name="Base.Theme.HappyKid" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Toddler-optimized color scheme -->
+        <item name="colorPrimary">@color/toddler_primary</item>
+        <item name="colorPrimaryDark">@color/toddler_primary</item>
+        <item name="colorAccent">@color/toddler_secondary</item>
+
+        <item name="android:colorBackground">@color/toddler_background</item>
+        <item name="android:textColorPrimary">@color/toddler_on_background</item>
+        <item name="android:textColorSecondary">@color/toddler_on_surface</item>
+
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- Window properties for toddler-friendly experience -->
+        <item name="android:windowBackground">@color/toddler_background</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+
+        <!-- Typography -->
+        <item name="android:textAppearanceLarge">@style/TextAppearance.HappyKid.DisplayLarge</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.HappyKid.HeadlineLarge</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.HappyKid.BodyLarge</item>
+    </style>
+
+    <!-- Main application theme -->
+    <style name="Theme.HappyKid" parent="Base.Theme.HappyKid" />
+
+    <!-- Splash screen theme -->
+    <style name="Theme.HappyKid.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/toddler_primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.HappyKid</item>
+    </style>
+
+    <!-- Age-specific themes -->
+    <!-- Theme for 1-2 year olds -->
+    <style name="Theme.HappyKid.Age1" parent="Base.Theme.HappyKid">
+        <item name="colorPrimary">@color/toddler_age_1_primary</item>
+        <item name="colorSecondary">@color/toddler_age_1_secondary</item>
+        <item name="colorTertiary">@color/toddler_age_1_accent</item>
+    </style>
+
+    <!-- Theme for 3-4 year olds -->
+    <style name="Theme.HappyKid.Age3" parent="Base.Theme.HappyKid">
+        <item name="colorPrimary">@color/toddler_age_3_primary</item>
+        <item name="colorSecondary">@color/toddler_age_3_secondary</item>
+        <item name="colorTertiary">@color/toddler_age_3_accent</item>
+    </style>
+
+    <!-- Windows emulator optimized theme -->
+    <style name="Theme.HappyKid.WindowsEmulator" parent="Base.Theme.HappyKid">
+        <item name="colorPrimary">@color/windows_emulator_primary</item>
+        <item name="colorSecondary">@color/windows_emulator_secondary</item>
+        <item name="android:colorBackground">@color/windows_emulator_background</item>
+    </style>
+
+    <!-- Accessibility theme -->
+    <style name="Theme.HappyKid.Accessibility" parent="Base.Theme.HappyKid">
+        <item name="colorPrimary">@color/accessibility_high_contrast</item>
+        <item name="android:colorBackground">@color/accessibility_background</item>
+        <item name="colorOnBackground">@color/accessibility_high_contrast</item>
+        <item name="colorSurface">@color/accessibility_background</item>
+        <item name="colorOnSurface">@color/accessibility_high_contrast</item>
+    </style>
+
+    <!-- Parental controls theme -->
+    <style name="Theme.HappyKid.Parental" parent="Base.Theme.HappyKid">
+        <item name="colorPrimary">@color/parental_primary</item>
+        <item name="colorSecondary">@color/parental_secondary</item>
+        <item name="android:colorBackground">@color/parental_background</item>
+    </style>
+
+    <!-- Typography styles -->
+    <style name="TextAppearance.HappyKid.DisplayLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HappyKid.HeadlineLarge" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HappyKid.BodyLarge" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Widget.HappyKid.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="Widget.HappyKid.Button.Large" parent="Widget.HappyKid.Button">
+        <item name="android:minHeight">72dp</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <style name="Widget.HappyKid.Button.Borderless" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Card styles -->
+    <style name="Widget.HappyKid.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <!-- Window animation styles -->
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+
+    <!-- Progress bar styles -->
+    <style name="Widget.HappyKid.ProgressBar" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackColor">@color/progress_empty</item>
+        <item name="indicatorColor">@color/progress_filled</item>
+        <item name="trackThickness">8dp</item>
+        <item name="trackCornerRadius">4dp</item>
+    </style>
+
+    <!-- Floating Action Button styles -->
+    <style name="Widget.HappyKid.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="fabSize">auto</item>
+    </style>
+
+    <!-- Dialog styles -->
+    <style name="ThemeOverlay.HappyKid.Dialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="dialogCornerRadius">20dp</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+
+    <!-- Bottom sheet styles -->
+    <style name="ThemeOverlay.HappyKid.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.HappyKid.BottomSheet</item>
+    </style>
+
+    <style name="Widget.HappyKid.BottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.HappyKid.BottomSheet</item>
+    </style>
+
+    <!-- Shape appearance styles -->
+    <style name="ShapeAppearanceOverlay.HappyKid.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+Gradle start parameters:
+  tasks = [clean]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 2.43 s
+
+
+
+No Kotlin task was run
+Task ':app:clean' finished in 2.43 s
+Time metrics:
+  Total Gradle task time: 2.43 s
+

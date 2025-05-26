@@ -1,0 +1,186 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Build failed: [Execution failed for task ':app:compileDebugKotlin'.]
+
+Time metrics:
+  Total Gradle task time: 6.22 s
+  Spent time before task action: 0.02 s
+  Task action before worker execution: 0.10 s
+  Run compilation in Gradle worker: 4.75 s
+    Connect to Kotlin daemon: 0.01 s
+    Run compilation: 4.73 s
+      Incremental compilation in daemon: 4.70 s
+        Sources compilation round: 4.69 s
+          Compiler initialization time: 0.15 s
+          Compiler code analysis: 4.54 s
+  Start gradle worker: 0.00 s
+
+Size metrics:
+    ABI snapshot size: 31 B
+  Increase memory usage: 112.9 MB
+  Total memory usage at the end of build: 623.8 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 15674
+    Analysis lines per second: 3453
+  Start time of task action: 2025-05-26T03:29:34
+
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+
+Total time for Kotlin tasks: 4.86 s (78.2 % of all tasks time)
+Time  |% of Kotlin time|Task                   
+4.86 s|100.0 %         |:app:compileDebugKotlin
+
+Task ':app:compileDebugKotlin' finished in 4.86 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Non-incremental compilation will be performed: UNKNOWN_CHANGES_IN_GRADLE_INPUTS
+  Cleaning 3 output directories
+Time metrics:
+  Total Gradle task time: 4.86 s
+  Spent time before task action: 0.02 s
+  Task action before worker execution: 0.10 s
+  Run compilation in Gradle worker: 4.75 s
+    Connect to Kotlin daemon: 0.01 s
+    Run compilation: 4.73 s
+      Incremental compilation in daemon: 4.70 s
+        Sources compilation round: 4.69 s
+          Compiler initialization time: 0.15 s
+          Compiler code analysis: 4.54 s
+  Start gradle worker: 0.00 s
+Size metrics:
+    ABI snapshot size: 31 B
+  Increase memory usage: 112.9 MB
+  Total memory usage at the end of build: 623.8 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 15674
+    Analysis lines per second: 3453
+  Start time of task action: 2025-05-26T03:29:34
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+GC metrics:
+  G1 Young Generation:
+    GC count: 15
+    GC time: 0.09 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 0.36 s
+Time metrics:
+  Total Gradle task time: 0.36 s
+
+Task ':app:mergeDebugResources' finished in 0.36 s
+Time metrics:
+  Total Gradle task time: 0.36 s
+
+Task ':app:validateSigningDebug' finished in 0.16 s
+Time metrics:
+  Total Gradle task time: 0.16 s
+
+Task ':app:kaptDebugKotlin' finished in 0.12 s
+Time metrics:
+  Total Gradle task time: 0.12 s
+
+Task ':app:processDebugResources' finished in 0.05 s
+Time metrics:
+  Total Gradle task time: 0.05 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.05 s
+Time metrics:
+  Total Gradle task time: 0.05 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:packageDebugResources' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:processDebugMainManifest' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugAssets' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:parseDebugLocalResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:javaPreCompileDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+

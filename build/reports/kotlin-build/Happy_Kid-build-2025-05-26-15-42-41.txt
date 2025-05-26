@@ -1,0 +1,490 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 55.78 s
+  Spent time before task action: 0.10 s
+  Task action before worker execution: 2.05 s
+    Backup output: 1.66 s
+  Run compilation in Gradle worker: 7.31 s
+    Connect to Kotlin daemon: 0.02 s
+    Calculate output size: 0.01 s
+    Run compilation: 7.28 s
+      Incremental compilation in daemon: 7.21 s
+        Calculate initial dirty sources set: 0.06 s
+          Analyze Java file changes: 0.02 s
+          Detect removed classes: 0.03 s
+        Update caches: 0.09 s
+        Sources compilation round: 5.81 s
+          Compiler initialization time: 0.38 s
+          Compiler code analysis: 3.45 s
+          Compiler code generation: 1.04 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.06 s
+          Shrink current classpath snapshot incrementally: 0.04 s
+            Load current classpath snapshot: 0.01 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.01 s
+
+Size metrics:
+  Total size of the cache directory: 3.9 MB
+    ABI snapshot size: 24.3 KB
+  Increase memory usage: 88.6 MB
+  Total memory usage at the end of build: 595.0 MB
+  Total compiler iteration: 2
+    Number of lines analyzed: 2158
+    Number of lines for code generation: 1493
+    Analysis lines per second: 1255
+    Code generation lines per second: 1439
+  Number of times classpath snapshot is shrunk and saved after compilation: 2
+    Number of classpath entries: 229
+    Size of classpath snapshot: 20.4 MB
+    Size of shrunk classpath snapshot: 192.6 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 115
+  Start time of task action: 2080-10-18T15:23:43
+
+
+Total time for Kotlin tasks: 11.32 s (20.3 % of all tasks time)
+Time  |% of Kotlin time|Task                             
+7.88 s|69.6 %          |:app:compileDebugKotlin          
+3.44 s|30.4 %          |:app:kaptGenerateStubsDebugKotlin
+
+Task ':app:dexBuilderDebug' finished in 12.12 s
+Time metrics:
+  Total Gradle task time: 12.12 s
+
+Task ':app:transformDebugClassesWithAsm' finished in 9.25 s
+Time metrics:
+  Total Gradle task time: 9.25 s
+
+Task ':app:compileDebugKotlin' finished in 7.88 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-4.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.6.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-6.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.4.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9.2.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9.2.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.LiveLiterals.HappyKidNavigationKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.2.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-2.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-8.1)
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.5.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.6)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.5.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-5.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.5)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.5.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.4)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-7.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.3)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.3.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.4)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.3)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.6)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.LiveLiterals.HomeScreenKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt.lambda-3.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.1.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.6)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.7)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.3)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.4)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.5)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.ComposableSingletons.HomeScreenKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.1.7)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.7.1)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-7$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-8$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt$HomeScreen$3.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt$HomeScreen$4.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt$HomeScreen$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\LiveLiterals$HomeScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-3$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt$HomeScreen$5$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt$HomeScreen$6.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-4$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt$HomeScreen$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-2$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-5$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\screens\ComposableSingletons$HomeScreenKt$lambda-6$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$7.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$9.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$4.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$4.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\LiveLiterals$HappyKidNavigationKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$6.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$5.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$7$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$8$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$6$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$9$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$9$2$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$3.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$3.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$3$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$5$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$8$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$4$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$8.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$9$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$9$2$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$8$1$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$5$2.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$7.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$5.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$8$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$1$6.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt$HappyKidNavGraph$1$2$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\viewmodel\VocabularyViewModel.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\VocabularyScreen.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules_KeyModule_ProvideFactory, names = [provide, get, create, <init>])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_Factory, names = [get, create, newInstance, <init>])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules.KeyModule, names = [provide])
+  Process MembersChanged(fqName = hilt_aggregated_deps._com_happykid_toddlerabc_viewmodel_VocabularyViewModel_HiltModules_BindsModule, names = [<init>])
+  Process MembersChanged(fqName = hilt_aggregated_deps._com_happykid_toddlerabc_viewmodel_VocabularyViewModel_HiltModules_KeyModule, names = [<init>])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.ui.screens, names = [VocabularyScreen, HomeScreen])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidDestinations, names = [VOCABULARY_ROUTE])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules.BindsModule, names = [binds])
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules_KeyModule_ProvideFactory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_Factory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9.2.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules.KeyModule)
+  Process SignatureChanged(fqName = hilt_aggregated_deps._com_happykid_toddlerabc_viewmodel_VocabularyViewModel_HiltModules_BindsModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.9.2.1.1)
+  Process SignatureChanged(fqName = hilt_aggregated_deps._com_happykid_toddlerabc_viewmodel_VocabularyViewModel_HiltModules_KeyModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.6)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules.BindsModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.1.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyUiState)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt.HomeScreen.5.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt.HappyKidNavGraph.1.8.2)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules_KeyModule_ProvideFactory.InstanceHolder)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules_KeyModule_ProvideFactory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_Factory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules.KeyModule)
+  Process ParentsChanged(fqName = hilt_aggregated_deps._com_happykid_toddlerabc_viewmodel_VocabularyViewModel_HiltModules_BindsModule)
+  Process ParentsChanged(fqName = hilt_aggregated_deps._com_happykid_toddlerabc_viewmodel_VocabularyViewModel_HiltModules_KeyModule)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyUiState)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules.BindsModule)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.viewmodel.VocabularyViewModel_HiltModules_KeyModule_ProvideFactory.InstanceHolder)
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsUnchangedClasspath), retained 552 / 29029 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 7.88 s
+  Spent time before task action: 0.03 s
+  Task action before worker execution: 1.01 s
+    Backup output: 0.78 s
+  Run compilation in Gradle worker: 5.83 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 5.81 s
+      Incremental compilation in daemon: 5.77 s
+        Calculate initial dirty sources set: 0.04 s
+          Analyze Java file changes: 0.02 s
+          Detect removed classes: 0.02 s
+        Update caches: 0.05 s
+        Sources compilation round: 4.56 s
+          Compiler initialization time: 0.18 s
+          Compiler code analysis: 2.41 s
+          Compiler code generation: 1.04 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.05 s
+          Shrink current classpath snapshot incrementally: 0.04 s
+            Load current classpath snapshot: 0.01 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.01 s
+Size metrics:
+  Total size of the cache directory: 2.7 MB
+    ABI snapshot size: 22.9 KB
+  Increase memory usage: 70.5 MB
+  Total memory usage at the end of build: 333.2 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1493
+    Number of lines for code generation: 1493
+    Analysis lines per second: 620
+    Code generation lines per second: 1439
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 115
+    Size of classpath snapshot: 10.2 MB
+    Size of shrunk classpath snapshot: 122.9 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 115
+  Start time of task action: 2025-05-26T07:41:55
+GC metrics:
+  G1 Young Generation:
+    GC count: 3
+    GC time: 0.04 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:jacocoDebug' finished in 6.33 s
+Time metrics:
+  Total Gradle task time: 6.33 s
+
+Task ':app:hiltJavaCompileDebug' finished in 5.86 s
+Time metrics:
+  Total Gradle task time: 5.86 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 3.44 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.VocabularyScreenKt)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\VocabularyScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\VocabularyScreenKt.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\VocabularyScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\ui\screens\VocabularyScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\VocabularyScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\VocabularyScreenKt.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\VocabularyScreen.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\VocabularyScreen.kt <- was modified since last time
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = UnchangedLookupsUnchangedClasspath), no updates since previous run
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 3.44 s
+  Spent time before task action: 0.07 s
+  Task action before worker execution: 1.04 s
+    Backup output: 0.88 s
+  Run compilation in Gradle worker: 1.48 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 1.47 s
+      Incremental compilation in daemon: 1.44 s
+        Calculate initial dirty sources set: 0.02 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.04 s
+        Sources compilation round: 1.25 s
+          Compiler initialization time: 0.20 s
+          Compiler code analysis: 1.05 s
+        Shrink and save current classpath snapshot after compilation: 0.01 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 1.3 MB
+    ABI snapshot size: 1.3 KB
+  Increase memory usage: 18.1 MB
+  Total memory usage at the end of build: 261.7 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 665
+    Analysis lines per second: 635
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 114
+    Size of classpath snapshot: 10.2 MB
+    Size of shrunk classpath snapshot: 69.8 KB
+  Start time of task action: 2025-05-26T07:41:48
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.02 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 3.08 s
+Time metrics:
+  Total Gradle task time: 3.08 s
+
+Task ':app:mergeDebugJavaResource' finished in 3.02 s
+Time metrics:
+  Total Gradle task time: 3.02 s
+
+Task ':app:kaptDebugKotlin' finished in 2.98 s
+Time metrics:
+  Total Gradle task time: 2.98 s
+
+Task ':app:mergeProjectDexDebug' finished in 0.81 s
+Time metrics:
+  Total Gradle task time: 0.81 s
+
+Task ':app:hiltAggregateDepsDebug' finished in 0.41 s
+Time metrics:
+  Total Gradle task time: 0.41 s
+
+Task ':app:packageDebug' finished in 0.28 s
+Time metrics:
+  Total Gradle task time: 0.28 s
+
+Task ':app:processDebugJavaRes' finished in 0.09 s
+Time metrics:
+  Total Gradle task time: 0.09 s
+
+Task ':app:processDebugResources' finished in 0.06 s
+Time metrics:
+  Total Gradle task time: 0.06 s
+
+Task ':app:processDebugMainManifest' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mergeDebugResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mergeDebugAssets' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:createDebugApkListingFileRedirect' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:packageDebugResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:javaPreCompileDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:parseDebugLocalResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugGlobalSynthetics' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeExtDexDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeLibDexDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+
+Task ':app:assembleDebug' finished in 0.00 s
+

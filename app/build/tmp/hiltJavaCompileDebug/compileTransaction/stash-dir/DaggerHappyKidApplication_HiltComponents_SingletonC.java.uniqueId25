@@ -1,0 +1,915 @@
+package com.happykid.toddlerabc;
+
+import android.app.Activity;
+import android.app.Service;
+import android.view.View;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.SavedStateHandle;
+import androidx.lifecycle.ViewModel;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.happykid.toddlerabc.analytics.AchievementManager;
+import com.happykid.toddlerabc.analytics.AdaptiveLearningEngine;
+import com.happykid.toddlerabc.analytics.ParentDashboardAnalytics;
+import com.happykid.toddlerabc.audio.AudioManager;
+import com.happykid.toddlerabc.auth.ParentalAuthManager;
+import com.happykid.toddlerabc.data.FontPreferenceDao;
+import com.happykid.toddlerabc.data.HappyKidDatabase;
+import com.happykid.toddlerabc.data.LearningAnalyticsDao;
+import com.happykid.toddlerabc.data.LetterDao;
+import com.happykid.toddlerabc.data.ParentalAuthDao;
+import com.happykid.toddlerabc.data.PhonicsDao;
+import com.happykid.toddlerabc.data.PhonicsProgressDao;
+import com.happykid.toddlerabc.data.StoryDao;
+import com.happykid.toddlerabc.data.TracingProgressDao;
+import com.happykid.toddlerabc.di.AnalyticsModule;
+import com.happykid.toddlerabc.di.AnalyticsModule_ProvideAchievementManagerFactory;
+import com.happykid.toddlerabc.di.AnalyticsModule_ProvideAdaptiveLearningEngineFactory;
+import com.happykid.toddlerabc.di.AnalyticsModule_ProvideAnalyticsRepositoryFactory;
+import com.happykid.toddlerabc.di.AnalyticsModule_ProvideParentDashboardAnalyticsFactory;
+import com.happykid.toddlerabc.di.AudioModule;
+import com.happykid.toddlerabc.di.AudioModule_ProvideAudioManagerFactory;
+import com.happykid.toddlerabc.di.AuthModule;
+import com.happykid.toddlerabc.di.AuthModule_ProvideParentalAuthDaoFactory;
+import com.happykid.toddlerabc.di.AuthModule_ProvideParentalAuthManagerFactory;
+import com.happykid.toddlerabc.di.DatabaseModule;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideApplicationScopeFactory;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideFontPreferenceDaoFactory;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideHappyKidDatabaseFactory;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideLearningAnalyticsDaoFactory;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideLetterDaoFactory;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideStoryDaoFactory;
+import com.happykid.toddlerabc.di.DatabaseModule_ProvideTracingProgressDaoFactory;
+import com.happykid.toddlerabc.di.PhonicsModule;
+import com.happykid.toddlerabc.di.PhonicsModule_ProvidePhonicsDaoFactory;
+import com.happykid.toddlerabc.di.PhonicsModule_ProvidePhonicsProgressDaoFactory;
+import com.happykid.toddlerabc.di.PhonicsModule_ProvidePhonicsProgressRepositoryFactory;
+import com.happykid.toddlerabc.di.PhonicsModule_ProvidePhonicsRepositoryFactory;
+import com.happykid.toddlerabc.di.SpeechModule;
+import com.happykid.toddlerabc.di.SpeechModule_ProvidePermissionManagerFactory;
+import com.happykid.toddlerabc.di.SpeechModule_ProvideSpeechRecognitionManagerFactory;
+import com.happykid.toddlerabc.di.TracingModule;
+import com.happykid.toddlerabc.di.TracingModule_ProvideHapticFeedbackManagerFactory;
+import com.happykid.toddlerabc.di.TracingModule_ProvideTracingProgressRepositoryFactory;
+import com.happykid.toddlerabc.di.TracingModule_ProvideTracingTouchDetectorFactory;
+import com.happykid.toddlerabc.di.WindowsModule;
+import com.happykid.toddlerabc.haptic.HapticFeedbackManager;
+import com.happykid.toddlerabc.manager.FontManager;
+import com.happykid.toddlerabc.permission.PermissionManager;
+import com.happykid.toddlerabc.repository.AnalyticsRepository;
+import com.happykid.toddlerabc.repository.LetterRepository;
+import com.happykid.toddlerabc.repository.PhonicsProgressRepository;
+import com.happykid.toddlerabc.repository.PhonicsRepository;
+import com.happykid.toddlerabc.repository.StoryRepository;
+import com.happykid.toddlerabc.repository.TracingProgressRepository;
+import com.happykid.toddlerabc.speech.SpeechRecognitionManager;
+import com.happykid.toddlerabc.tracing.TracingTouchDetector;
+import com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel;
+import com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.AlphabetViewModel;
+import com.happykid.toddlerabc.viewmodel.AlphabetViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.FontViewModel;
+import com.happykid.toddlerabc.viewmodel.FontViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.ParentDashboardViewModel;
+import com.happykid.toddlerabc.viewmodel.ParentDashboardViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.ParentalAuthViewModel;
+import com.happykid.toddlerabc.viewmodel.ParentalAuthViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.PhonicsViewModel;
+import com.happykid.toddlerabc.viewmodel.PhonicsViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.SpeechViewModel;
+import com.happykid.toddlerabc.viewmodel.SpeechViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.StoryViewModel;
+import com.happykid.toddlerabc.viewmodel.StoryViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.happykid.toddlerabc.viewmodel.TracingViewModel;
+import com.happykid.toddlerabc.viewmodel.TracingViewModel_HiltModules_KeyModule_ProvideFactory;
+import dagger.hilt.android.ActivityRetainedLifecycle;
+import dagger.hilt.android.ViewModelLifecycle;
+import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
+import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
+import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
+import dagger.hilt.android.internal.builders.FragmentComponentBuilder;
+import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory;
+import dagger.hilt.android.internal.managers.ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory;
+import dagger.hilt.android.internal.modules.ApplicationContextModule;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
+import dagger.internal.DaggerGenerated;
+import dagger.internal.DoubleCheck;
+import dagger.internal.Preconditions;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.processing.Generated;
+import javax.inject.Provider;
+import kotlinx.coroutines.CoroutineScope;
+
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
+})
+public final class DaggerHappyKidApplication_HiltComponents_SingletonC {
+  private DaggerHappyKidApplication_HiltComponents_SingletonC() {
+  }
+
+  public static Builder builder() {
+    return new Builder();
+  }
+
+  public static final class Builder {
+    private ApplicationContextModule applicationContextModule;
+
+    private Builder() {
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder analyticsModule(AnalyticsModule analyticsModule) {
+      Preconditions.checkNotNull(analyticsModule);
+      return this;
+    }
+
+    public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
+      this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder audioModule(AudioModule audioModule) {
+      Preconditions.checkNotNull(audioModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder authModule(AuthModule authModule) {
+      Preconditions.checkNotNull(authModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder databaseModule(DatabaseModule databaseModule) {
+      Preconditions.checkNotNull(databaseModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder hiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule(
+        HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule hiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule) {
+      Preconditions.checkNotNull(hiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder phonicsModule(PhonicsModule phonicsModule) {
+      Preconditions.checkNotNull(phonicsModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder speechModule(SpeechModule speechModule) {
+      Preconditions.checkNotNull(speechModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder tracingModule(TracingModule tracingModule) {
+      Preconditions.checkNotNull(tracingModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder windowsModule(WindowsModule windowsModule) {
+      Preconditions.checkNotNull(windowsModule);
+      return this;
+    }
+
+    public HappyKidApplication_HiltComponents.SingletonC build() {
+      Preconditions.checkBuilderRequirement(applicationContextModule, ApplicationContextModule.class);
+      return new SingletonCImpl(applicationContextModule);
+    }
+  }
+
+  private static final class ActivityRetainedCBuilder implements HappyKidApplication_HiltComponents.ActivityRetainedC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private ActivityRetainedCBuilder(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.ActivityRetainedC build() {
+      return new ActivityRetainedCImpl(singletonCImpl);
+    }
+  }
+
+  private static final class ActivityCBuilder implements HappyKidApplication_HiltComponents.ActivityC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private Activity activity;
+
+    private ActivityCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+    }
+
+    @Override
+    public ActivityCBuilder activity(Activity activity) {
+      this.activity = Preconditions.checkNotNull(activity);
+      return this;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.ActivityC build() {
+      Preconditions.checkBuilderRequirement(activity, Activity.class);
+      return new ActivityCImpl(singletonCImpl, activityRetainedCImpl, activity);
+    }
+  }
+
+  private static final class FragmentCBuilder implements HappyKidApplication_HiltComponents.FragmentC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private Fragment fragment;
+
+    private FragmentCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+    }
+
+    @Override
+    public FragmentCBuilder fragment(Fragment fragment) {
+      this.fragment = Preconditions.checkNotNull(fragment);
+      return this;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.FragmentC build() {
+      Preconditions.checkBuilderRequirement(fragment, Fragment.class);
+      return new FragmentCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, fragment);
+    }
+  }
+
+  private static final class ViewWithFragmentCBuilder implements HappyKidApplication_HiltComponents.ViewWithFragmentC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl;
+
+    private View view;
+
+    private ViewWithFragmentCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        FragmentCImpl fragmentCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+      this.fragmentCImpl = fragmentCImpl;
+    }
+
+    @Override
+    public ViewWithFragmentCBuilder view(View view) {
+      this.view = Preconditions.checkNotNull(view);
+      return this;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.ViewWithFragmentC build() {
+      Preconditions.checkBuilderRequirement(view, View.class);
+      return new ViewWithFragmentCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl, view);
+    }
+  }
+
+  private static final class ViewCBuilder implements HappyKidApplication_HiltComponents.ViewC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private View view;
+
+    private ViewCBuilder(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+        ActivityCImpl activityCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+    }
+
+    @Override
+    public ViewCBuilder view(View view) {
+      this.view = Preconditions.checkNotNull(view);
+      return this;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.ViewC build() {
+      Preconditions.checkBuilderRequirement(view, View.class);
+      return new ViewCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, view);
+    }
+  }
+
+  private static final class ViewModelCBuilder implements HappyKidApplication_HiltComponents.ViewModelC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private SavedStateHandle savedStateHandle;
+
+    private ViewModelLifecycle viewModelLifecycle;
+
+    private ViewModelCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+    }
+
+    @Override
+    public ViewModelCBuilder savedStateHandle(SavedStateHandle handle) {
+      this.savedStateHandle = Preconditions.checkNotNull(handle);
+      return this;
+    }
+
+    @Override
+    public ViewModelCBuilder viewModelLifecycle(ViewModelLifecycle viewModelLifecycle) {
+      this.viewModelLifecycle = Preconditions.checkNotNull(viewModelLifecycle);
+      return this;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.ViewModelC build() {
+      Preconditions.checkBuilderRequirement(savedStateHandle, SavedStateHandle.class);
+      Preconditions.checkBuilderRequirement(viewModelLifecycle, ViewModelLifecycle.class);
+      return new ViewModelCImpl(singletonCImpl, activityRetainedCImpl, savedStateHandle, viewModelLifecycle);
+    }
+  }
+
+  private static final class ServiceCBuilder implements HappyKidApplication_HiltComponents.ServiceC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private Service service;
+
+    private ServiceCBuilder(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+    }
+
+    @Override
+    public ServiceCBuilder service(Service service) {
+      this.service = Preconditions.checkNotNull(service);
+      return this;
+    }
+
+    @Override
+    public HappyKidApplication_HiltComponents.ServiceC build() {
+      Preconditions.checkBuilderRequirement(service, Service.class);
+      return new ServiceCImpl(singletonCImpl, service);
+    }
+  }
+
+  private static final class ViewWithFragmentCImpl extends HappyKidApplication_HiltComponents.ViewWithFragmentC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl;
+
+    private final ViewWithFragmentCImpl viewWithFragmentCImpl = this;
+
+    private ViewWithFragmentCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        FragmentCImpl fragmentCImpl, View viewParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+      this.fragmentCImpl = fragmentCImpl;
+
+
+    }
+  }
+
+  private static final class FragmentCImpl extends HappyKidApplication_HiltComponents.FragmentC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl = this;
+
+    private FragmentCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        Fragment fragmentParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+
+
+    }
+
+    @Override
+    public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
+      return activityCImpl.getHiltInternalFactoryFactory();
+    }
+
+    @Override
+    public ViewWithFragmentComponentBuilder viewWithFragmentComponentBuilder() {
+      return new ViewWithFragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl);
+    }
+  }
+
+  private static final class ViewCImpl extends HappyKidApplication_HiltComponents.ViewC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final ViewCImpl viewCImpl = this;
+
+    private ViewCImpl(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+        ActivityCImpl activityCImpl, View viewParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+
+
+    }
+  }
+
+  private static final class ActivityCImpl extends HappyKidApplication_HiltComponents.ActivityC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl = this;
+
+    private ActivityCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, Activity activityParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+
+
+    }
+
+    @Override
+    public void injectMainActivity(MainActivity mainActivity) {
+    }
+
+    @Override
+    public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
+      return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(getViewModelKeys(), new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl));
+    }
+
+    @Override
+    public Set<String> getViewModelKeys() {
+      return ImmutableSet.<String>of(AlphabetViewModel_HiltModules_KeyModule_ProvideFactory.provide(), AnalyticsViewModel_HiltModules_KeyModule_ProvideFactory.provide(), FontViewModel_HiltModules_KeyModule_ProvideFactory.provide(), ParentDashboardViewModel_HiltModules_KeyModule_ProvideFactory.provide(), ParentalAuthViewModel_HiltModules_KeyModule_ProvideFactory.provide(), PhonicsViewModel_HiltModules_KeyModule_ProvideFactory.provide(), SpeechViewModel_HiltModules_KeyModule_ProvideFactory.provide(), StoryViewModel_HiltModules_KeyModule_ProvideFactory.provide(), TracingViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+    }
+
+    @Override
+    public ViewModelComponentBuilder getViewModelComponentBuilder() {
+      return new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl);
+    }
+
+    @Override
+    public FragmentComponentBuilder fragmentComponentBuilder() {
+      return new FragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
+    }
+
+    @Override
+    public ViewComponentBuilder viewComponentBuilder() {
+      return new ViewCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
+    }
+  }
+
+  private static final class ViewModelCImpl extends HappyKidApplication_HiltComponents.ViewModelC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ViewModelCImpl viewModelCImpl = this;
+
+    private Provider<AlphabetViewModel> alphabetViewModelProvider;
+
+    private Provider<AnalyticsViewModel> analyticsViewModelProvider;
+
+    private Provider<FontViewModel> fontViewModelProvider;
+
+    private Provider<ParentDashboardViewModel> parentDashboardViewModelProvider;
+
+    private Provider<ParentalAuthViewModel> parentalAuthViewModelProvider;
+
+    private Provider<PhonicsViewModel> phonicsViewModelProvider;
+
+    private Provider<SpeechViewModel> speechViewModelProvider;
+
+    private Provider<StoryViewModel> storyViewModelProvider;
+
+    private Provider<TracingViewModel> tracingViewModelProvider;
+
+    private ViewModelCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
+        ViewModelLifecycle viewModelLifecycleParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+
+      initialize(savedStateHandleParam, viewModelLifecycleParam);
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final SavedStateHandle savedStateHandleParam,
+        final ViewModelLifecycle viewModelLifecycleParam) {
+      this.alphabetViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.analyticsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.fontViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.parentDashboardViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.parentalAuthViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.phonicsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
+      this.speechViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
+      this.storyViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
+      this.tracingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 8);
+    }
+
+    @Override
+    public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
+      return ImmutableMap.<String, Provider<ViewModel>>builderWithExpectedSize(9).put("com.happykid.toddlerabc.viewmodel.AlphabetViewModel", ((Provider) alphabetViewModelProvider)).put("com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel", ((Provider) analyticsViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.FontViewModel", ((Provider) fontViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.ParentDashboardViewModel", ((Provider) parentDashboardViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.ParentalAuthViewModel", ((Provider) parentalAuthViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.PhonicsViewModel", ((Provider) phonicsViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.SpeechViewModel", ((Provider) speechViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.StoryViewModel", ((Provider) storyViewModelProvider)).put("com.happykid.toddlerabc.viewmodel.TracingViewModel", ((Provider) tracingViewModelProvider)).build();
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final ViewModelCImpl viewModelCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+          ViewModelCImpl viewModelCImpl, int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.viewModelCImpl = viewModelCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // com.happykid.toddlerabc.viewmodel.AlphabetViewModel 
+          return (T) new AlphabetViewModel(singletonCImpl.letterRepositoryProvider.get(), singletonCImpl.provideAudioManagerProvider.get());
+
+          case 1: // com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel 
+          return (T) new AnalyticsViewModel(singletonCImpl.provideAnalyticsRepositoryProvider.get());
+
+          case 2: // com.happykid.toddlerabc.viewmodel.FontViewModel 
+          return (T) new FontViewModel(singletonCImpl.fontManagerProvider.get());
+
+          case 3: // com.happykid.toddlerabc.viewmodel.ParentDashboardViewModel 
+          return (T) new ParentDashboardViewModel(singletonCImpl.provideParentDashboardAnalyticsProvider.get(), singletonCImpl.provideParentalAuthManagerProvider.get(), ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 4: // com.happykid.toddlerabc.viewmodel.ParentalAuthViewModel 
+          return (T) new ParentalAuthViewModel(singletonCImpl.provideParentalAuthManagerProvider.get(), ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 5: // com.happykid.toddlerabc.viewmodel.PhonicsViewModel 
+          return (T) new PhonicsViewModel(singletonCImpl.providePhonicsRepositoryProvider.get(), singletonCImpl.providePhonicsProgressRepositoryProvider.get(), singletonCImpl.provideAudioManagerProvider.get(), singletonCImpl.provideSpeechRecognitionManagerProvider.get());
+
+          case 6: // com.happykid.toddlerabc.viewmodel.SpeechViewModel 
+          return (T) new SpeechViewModel(singletonCImpl.provideSpeechRecognitionManagerProvider.get(), singletonCImpl.providePermissionManagerProvider.get(), singletonCImpl.provideAudioManagerProvider.get());
+
+          case 7: // com.happykid.toddlerabc.viewmodel.StoryViewModel 
+          return (T) new StoryViewModel(singletonCImpl.storyRepositoryProvider.get(), singletonCImpl.provideAudioManagerProvider.get());
+
+          case 8: // com.happykid.toddlerabc.viewmodel.TracingViewModel 
+          return (T) new TracingViewModel(singletonCImpl.letterRepositoryProvider.get(), singletonCImpl.provideTracingProgressRepositoryProvider.get(), singletonCImpl.provideTracingTouchDetectorProvider.get(), singletonCImpl.provideHapticFeedbackManagerProvider.get(), singletonCImpl.provideAudioManagerProvider.get());
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+
+  private static final class ActivityRetainedCImpl extends HappyKidApplication_HiltComponents.ActivityRetainedC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl = this;
+
+    private Provider<ActivityRetainedLifecycle> provideActivityRetainedLifecycleProvider;
+
+    private ActivityRetainedCImpl(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+
+      initialize();
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize() {
+      this.provideActivityRetainedLifecycleProvider = DoubleCheck.provider(new SwitchingProvider<ActivityRetainedLifecycle>(singletonCImpl, activityRetainedCImpl, 0));
+    }
+
+    @Override
+    public ActivityComponentBuilder activityComponentBuilder() {
+      return new ActivityCBuilder(singletonCImpl, activityRetainedCImpl);
+    }
+
+    @Override
+    public ActivityRetainedLifecycle getActivityRetainedLifecycle() {
+      return provideActivityRetainedLifecycleProvider.get();
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+          int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // dagger.hilt.android.ActivityRetainedLifecycle 
+          return (T) ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory.provideActivityRetainedLifecycle();
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+
+  private static final class ServiceCImpl extends HappyKidApplication_HiltComponents.ServiceC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ServiceCImpl serviceCImpl = this;
+
+    private ServiceCImpl(SingletonCImpl singletonCImpl, Service serviceParam) {
+      this.singletonCImpl = singletonCImpl;
+
+
+    }
+  }
+
+  private static final class SingletonCImpl extends HappyKidApplication_HiltComponents.SingletonC {
+    private final ApplicationContextModule applicationContextModule;
+
+    private final SingletonCImpl singletonCImpl = this;
+
+    private Provider<CoroutineScope> provideApplicationScopeProvider;
+
+    private Provider<HappyKidDatabase> provideHappyKidDatabaseProvider;
+
+    private Provider<LetterRepository> letterRepositoryProvider;
+
+    private Provider<FontManager> fontManagerProvider;
+
+    private Provider<AudioManager> provideAudioManagerProvider;
+
+    private Provider<AdaptiveLearningEngine> provideAdaptiveLearningEngineProvider;
+
+    private Provider<AchievementManager> provideAchievementManagerProvider;
+
+    private Provider<ParentDashboardAnalytics> provideParentDashboardAnalyticsProvider;
+
+    private Provider<AnalyticsRepository> provideAnalyticsRepositoryProvider;
+
+    private Provider<ParentalAuthDao> provideParentalAuthDaoProvider;
+
+    private Provider<ParentalAuthManager> provideParentalAuthManagerProvider;
+
+    private Provider<PhonicsDao> providePhonicsDaoProvider;
+
+    private Provider<PhonicsRepository> providePhonicsRepositoryProvider;
+
+    private Provider<PhonicsProgressDao> providePhonicsProgressDaoProvider;
+
+    private Provider<PhonicsProgressRepository> providePhonicsProgressRepositoryProvider;
+
+    private Provider<SpeechRecognitionManager> provideSpeechRecognitionManagerProvider;
+
+    private Provider<PermissionManager> providePermissionManagerProvider;
+
+    private Provider<StoryRepository> storyRepositoryProvider;
+
+    private Provider<TracingProgressRepository> provideTracingProgressRepositoryProvider;
+
+    private Provider<TracingTouchDetector> provideTracingTouchDetectorProvider;
+
+    private Provider<HapticFeedbackManager> provideHapticFeedbackManagerProvider;
+
+    private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
+      this.applicationContextModule = applicationContextModuleParam;
+      initialize(applicationContextModuleParam);
+
+    }
+
+    private LetterDao letterDao() {
+      return DatabaseModule_ProvideLetterDaoFactory.provideLetterDao(provideHappyKidDatabaseProvider.get());
+    }
+
+    private FontPreferenceDao fontPreferenceDao() {
+      return DatabaseModule_ProvideFontPreferenceDaoFactory.provideFontPreferenceDao(provideHappyKidDatabaseProvider.get());
+    }
+
+    private LearningAnalyticsDao learningAnalyticsDao() {
+      return DatabaseModule_ProvideLearningAnalyticsDaoFactory.provideLearningAnalyticsDao(provideHappyKidDatabaseProvider.get());
+    }
+
+    private StoryDao storyDao() {
+      return DatabaseModule_ProvideStoryDaoFactory.provideStoryDao(provideHappyKidDatabaseProvider.get());
+    }
+
+    private TracingProgressDao tracingProgressDao() {
+      return DatabaseModule_ProvideTracingProgressDaoFactory.provideTracingProgressDao(provideHappyKidDatabaseProvider.get());
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final ApplicationContextModule applicationContextModuleParam) {
+      this.provideApplicationScopeProvider = DoubleCheck.provider(new SwitchingProvider<CoroutineScope>(singletonCImpl, 2));
+      this.provideHappyKidDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<HappyKidDatabase>(singletonCImpl, 1));
+      this.letterRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<LetterRepository>(singletonCImpl, 0));
+      this.fontManagerProvider = DoubleCheck.provider(new SwitchingProvider<FontManager>(singletonCImpl, 3));
+      this.provideAudioManagerProvider = DoubleCheck.provider(new SwitchingProvider<AudioManager>(singletonCImpl, 4));
+      this.provideAdaptiveLearningEngineProvider = DoubleCheck.provider(new SwitchingProvider<AdaptiveLearningEngine>(singletonCImpl, 6));
+      this.provideAchievementManagerProvider = DoubleCheck.provider(new SwitchingProvider<AchievementManager>(singletonCImpl, 7));
+      this.provideParentDashboardAnalyticsProvider = DoubleCheck.provider(new SwitchingProvider<ParentDashboardAnalytics>(singletonCImpl, 8));
+      this.provideAnalyticsRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<AnalyticsRepository>(singletonCImpl, 5));
+      this.provideParentalAuthDaoProvider = DoubleCheck.provider(new SwitchingProvider<ParentalAuthDao>(singletonCImpl, 10));
+      this.provideParentalAuthManagerProvider = DoubleCheck.provider(new SwitchingProvider<ParentalAuthManager>(singletonCImpl, 9));
+      this.providePhonicsDaoProvider = DoubleCheck.provider(new SwitchingProvider<PhonicsDao>(singletonCImpl, 12));
+      this.providePhonicsRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<PhonicsRepository>(singletonCImpl, 11));
+      this.providePhonicsProgressDaoProvider = DoubleCheck.provider(new SwitchingProvider<PhonicsProgressDao>(singletonCImpl, 14));
+      this.providePhonicsProgressRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<PhonicsProgressRepository>(singletonCImpl, 13));
+      this.provideSpeechRecognitionManagerProvider = DoubleCheck.provider(new SwitchingProvider<SpeechRecognitionManager>(singletonCImpl, 15));
+      this.providePermissionManagerProvider = DoubleCheck.provider(new SwitchingProvider<PermissionManager>(singletonCImpl, 16));
+      this.storyRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<StoryRepository>(singletonCImpl, 17));
+      this.provideTracingProgressRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<TracingProgressRepository>(singletonCImpl, 18));
+      this.provideTracingTouchDetectorProvider = DoubleCheck.provider(new SwitchingProvider<TracingTouchDetector>(singletonCImpl, 19));
+      this.provideHapticFeedbackManagerProvider = DoubleCheck.provider(new SwitchingProvider<HapticFeedbackManager>(singletonCImpl, 20));
+    }
+
+    @Override
+    public void injectHappyKidApplication(HappyKidApplication happyKidApplication) {
+      injectHappyKidApplication2(happyKidApplication);
+    }
+
+    @Override
+    public Set<Boolean> getDisableFragmentGetContextFix() {
+      return ImmutableSet.<Boolean>of();
+    }
+
+    @Override
+    public ActivityRetainedComponentBuilder retainedComponentBuilder() {
+      return new ActivityRetainedCBuilder(singletonCImpl);
+    }
+
+    @Override
+    public ServiceComponentBuilder serviceComponentBuilder() {
+      return new ServiceCBuilder(singletonCImpl);
+    }
+
+    @CanIgnoreReturnValue
+    private HappyKidApplication injectHappyKidApplication2(HappyKidApplication instance) {
+      HappyKidApplication_MembersInjector.injectRepository(instance, letterRepositoryProvider.get());
+      HappyKidApplication_MembersInjector.injectFontManager(instance, fontManagerProvider.get());
+      return instance;
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // com.happykid.toddlerabc.repository.LetterRepository 
+          return (T) new LetterRepository(singletonCImpl.letterDao());
+
+          case 1: // com.happykid.toddlerabc.data.HappyKidDatabase 
+          return (T) DatabaseModule_ProvideHappyKidDatabaseFactory.provideHappyKidDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.provideApplicationScopeProvider.get());
+
+          case 2: // kotlinx.coroutines.CoroutineScope 
+          return (T) DatabaseModule_ProvideApplicationScopeFactory.provideApplicationScope();
+
+          case 3: // com.happykid.toddlerabc.manager.FontManager 
+          return (T) new FontManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.fontPreferenceDao());
+
+          case 4: // com.happykid.toddlerabc.audio.AudioManager 
+          return (T) AudioModule_ProvideAudioManagerFactory.provideAudioManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 5: // com.happykid.toddlerabc.repository.AnalyticsRepository 
+          return (T) AnalyticsModule_ProvideAnalyticsRepositoryFactory.provideAnalyticsRepository(singletonCImpl.learningAnalyticsDao(), singletonCImpl.provideAdaptiveLearningEngineProvider.get(), singletonCImpl.provideAchievementManagerProvider.get(), singletonCImpl.provideParentDashboardAnalyticsProvider.get());
+
+          case 6: // com.happykid.toddlerabc.analytics.AdaptiveLearningEngine 
+          return (T) AnalyticsModule_ProvideAdaptiveLearningEngineFactory.provideAdaptiveLearningEngine(singletonCImpl.learningAnalyticsDao());
+
+          case 7: // com.happykid.toddlerabc.analytics.AchievementManager 
+          return (T) AnalyticsModule_ProvideAchievementManagerFactory.provideAchievementManager(singletonCImpl.learningAnalyticsDao());
+
+          case 8: // com.happykid.toddlerabc.analytics.ParentDashboardAnalytics 
+          return (T) AnalyticsModule_ProvideParentDashboardAnalyticsFactory.provideParentDashboardAnalytics(singletonCImpl.learningAnalyticsDao(), singletonCImpl.provideAdaptiveLearningEngineProvider.get());
+
+          case 9: // com.happykid.toddlerabc.auth.ParentalAuthManager 
+          return (T) AuthModule_ProvideParentalAuthManagerFactory.provideParentalAuthManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.provideParentalAuthDaoProvider.get());
+
+          case 10: // com.happykid.toddlerabc.data.ParentalAuthDao 
+          return (T) AuthModule_ProvideParentalAuthDaoFactory.provideParentalAuthDao(singletonCImpl.provideHappyKidDatabaseProvider.get());
+
+          case 11: // com.happykid.toddlerabc.repository.PhonicsRepository 
+          return (T) PhonicsModule_ProvidePhonicsRepositoryFactory.providePhonicsRepository(singletonCImpl.providePhonicsDaoProvider.get());
+
+          case 12: // com.happykid.toddlerabc.data.PhonicsDao 
+          return (T) PhonicsModule_ProvidePhonicsDaoFactory.providePhonicsDao(singletonCImpl.provideHappyKidDatabaseProvider.get());
+
+          case 13: // com.happykid.toddlerabc.repository.PhonicsProgressRepository 
+          return (T) PhonicsModule_ProvidePhonicsProgressRepositoryFactory.providePhonicsProgressRepository(singletonCImpl.providePhonicsProgressDaoProvider.get());
+
+          case 14: // com.happykid.toddlerabc.data.PhonicsProgressDao 
+          return (T) PhonicsModule_ProvidePhonicsProgressDaoFactory.providePhonicsProgressDao(singletonCImpl.provideHappyKidDatabaseProvider.get());
+
+          case 15: // com.happykid.toddlerabc.speech.SpeechRecognitionManager 
+          return (T) SpeechModule_ProvideSpeechRecognitionManagerFactory.provideSpeechRecognitionManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 16: // com.happykid.toddlerabc.permission.PermissionManager 
+          return (T) SpeechModule_ProvidePermissionManagerFactory.providePermissionManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 17: // com.happykid.toddlerabc.repository.StoryRepository 
+          return (T) new StoryRepository(singletonCImpl.storyDao());
+
+          case 18: // com.happykid.toddlerabc.repository.TracingProgressRepository 
+          return (T) TracingModule_ProvideTracingProgressRepositoryFactory.provideTracingProgressRepository(singletonCImpl.tracingProgressDao());
+
+          case 19: // com.happykid.toddlerabc.tracing.TracingTouchDetector 
+          return (T) TracingModule_ProvideTracingTouchDetectorFactory.provideTracingTouchDetector();
+
+          case 20: // com.happykid.toddlerabc.haptic.HapticFeedbackManager 
+          return (T) TracingModule_ProvideHapticFeedbackManagerFactory.provideHapticFeedbackManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+}

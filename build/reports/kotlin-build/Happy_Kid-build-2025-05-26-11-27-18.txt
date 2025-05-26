@@ -1,0 +1,13 @@
+Gradle start parameters:
+  tasks = []
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+
+
+
+No Kotlin task was run
+Task ':nothing' finished in 0.00 s
+

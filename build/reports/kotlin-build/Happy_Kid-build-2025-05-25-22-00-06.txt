@@ -1,0 +1,1096 @@
+Gradle start parameters:
+  tasks = [clean, build]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Build failed: [Execution failed for task ':app:lintDebug'.]
+
+Time metrics:
+  Total Gradle task time: 222.36 s
+  Spent time before task action: 6.36 s
+  Task action before worker execution: 0.25 s
+  Run compilation in Gradle worker: 16.63 s
+    Connect to Kotlin daemon: 0.04 s
+    Calculate output size: 0.00 s
+    Run compilation: 16.57 s
+      Incremental compilation in daemon: 16.35 s
+        Update caches: 0.40 s
+        Sources compilation round: 12.77 s
+          Compiler initialization time: 0.55 s
+          Compiler code analysis: 8.25 s
+          Compiler code generation: 1.75 s
+        Shrink and save current classpath snapshot after compilation: 0.23 s
+          Shrink current classpath snapshot non-incrementally: 0.21 s
+            Load current classpath snapshot: 0.05 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+  Classpath entry snapshot transform: 0.53 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.47 s
+      Load contents of classes: 0.16 s
+      Snapshot Kotlin classes: 0.02 s
+      Snapshot Java classes: 0.19 s
+    Save classpath entry snapshot: 0.03 s
+
+Size metrics:
+  Total size of the cache directory: 1.6 MB
+    ABI snapshot size: 196 B
+  Increase memory usage: 117.2 MB
+  Total memory usage at the end of build: 1.5 GB
+  Total compiler iteration: 4
+    Number of lines analyzed: 6268
+    Number of lines for code generation: 3134
+    Analysis lines per second: 3114
+    Code generation lines per second: 3619
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 29
+    Size of jar classpath entry: 11.5 MB
+    Size of jar classpath entry's snapshot: 5.7 MB
+    Size of directory classpath entry's snapshot: 4 B
+  Number of times classpath snapshot is shrunk and saved after compilation: 4
+    Number of classpath entries: 380
+    Size of classpath snapshot: 33.6 MB
+    Size of shrunk classpath snapshot: 174.4 KB
+  Number of times classpath snapshot is loaded: 4
+    Number of cache hits when loading classpath entry snapshots: 363
+    Number of cache misses when loading classpath entry snapshots: 17
+  Start time of task action: 2302-05-22T11:50:17
+
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+
+Total time for Kotlin tasks: 24.17 s (10.8 % of all tasks time)
+Time  |% of Kotlin time|Task                                                                                                                                                                                      
+5.67 s|23.5 %          |:app:compileDebugKotlin                                                                                                                                                                   
+5.62 s|23.2 %          |:app:compileReleaseKotlin                                                                                                                                                                 
+4.32 s|17.9 %          |:app:kaptGenerateStubsDebugKotlin                                                                                                                                                         
+4.05 s|16.8 %          |:app:kaptGenerateStubsReleaseKotlin                                                                                                                                                       
+3.82 s|15.8 %          |:app:kaptGenerateStubsReleaseUnitTestKotlin                                                                                                                                               
+0.19 s|0.8 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ca3be51f01fff98a66c01ed77734d753\transformed\jetified-byte-buddy-1.14.9.jar                                
+0.15 s|0.6 %           |:app:kaptGenerateStubsDebugUnitTestKotlin                                                                                                                                                 
+0.08 s|0.3 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_app_classes_jar\debug\classes.jar                                                            
+0.05 s|0.2 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_app_classes_jar\release\classes.jar                                                          
+0.04 s|0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e6f400833c6b7dd5ccb1eab8e5072080\transformed\jetified-mockito-core-5.7.0.jar                               
+0.03 s|0.1 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar                                           
+0.03 s|0.1 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar                                         
+0.02 s|0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\441c5ce230d87c346df802c15b6798c7\transformed\jetified-junit-4.13.2.jar                                     
+0.01 s|0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ec9cbca7f54ea467b9a497de52bbea7e\transformed\jetified-hilt-android-2.48.1-api.jar                          
+0.01 s|0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5a8874d65e6147f6251a37598a23cbbe\transformed\jetified-kotlinx-coroutines-test-jvm-1.7.3.jar                
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1fac6ff1a3eaffbdf300a2baad6b934f\transformed\navigation-common-2.5.1-api.jar                               
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\c51d28dd28a736f9488e96060ee93ff8\transformed\fragment-1.5.1-api.jar                                        
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.room\room-migration\2.6.1\8d8218e4ccfe9b34485619a8ca68f8760840301d\room-migration-2.6.1.jar
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\f145400d0fc3783b3de426d8db3412ed\transformed\jetified-mockito-kotlin-5.2.1.jar                             
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\bdd8fef4613ce773a170be2c106943b3\transformed\navigation-runtime-2.5.1-api.jar                              
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\9664eb275674c499cd873533353e2a23\transformed\jetified-byte-buddy-agent-1.14.9.jar                          
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\9a2350590af473aa1cebe1d154d48c40\transformed\jetified-navigation-compose-2.5.1-api.jar                     
+0.01 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\87d9da02b5a17b044c9ba9585760054d\transformed\jetified-hamcrest-core-1.3.jar                                
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\9196ed9b130ac396f9a5493a4f8f50c5\transformed\jetified-jsr305-3.0.2.jar                                     
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\627d93ceab38ca30a580de282608396c\transformed\jetified-dagger-2.48.1.jar                                    
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\c9b73535375f26f66f5814d0f5c654ed\transformed\jetified-hilt-navigation-compose-1.1.0-api.jar                
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\850ccca3d1cfa26a8cfd2f0c4b254ee7\transformed\room-testing-2.6.1-api.jar                                    
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a3edcbce2ea195e23b4f3e56ea257203\transformed\navigation-common-ktx-2.5.1-api.jar                           
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\97aab9974f6330a51ee5b735c381c5a2\transformed\jetified-javax.inject-1.jar                                   
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\cd8c16470c81b5bdf58214d234ef7c4f\transformed\jetified-hilt-core-2.48.1.jar                                 
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\89e871eaf98e6d0125d960f9db4f8918\transformed\jetified-hilt-navigation-1.1.0-api.jar                        
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d3ceee74d24d3a40fd9e227d591f626c\transformed\navigation-runtime-ktx-2.5.1-api.jar                          
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ceced44680a3168dd28e8eb16493a1c6\transformed\jetified-dagger-lint-aar-2.48.1-api.jar                       
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\classes\release                                                                                          
+0.00 s|0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5cf621630f592095cbb120ce645e1d7f\transformed\core-testing-2.2.0-api.jar                                    
+
+Task ':app:lintAnalyzeDebug' finished in 63.04 s
+Time metrics:
+  Total Gradle task time: 63.04 s
+
+Task ':app:minifyReleaseWithR8' finished in 40.58 s
+Time metrics:
+  Total Gradle task time: 40.58 s
+
+Task ':app:dexBuilderDebug' finished in 33.94 s
+Time metrics:
+  Total Gradle task time: 33.94 s
+
+Task ':app:mergeExtDexDebug' finished in 6.76 s
+Time metrics:
+  Total Gradle task time: 6.76 s
+
+Task ':app:compileDebugKotlin' finished in 5.67 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Non-incremental compilation will be performed: UNKNOWN_CHANGES_IN_GRADLE_INPUTS
+  Cleaning 3 output directories
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = NonIncremental), retained 218 / 24577 classes
+Time metrics:
+  Total Gradle task time: 5.67 s
+  Spent time before task action: 0.04 s
+  Task action before worker execution: 0.08 s
+  Run compilation in Gradle worker: 5.48 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 5.47 s
+      Incremental compilation in daemon: 5.46 s
+        Update caches: 0.10 s
+        Sources compilation round: 4.73 s
+          Compiler initialization time: 0.10 s
+          Compiler code analysis: 2.50 s
+          Compiler code generation: 0.98 s
+        Shrink and save current classpath snapshot after compilation: 0.06 s
+          Shrink current classpath snapshot non-incrementally: 0.06 s
+            Load current classpath snapshot: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 420.3 KB
+    ABI snapshot size: 49 B
+  Increase memory usage: 21.3 MB
+  Total memory usage at the end of build: 438.3 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1567
+    Number of lines for code generation: 1567
+    Analysis lines per second: 628
+    Code generation lines per second: 1605
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 97
+    Size of classpath snapshot: 8.4 MB
+    Size of shrunk classpath snapshot: 58.5 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 97
+  Start time of task action: 2025-05-25T13:58:04
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+GC metrics:
+  G1 Young Generation:
+    GC count: 4
+    GC time: 0.05 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:compileReleaseKotlin' finished in 5.62 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileReleaseKotlin':
+  Non-incremental compilation will be performed: UNKNOWN_CHANGES_IN_GRADLE_INPUTS
+  Cleaning 3 output directories
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = NonIncremental), retained 218 / 24499 classes
+Time metrics:
+  Total Gradle task time: 5.62 s
+  Spent time before task action: 0.03 s
+  Task action before worker execution: 0.08 s
+  Run compilation in Gradle worker: 5.40 s
+    Connect to Kotlin daemon: 0.01 s
+    Run compilation: 5.39 s
+      Incremental compilation in daemon: 5.37 s
+        Update caches: 0.11 s
+        Sources compilation round: 3.81 s
+          Compiler initialization time: 0.16 s
+          Compiler code analysis: 1.82 s
+          Compiler code generation: 0.78 s
+        Shrink and save current classpath snapshot after compilation: 0.06 s
+          Shrink current classpath snapshot non-incrementally: 0.05 s
+            Load current classpath snapshot: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+Size metrics:
+  Total size of the cache directory: 420.3 KB
+    ABI snapshot size: 49 B
+  Increase memory usage: -68709168 B
+  Total memory usage at the end of build: 357.9 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1567
+    Number of lines for code generation: 1567
+    Analysis lines per second: 862
+    Code generation lines per second: 2014
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 94
+    Size of classpath snapshot: 8.4 MB
+    Size of shrunk classpath snapshot: 58.5 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 93
+    Number of cache misses when loading classpath entry snapshots: 1
+  Start time of task action: 2025-05-25T13:58:07
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+GC metrics:
+  G1 Young Generation:
+    GC count: 4
+    GC time: 0.05 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:hiltAggregateDepsDebug' finished in 4.33 s
+Time metrics:
+  Total Gradle task time: 4.33 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 4.32 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Non-incremental compilation will be performed: UNKNOWN_CHANGES_IN_GRADLE_INPUTS
+  Cleaning 4 output directories
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = NonIncremental), retained 150 / 24577 classes
+Time metrics:
+  Total Gradle task time: 4.32 s
+  Spent time before task action: 1.04 s
+  Task action before worker execution: 0.04 s
+  Run compilation in Gradle worker: 3.16 s
+    Connect to Kotlin daemon: 0.02 s
+    Run compilation: 3.15 s
+      Incremental compilation in daemon: 3.12 s
+        Update caches: 0.10 s
+        Sources compilation round: 2.43 s
+          Compiler initialization time: 0.18 s
+          Compiler code analysis: 2.25 s
+        Shrink and save current classpath snapshot after compilation: 0.07 s
+          Shrink current classpath snapshot non-incrementally: 0.07 s
+            Load current classpath snapshot: 0.03 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 420.3 KB
+    ABI snapshot size: 49 B
+  Increase memory usage: 77.0 MB
+  Total memory usage at the end of build: 360.4 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1567
+    Analysis lines per second: 697
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 96
+    Size of classpath snapshot: 8.4 MB
+    Size of shrunk classpath snapshot: 28.8 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 81
+    Number of cache misses when loading classpath entry snapshots: 15
+  Start time of task action: 2025-05-25T13:57:57
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.04 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:kaptGenerateStubsReleaseKotlin' finished in 4.05 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsReleaseKotlin':
+  Non-incremental compilation will be performed: UNKNOWN_CHANGES_IN_GRADLE_INPUTS
+  Cleaning 4 output directories
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = NonIncremental), retained 150 / 24499 classes
+Time metrics:
+  Total Gradle task time: 4.05 s
+  Spent time before task action: 1.30 s
+  Task action before worker execution: 0.04 s
+  Run compilation in Gradle worker: 2.58 s
+    Connect to Kotlin daemon: 0.01 s
+    Run compilation: 2.57 s
+      Incremental compilation in daemon: 2.40 s
+        Update caches: 0.09 s
+        Sources compilation round: 1.80 s
+          Compiler initialization time: 0.11 s
+          Compiler code analysis: 1.69 s
+        Shrink and save current classpath snapshot after compilation: 0.04 s
+          Shrink current classpath snapshot non-incrementally: 0.04 s
+            Load current classpath snapshot: 0.01 s
+Size metrics:
+  Total size of the cache directory: 420.3 KB
+    ABI snapshot size: 49 B
+  Increase memory usage: 84.4 MB
+  Total memory usage at the end of build: 415.8 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1567
+    Analysis lines per second: 927
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 93
+    Size of classpath snapshot: 8.4 MB
+    Size of shrunk classpath snapshot: 28.8 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 92
+    Number of cache misses when loading classpath entry snapshots: 1
+  Start time of task action: 2025-05-25T13:58:00
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.01 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:kaptDebugKotlin' finished in 3.91 s
+Time metrics:
+  Total Gradle task time: 3.91 s
+
+Task ':app:hiltJavaCompileDebug' finished in 3.84 s
+Time metrics:
+  Total Gradle task time: 3.84 s
+
+Task ':app:kaptGenerateStubsReleaseUnitTestKotlin' finished in 3.82 s
+Time metrics:
+  Total Gradle task time: 3.82 s
+  Spent time before task action: 3.82 s
+  Task action before worker execution: 0.00 s
+Size metrics:
+  Start time of task action: 2025-05-25T13:58:27
+
+Task ':app:checkDebugAarMetadata' finished in 3.75 s
+Time metrics:
+  Total Gradle task time: 3.75 s
+
+Task ':app:mergeReleaseResources' finished in 3.68 s
+Time metrics:
+  Total Gradle task time: 3.68 s
+
+Task ':app:kaptReleaseKotlin' finished in 3.50 s
+Time metrics:
+  Total Gradle task time: 3.50 s
+
+Task ':app:javaPreCompileDebug' finished in 3.21 s
+Time metrics:
+  Total Gradle task time: 3.21 s
+
+Task ':app:mergeDebugJavaResource' finished in 2.35 s
+Time metrics:
+  Total Gradle task time: 2.35 s
+
+Task ':app:hiltJavaCompileRelease' finished in 2.23 s
+Time metrics:
+  Total Gradle task time: 2.23 s
+
+Task ':app:transformDebugClassesWithAsm' finished in 2.15 s
+Time metrics:
+  Total Gradle task time: 2.15 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 1.86 s
+Time metrics:
+  Total Gradle task time: 1.86 s
+
+Task ':app:shrinkReleaseRes' finished in 1.71 s
+Time metrics:
+  Total Gradle task time: 1.71 s
+
+Task ':app:mergeDebugResources' finished in 1.56 s
+Time metrics:
+  Total Gradle task time: 1.56 s
+
+Task ':app:packageDebug' finished in 1.51 s
+Time metrics:
+  Total Gradle task time: 1.51 s
+
+Task ':app:mergeReleaseJavaResource' finished in 1.43 s
+Time metrics:
+  Total Gradle task time: 1.43 s
+
+Task ':app:jacocoDebug' finished in 1.39 s
+Time metrics:
+  Total Gradle task time: 1.39 s
+
+Task ':app:transformReleaseClassesWithAsm' finished in 1.33 s
+Time metrics:
+  Total Gradle task time: 1.33 s
+
+Task ':app:hiltAggregateDepsDebugUnitTest' finished in 0.99 s
+Time metrics:
+  Total Gradle task time: 0.99 s
+
+Task ':app:processDebugResources' finished in 0.98 s
+Time metrics:
+  Total Gradle task time: 0.98 s
+
+Task ':app:compileReleaseJavaWithJavac' finished in 0.84 s
+Time metrics:
+  Total Gradle task time: 0.84 s
+
+Task ':app:bundleReleaseResources' finished in 0.78 s
+Time metrics:
+  Total Gradle task time: 0.78 s
+
+Task ':app:processReleaseResources' finished in 0.77 s
+Time metrics:
+  Total Gradle task time: 0.77 s
+
+Task ':app:processReleaseManifestForPackage' finished in 0.72 s
+Time metrics:
+  Total Gradle task time: 0.72 s
+
+Task ':app:compileReleaseArtProfile' finished in 0.59 s
+Time metrics:
+  Total Gradle task time: 0.59 s
+
+Task ':app:lintReportDebug' finished in 0.46 s
+Time metrics:
+  Total Gradle task time: 0.46 s
+
+Task ':app:optimizeReleaseResources' finished in 0.38 s
+Time metrics:
+  Total Gradle task time: 0.38 s
+
+Task ':app:kaptDebugUnitTestKotlin' finished in 0.34 s
+Time metrics:
+  Total Gradle task time: 0.34 s
+
+Task ':app:transformDebugUnitTestClassesWithAsm' finished in 0.32 s
+Time metrics:
+  Total Gradle task time: 0.32 s
+
+Task ':app:collectReleaseDependencies' finished in 0.30 s
+Time metrics:
+  Total Gradle task time: 0.30 s
+
+Task ':app:packageRelease' finished in 0.26 s
+Time metrics:
+  Total Gradle task time: 0.26 s
+
+Task ':app:clean' finished in 0.24 s
+Time metrics:
+  Total Gradle task time: 0.24 s
+
+Task ':app:processDebugMainManifest' finished in 0.22 s
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.22 s
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task ':app:kaptReleaseUnitTestKotlin' finished in 0.22 s
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task ':app:sdkReleaseDependencyData' finished in 0.22 s
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ca3be51f01fff98a66c01ed77734d753\transformed\jetified-byte-buddy-1.14.9.jar' finished in 0.19 s
+Time metrics:
+  Classpath entry snapshot transform: 0.19 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.18 s
+      Load contents of classes: 0.10 s
+      Snapshot Java classes: 0.05 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 4.0 MB
+    Size of jar classpath entry's snapshot: 1.2 MB
+
+Task ':app:kaptGenerateStubsDebugUnitTestKotlin' finished in 0.15 s
+Time metrics:
+  Total Gradle task time: 0.15 s
+  Spent time before task action: 0.14 s
+  Task action before worker execution: 0.00 s
+Size metrics:
+  Start time of task action: 2025-05-25T13:59:38
+
+Task ':app:bundleDebugClassesToRuntimeJar' finished in 0.13 s
+Time metrics:
+  Total Gradle task time: 0.13 s
+
+Task ':app:hiltAggregateDepsReleaseUnitTest' finished in 0.13 s
+Time metrics:
+  Total Gradle task time: 0.13 s
+
+Task ':app:mergeReleaseArtProfile' finished in 0.12 s
+Time metrics:
+  Total Gradle task time: 0.12 s
+
+Task ':app:buildKotlinToolingMetadata' finished in 0.12 s
+Time metrics:
+  Total Gradle task time: 0.12 s
+
+Task ':app:mergeProjectDexDebug' finished in 0.12 s
+Time metrics:
+  Total Gradle task time: 0.12 s
+
+Task ':app:bundleDebugClassesToCompileJar' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:bundleReleaseClassesToRuntimeJar' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:bundleReleaseClassesToCompileJar' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:hiltAggregateDepsRelease' finished in 0.09 s
+Time metrics:
+  Total Gradle task time: 0.09 s
+
+Task ':app:processReleaseMainManifest' finished in 0.08 s
+Time metrics:
+  Total Gradle task time: 0.08 s
+
+Task ':app:packageDebugUnitTestForUnitTest' finished in 0.08 s
+Time metrics:
+  Total Gradle task time: 0.08 s
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_app_classes_jar\debug\classes.jar' finished in 0.08 s
+Time metrics:
+  Classpath entry snapshot transform: 0.08 s
+    Snapshot classes: 0.07 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+      Snapshot Java classes: 0.06 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.4 MB
+    Size of jar classpath entry's snapshot: 1.1 MB
+
+Task ':app:transformReleaseUnitTestClassesWithAsm' finished in 0.08 s
+Time metrics:
+  Total Gradle task time: 0.08 s
+
+Task ':app:packageReleaseResources' finished in 0.07 s
+Time metrics:
+  Total Gradle task time: 0.07 s
+
+Task ':app:packageReleaseUnitTestForUnitTest' finished in 0.07 s
+Time metrics:
+  Total Gradle task time: 0.07 s
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_app_classes_jar\release\classes.jar' finished in 0.05 s
+Time metrics:
+  Classpath entry snapshot transform: 0.05 s
+    Snapshot classes: 0.04 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.00 s
+      Snapshot Java classes: 0.03 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.2 MB
+    Size of jar classpath entry's snapshot: 1.1 MB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e6f400833c6b7dd5ccb1eab8e5072080\transformed\jetified-mockito-core-5.7.0.jar' finished in 0.04 s
+Time metrics:
+  Classpath entry snapshot transform: 0.03 s
+    Snapshot classes: 0.03 s
+      Load contents of classes: 0.02 s
+      Snapshot Java classes: 0.01 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 683.7 KB
+    Size of jar classpath entry's snapshot: 178.1 KB
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar' finished in 0.03 s
+Time metrics:
+  Classpath entry snapshot transform: 0.03 s
+    Snapshot classes: 0.03 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.02 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 835.9 KB
+    Size of jar classpath entry's snapshot: 995.2 KB
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar' finished in 0.03 s
+Time metrics:
+  Classpath entry snapshot transform: 0.03 s
+    Snapshot classes: 0.02 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.02 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 834.8 KB
+    Size of jar classpath entry's snapshot: 994.1 KB
+
+Task ':app:mergeDebugAssets' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:packageDebugResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:checkReleaseDuplicateClasses' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\441c5ce230d87c346df802c15b6798c7\transformed\jetified-junit-4.13.2.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Snapshot classes: 0.02 s
+      Load contents of classes: 0.01 s
+      Snapshot Java classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 375.6 KB
+    Size of jar classpath entry's snapshot: 82.8 KB
+
+Task ':app:processReleaseManifest' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mergeReleaseNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:processReleaseJavaRes' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:processDebugJavaRes' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ec9cbca7f54ea467b9a497de52bbea7e\transformed\jetified-hilt-android-2.48.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.01 s
+      Snapshot Java classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 174.1 KB
+    Size of jar classpath entry's snapshot: 56.2 KB
+
+Task ':app:generateDebugUnitTestConfig' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5a8874d65e6147f6251a37598a23cbbe\transformed\jetified-kotlinx-coroutines-test-jvm-1.7.3.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 155.5 KB
+    Size of jar classpath entry's snapshot: 22.2 KB
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:extractProguardFiles' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1fac6ff1a3eaffbdf300a2baad6b934f\transformed\navigation-common-2.5.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 328.4 KB
+    Size of jar classpath entry's snapshot: 19.1 KB
+
+Task ':app:generateReleaseBuildConfig' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkReleaseAarMetadata' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\c51d28dd28a736f9488e96060ee93ff8\transformed\fragment-1.5.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 636.2 KB
+    Size of jar classpath entry's snapshot: 36.9 KB
+
+Task ':app:parseDebugLocalResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mapReleaseSourceSetPaths' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugGlobalSynthetics' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:processApplicationManifestReleaseForBundle' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:javaPreCompileDebugUnitTest' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.room\room-migration\2.6.1\8d8218e4ccfe9b34485619a8ca68f8760840301d\room-migration-2.6.1.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 43.0 KB
+    Size of jar classpath entry's snapshot: 7.1 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\f145400d0fc3783b3de426d8db3412ed\transformed\jetified-mockito-kotlin-5.2.1.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 66.7 KB
+    Size of jar classpath entry's snapshot: 8.2 KB
+
+Task ':app:javaPreCompileRelease' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:javaPreCompileReleaseUnitTest' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\bdd8fef4613ce773a170be2c106943b3\transformed\navigation-runtime-2.5.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 256.0 KB
+    Size of jar classpath entry's snapshot: 12.5 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\9664eb275674c499cd873533353e2a23\transformed\jetified-byte-buddy-agent-1.14.9.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 250.8 KB
+    Size of jar classpath entry's snapshot: 28.1 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\9a2350590af473aa1cebe1d154d48c40\transformed\jetified-navigation-compose-2.5.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 165.2 KB
+    Size of jar classpath entry's snapshot: 8.8 KB
+
+Task ':app:generateReleaseUnitTestConfig' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\87d9da02b5a17b044c9ba9585760054d\transformed\jetified-hamcrest-core-1.3.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Load contents of classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 44.0 KB
+    Size of jar classpath entry's snapshot: 9.6 KB
+
+Task ':app:createDebugApkListingFileRedirect' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:createReleaseApkListingFileRedirect' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:lintDebug' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\9196ed9b130ac396f9a5493a4f8f50c5\transformed\jetified-jsr305-3.0.2.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Load contents of classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 19.5 KB
+    Size of jar classpath entry's snapshot: 9.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\627d93ceab38ca30a580de282608396c\transformed\jetified-dagger-2.48.1.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Load contents of classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 36.1 KB
+    Size of jar classpath entry's snapshot: 12.4 KB
+
+Task ':app:createReleaseCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressReleaseAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeReleaseAppMetadata' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeReleaseSigningConfigVersions' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeLibDexDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeReleaseJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\c9b73535375f26f66f5814d0f5c654ed\transformed\jetified-hilt-navigation-compose-1.1.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 6.9 KB
+    Size of jar classpath entry's snapshot: 531 B
+
+Task ':app:parseReleaseLocalResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeReleaseAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\850ccca3d1cfa26a8cfd2f0c4b254ee7\transformed\room-testing-2.6.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 53.0 KB
+    Size of jar classpath entry's snapshot: 1.9 KB
+
+Task ':app:mergeReleaseGeneratedProguardFiles' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a3edcbce2ea195e23b4f3e56ea257203\transformed\navigation-common-ktx-2.5.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 519 B
+    Size of jar classpath entry's snapshot: 206 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\97aab9974f6330a51ee5b735c381c5a2\transformed\jetified-javax.inject-1.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.4 KB
+    Size of jar classpath entry's snapshot: 1.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\cd8c16470c81b5bdf58214d234ef7c4f\transformed\jetified-hilt-core-2.48.1.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 17.3 KB
+    Size of jar classpath entry's snapshot: 8.3 KB
+
+Task ':app:extractDeepLinksRelease' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compileDebugUnitTestKotlin' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugUnitTestJavaRes' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:testDebugUnitTest' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compileReleaseUnitTestKotlin' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processReleaseUnitTestJavaRes' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripReleaseDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:extractReleaseNativeSymbolTables' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeReleaseNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\89e871eaf98e6d0125d960f9db4f8918\transformed\jetified-hilt-navigation-1.1.0-api.jar' finished in 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 3.9 KB
+    Size of jar classpath entry's snapshot: 445 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d3ceee74d24d3a40fd9e227d591f626c\transformed\navigation-runtime-ktx-2.5.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 500 B
+    Size of jar classpath entry's snapshot: 178 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ceced44680a3168dd28e8eb16493a1c6\transformed\jetified-dagger-lint-aar-2.48.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 630 B
+    Size of jar classpath entry's snapshot: 130 B
+
+Task ':app:preReleaseUnitTestBuild' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\classes\release' finished in 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of directory classpath entry's snapshot: 4 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5cf621630f592095cbb120ce645e1d7f\transformed\core-testing-2.2.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 20.9 KB
+    Size of jar classpath entry's snapshot: 2.7 KB
+
+Task ':app:compileDebugUnitTestJavaWithJavac' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:hiltJavaCompileDebugUnitTest' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compileReleaseUnitTestJavaWithJavac' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:hiltJavaCompileReleaseUnitTest' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:testReleaseUnitTest' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+
+Task ':app:preReleaseBuild' finished in 0.00 s
+
+Task ':app:generateReleaseResources' finished in 0.00 s
+
+Task ':app:generateReleaseAssets' finished in 0.00 s
+
+Task ':app:preDebugUnitTestBuild' finished in 0.00 s
+
+Task ':app:assembleDebug' finished in 0.00 s
+
+Task ':app:test' finished in 0.00 s
+
+Task ':app:assembleRelease' finished in 0.00 s
+
+Task ':app:assemble' finished in 0.00 s
+

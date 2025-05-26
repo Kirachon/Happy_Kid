@@ -1,0 +1,1161 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 138.20 s
+  Spent time before task action: 7.42 s
+  Task action before worker execution: 0.23 s
+  Run compilation in Gradle worker: 11.88 s
+    Connect to Kotlin daemon: 0.53 s
+    Run compilation: 11.34 s
+      Incremental compilation in daemon: 11.23 s
+        Clear outputs on rebuild: 0.00 s
+        Update caches: 0.16 s
+        Sources compilation round: 10.34 s
+          Compiler initialization time: 0.57 s
+          Compiler code analysis: 5.82 s
+          Compiler code generation: 2.44 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.32 s
+          Shrink current classpath snapshot non-incrementally: 0.31 s
+            Load current classpath snapshot: 0.18 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.02 s
+  Classpath entry snapshot transform: 12.35 s
+    Load classes (paths only): 0.04 s
+    Snapshot classes: 12.05 s
+      Load contents of classes: 0.59 s
+      Snapshot Kotlin classes: 9.82 s
+      Snapshot Java classes: 0.58 s
+    Save classpath entry snapshot: 0.15 s
+
+Size metrics:
+  Total size of the cache directory: 420.3 KB
+    ABI snapshot size: 49 B
+  Increase memory usage: 80.9 MB
+  Total memory usage at the end of build: 103.4 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 996
+    Number of lines for code generation: 996
+    Analysis lines per second: 171
+    Code generation lines per second: 408
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 78
+    Size of jar classpath entry: 153.0 MB
+    Size of jar classpath entry's snapshot: 8.2 MB
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 78
+    Size of classpath snapshot: 8.2 MB
+    Size of shrunk classpath snapshot: 44.7 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache misses when loading classpath entry snapshots: 78
+  Start time of task action: 2025-05-25T13:29:16
+
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+
+Total time for Kotlin tasks: 31.99 s (21.2 % of all tasks time)
+Time   |% of Kotlin time|Task                                                                                                                                                                                                                    
+19.60 s|61.3 %          |:app:compileDebugKotlin                                                                                                                                                                                                 
+1.14 s |3.5 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\4467c5d29efb017afe9b3d52f8e49b9f\transformed\jetified-material-icons-extended-release-api.jar                                            
+0.83 s |2.6 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ab0ef4ec3b0572b2d5a96a7ba4ba1199\transformed\jetified-ui-release-api.jar                                                                 
+0.76 s |2.4 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\85ec821ef9dd71332bf01bf7b920dd4d\transformed\jetified-material3-1.1.2-api.jar                                                            
+0.75 s |2.3 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\75ff7775616d2e11f8ad7201356a6856\transformed\jetified-foundation-release-api.jar                                                         
+0.70 s |2.2 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\eb8e3746f8ab838d6e26273b8ef7de2a\transformed\jetified-ui-text-release-api.jar                                                            
+0.57 s |1.8 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\b644c8d5ef289293d61ec42be5e3935b\transformed\jetified-ui-graphics-release-api.jar                                                        
+0.55 s |1.7 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6fb00f6da62babf82eca21a534879cd4\transformed\jetified-animation-core-release-api.jar                                                     
+0.54 s |1.7 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\475633dce0b6e1ba85b3595fd5346d8f\transformed\jetified-foundation-layout-release-api.jar                                                  
+0.52 s |1.6 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\02832e151f6443f3e0511d432de62d1c\transformed\jetified-material-icons-core-release-api.jar                                                
+0.51 s |1.6 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ec7d95b85cbdb809296c72375fc08620\transformed\jetified-animation-release-api.jar                                                          
+0.47 s |1.5 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ad784d057a1ccfdcce83f16c764848ab\transformed\jetified-activity-compose-1.8.2-api.jar                                                     
+0.47 s |1.5 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ea0d964d6cdc32d5df4d5cc1fef9e008\transformed\jetified-ui-unit-release-api.jar                                                            
+0.45 s |1.4 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a9bd685d08c0aa676dd696cb552bd8c4\transformed\jetified-ui-geometry-release-api.jar                                                        
+0.44 s |1.4 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\AppData\Local\Android\Sdk\platforms\android-34\android.jar                                                                                                           
+0.44 s |1.4 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6e3380b21e5809b2e5860a7a7c2216a0\transformed\jetified-activity-ktx-1.8.2-api.jar                                                         
+0.42 s |1.3 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\3f27b913a38da7272f3ad7bace4a40e2\transformed\jetified-material-ripple-release-api.jar                                                    
+0.42 s |1.3 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\35ede1134fe27aa2208d0ba3e6cb80b1\transformed\jetified-ui-tooling-preview-release-api.jar                                                 
+0.42 s |1.3 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6f84a4de718198d1d45bec8fe154f046\transformed\jetified-ui-tooling-data-release-api.jar                                                    
+0.39 s |1.2 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\f4459a1acecf9d13597a48bd599fc4ae\transformed\jetified-kotlin-stdlib-1.9.20.jar                                                           
+0.27 s |0.8 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7ae0430b1984900d639ff62544f3b8d5\transformed\jetified-kotlinx-coroutines-core-jvm-1.7.3.jar                                              
+0.24 s |0.8 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\27c17fcebd1523f566a2b2ca7322ee07\transformed\material-1.10.0-api.jar                                                                     
+0.22 s |0.7 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1d11c756ca3852919ca0b7b56b684330\transformed\jetified-runtime-release-api.jar                                                            
+0.22 s |0.7 %           |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar                                                                         
+0.18 s |0.6 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\931be5e6592c63becb2a25cbb84a18fd\transformed\jetified-activity-1.8.2-api.jar                                                             
+0.11 s |0.3 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6e46e92009dda55de6fafb8662ee8a0e\transformed\core-1.12.0-api.jar                                                                         
+0.08 s |0.2 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\704a47f48d2efb843625cc9b94da9c8b\transformed\jetified-core-ktx-1.12.0-api.jar                                                            
+0.02 s |0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common\2.7.0\85334205d65cca70ed0109c3acbd29e22a2d9cb1\lifecycle-common-2.7.0.jar                     
+0.02 s |0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\f1bad9a4a85122e9f9e80e79c5db6323\transformed\appcompat-1.6.1-api.jar                                                                     
+0.02 s |0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\21ceb88813ec5acc57f38b82ca0ed2f5\transformed\lifecycle-livedata-2.7.0-api.jar                                                            
+0.02 s |0.1 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7d71600dd7071a0eae7efb897fea3105\transformed\jetified-annotation-jvm-1.6.0.jar                                                           
+0.02 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5e39f938eedf5ebb9c15d310ce216148\transformed\constraintlayout-2.0.1-api.jar                                                              
+0.02 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\fa6f0780c9a683607d9a63899f65eeb2\transformed\jetified-ui-tooling-release-api.jar                                                         
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a34e1cf0775d98ed3cd7a44923655fb2\transformed\lifecycle-viewmodel-2.7.0-api.jar                                                           
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.constraintlayout\constraintlayout-solver\2.0.1\30988fe2d77f3fe3bf7551bb8a8b795fad7e7226\constraintlayout-solver-2.0.1.jar
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\AppData\Local\Android\Sdk\build-tools\33.0.1\core-lambda-stubs.jar                                                                                                   
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\bb0e104819fa4318d1032bbab2d696d5\transformed\recyclerview-1.1.0-api.jar                                                                  
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e1326564a8901094c5f62517628301a9\transformed\jetified-lifecycle-runtime-ktx-2.7.0-api.jar                                                
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7dd17fd1ddf518422470d26346fb451d\transformed\jetified-core-splashscreen-1.0.1-api.jar                                                    
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7c2b7a53c41c2f8dee6c789ca703d43f\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0-api.jar                                       
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e40d4bc2d776cc92d193f0a6384ca2e6\transformed\jetified-runtime-saveable-release-api.jar                                                   
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6a72437dfb398a7927ea276772be93c9\transformed\fragment-1.3.6-api.jar                                                                      
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\57601d76fc95b43c1bffbc73c4ff891c\transformed\jetified-lifecycle-viewmodel-compose-2.7.0-api.jar                                          
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\fb0ab634517c025aa8702ca404305fea\transformed\jetified-savedstate-1.2.1-api.jar                                                           
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\c0f0b1db8ab803ee0f0d42dde524bc08\transformed\transition-1.2.0-api.jar                                                                    
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ec2fc6152383bc81399d874b11e83158\transformed\lifecycle-runtime-2.7.0-api.jar                                                             
+0.01 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6933b0e065853a2460b5aed6c21ff24d\transformed\jetified-annotations-23.0.0.jar                                                             
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1588df73ea6b846c5064583c95c1d2e1\transformed\customview-1.1.0-api.jar                                                                    
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\41454149513372be6cfc01c13f27f766\transformed\jetified-kotlinx-coroutines-android-1.7.3.jar                                               
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.collection\collection\1.1.0\1f27220b47669781457de0d600849a5de0e89909\collection-1.1.0.jar                                
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1cac767958ba62bad8ce7caf44211aa2\transformed\jetified-appcompat-resources-1.6.1-api.jar                                                  
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\fec00bda00ded288da0f1c0ba793153c\transformed\dynamicanimation-1.0.0-api.jar                                                              
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\778de848a102ef39dc7eb4fe30f6fdc8\transformed\legacy-support-core-utils-1.0.0-api.jar                                                     
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6db47c2684226c9cb6b9febb2019ffee\transformed\loader-1.0.0-api.jar                                                                        
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e411d3a4d6586d07fb56f1d01d75cc87\transformed\lifecycle-livedata-core-2.7.0-api.jar                                                       
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\8118492236e4110e2b2335c797540e8c\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0-api.jar                                              
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e8f74bae9e6e5ff2e9412c06e4b0ba89\transformed\versionedparcelable-1.1.1-api.jar                                                           
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\de7063b26b71f588755c94d952abb9a6\transformed\jetified-ui-test-manifest-1.5.4-api.jar                                                     
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6ab08637fc21f02a031a57909c730664\transformed\jetified-viewpager2-1.0.0-api.jar                                                           
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d38b9eede001685acadfba420242e00b\transformed\drawerlayout-1.1.1-api.jar                                                                  
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5c0dcbe5f5d4e6a241eec336aeae0ea6\transformed\coordinatorlayout-1.1.0-api.jar                                                             
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\0a76f65a3eac7a34dd9655333713fe89\transformed\vectordrawable-animated-1.1.0-api.jar                                                       
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ecd2a09987ed8e9c2c37e15554b789c8\transformed\viewpager-1.0.0-api.jar                                                                     
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\62229c91c78a627d7b42a486bef2c3f2\transformed\vectordrawable-1.1.0-api.jar                                                                
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e6ef7d05b8a0da4c501fa993f944fd93\transformed\jetified-annotation-experimental-1.3.0-api.jar                                              
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7185c1723c8785fd928c284a0ce7bfc3\transformed\jetified-savedstate-ktx-1.2.1-api.jar                                                       
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d1f259dbebd3875b9f82c18cac2a89a3\transformed\cursoradapter-1.0.0-api.jar                                                                 
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.arch.core\core-common\2.2.0\5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3\core-common-2.2.0.jar                               
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7a1c49b4bb224b51fef41922c6095a79\transformed\core-runtime-2.2.0-api.jar                                                                  
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\90531bcdc60297b6c0794d584c85d30e\transformed\documentfile-1.0.0-api.jar                                                                  
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\3f2ad581eeeb31aed3658c425131dbd4\transformed\print-1.0.0-api.jar                                                                         
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\03519258fac2bc873961cfb7c787c150\transformed\jetified-resourceinspection-annotation-1.0.1.jar                                            
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7cdee7006d9bbca46788d55293ad6b35\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0-api.jar                                          
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common-java8\2.7.0\2ad14aed781c4a73ed4dbb421966d408a0a06686\lifecycle-common-java8-2.7.0.jar         
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\58dd39bc8bce0cbe6fde0deb722b1a55\transformed\cardview-1.0.0-api.jar                                                                      
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d9378960a2d056dad6681a6fd94cf79f\transformed\interpolator-1.0.0-api.jar                                                                  
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6cba49b8ce6193db92728c483723e0d4\transformed\localbroadcastmanager-1.0.0-api.jar                                                         
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a32929dccc1af3c5dfb8fab4f9e5579f\transformed\jetified-kotlin-stdlib-jdk7-1.8.22.jar                                                      
+0.00 s |0.0 %           |ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\daccf57ff6f51eecc7327f12c3c67004\transformed\jetified-kotlin-stdlib-jdk8-1.8.22.jar                                                      
+
+Task ':app:dexBuilderDebug' finished in 42.46 s
+Time metrics:
+  Total Gradle task time: 42.46 s
+
+Task ':app:checkDebugAarMetadata' finished in 41.40 s
+Time metrics:
+  Total Gradle task time: 41.40 s
+
+Task ':app:compileDebugKotlin' finished in 19.60 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Non-incremental compilation will be performed: UNKNOWN_CHANGES_IN_GRADLE_INPUTS
+  Cleaning 3 output directories
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = NonIncremental), retained 145 / 23997 classes
+Time metrics:
+  Total Gradle task time: 19.60 s
+  Spent time before task action: 7.42 s
+  Task action before worker execution: 0.23 s
+  Run compilation in Gradle worker: 11.88 s
+    Connect to Kotlin daemon: 0.53 s
+    Run compilation: 11.34 s
+      Incremental compilation in daemon: 11.23 s
+        Clear outputs on rebuild: 0.00 s
+        Update caches: 0.16 s
+        Sources compilation round: 10.34 s
+          Compiler initialization time: 0.57 s
+          Compiler code analysis: 5.82 s
+          Compiler code generation: 2.44 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.32 s
+          Shrink current classpath snapshot non-incrementally: 0.31 s
+            Load current classpath snapshot: 0.18 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.02 s
+Size metrics:
+  Total size of the cache directory: 420.3 KB
+    ABI snapshot size: 49 B
+  Increase memory usage: 80.9 MB
+  Total memory usage at the end of build: 103.4 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 996
+    Number of lines for code generation: 996
+    Analysis lines per second: 171
+    Code generation lines per second: 408
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 78
+    Size of classpath snapshot: 8.2 MB
+    Size of shrunk classpath snapshot: 44.7 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache misses when loading classpath entry snapshots: 78
+  Start time of task action: 2025-05-25T13:29:16
+Build attributes:
+  REBUILD_REASON: Unknown Gradle changes
+GC metrics:
+  G1 Young Generation:
+    GC count: 16
+    GC time: 0.11 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 6.60 s
+Time metrics:
+  Total Gradle task time: 6.60 s
+
+Task ':app:mergeExtDexDebug' finished in 5.90 s
+Time metrics:
+  Total Gradle task time: 5.90 s
+
+Task ':app:processDebugResources' finished in 4.08 s
+Time metrics:
+  Total Gradle task time: 4.08 s
+
+Task ':app:processDebugManifestForPackage' finished in 3.36 s
+Time metrics:
+  Total Gradle task time: 3.36 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 3.00 s
+Time metrics:
+  Total Gradle task time: 3.00 s
+
+Task ':app:mergeDebugJavaResource' finished in 2.80 s
+Time metrics:
+  Total Gradle task time: 2.80 s
+
+Task ':app:mergeDebugResources' finished in 2.50 s
+Time metrics:
+  Total Gradle task time: 2.50 s
+
+Task ':app:jacocoDebug' finished in 2.02 s
+Time metrics:
+  Total Gradle task time: 2.02 s
+
+Task ':app:packageDebug' finished in 1.72 s
+Time metrics:
+  Total Gradle task time: 1.72 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\4467c5d29efb017afe9b3d52f8e49b9f\transformed\jetified-material-icons-extended-release-api.jar' finished in 1.14 s
+Time metrics:
+  Classpath entry snapshot transform: 1.13 s
+    Load classes (paths only): 0.01 s
+    Snapshot classes: 1.11 s
+      Load contents of classes: 0.14 s
+      Snapshot Kotlin classes: 0.83 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 79.3 MB
+    Size of jar classpath entry's snapshot: 2.7 MB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ab0ef4ec3b0572b2d5a96a7ba4ba1199\transformed\jetified-ui-release-api.jar' finished in 0.83 s
+Time metrics:
+  Classpath entry snapshot transform: 0.83 s
+    Snapshot classes: 0.82 s
+      Load contents of classes: 0.02 s
+      Snapshot Kotlin classes: 0.75 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 5.2 MB
+    Size of jar classpath entry's snapshot: 328.7 KB
+
+Task ':app:processDebugMainManifest' finished in 0.82 s
+Time metrics:
+  Total Gradle task time: 0.82 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\85ec821ef9dd71332bf01bf7b920dd4d\transformed\jetified-material3-1.1.2-api.jar' finished in 0.76 s
+Time metrics:
+  Classpath entry snapshot transform: 0.76 s
+    Snapshot classes: 0.76 s
+      Load contents of classes: 0.03 s
+      Snapshot Kotlin classes: 0.67 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 7.7 MB
+    Size of jar classpath entry's snapshot: 252.3 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\75ff7775616d2e11f8ad7201356a6856\transformed\jetified-foundation-release-api.jar' finished in 0.75 s
+Time metrics:
+  Classpath entry snapshot transform: 0.75 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.75 s
+      Load contents of classes: 0.02 s
+      Snapshot Kotlin classes: 0.66 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 6.1 MB
+    Size of jar classpath entry's snapshot: 347.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\eb8e3746f8ab838d6e26273b8ef7de2a\transformed\jetified-ui-text-release-api.jar' finished in 0.70 s
+Time metrics:
+  Classpath entry snapshot transform: 0.70 s
+    Snapshot classes: 0.70 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.64 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.9 MB
+    Size of jar classpath entry's snapshot: 123.9 KB
+
+Task ':app:parseDebugLocalResources' finished in 0.68 s
+Time metrics:
+  Total Gradle task time: 0.68 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\b644c8d5ef289293d61ec42be5e3935b\transformed\jetified-ui-graphics-release-api.jar' finished in 0.57 s
+Time metrics:
+  Classpath entry snapshot transform: 0.57 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.56 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.52 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 889.7 KB
+    Size of jar classpath entry's snapshot: 59.5 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6fb00f6da62babf82eca21a534879cd4\transformed\jetified-animation-core-release-api.jar' finished in 0.55 s
+Time metrics:
+  Classpath entry snapshot transform: 0.55 s
+    Snapshot classes: 0.54 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.50 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 765.0 KB
+    Size of jar classpath entry's snapshot: 45.7 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\475633dce0b6e1ba85b3595fd5346d8f\transformed\jetified-foundation-layout-release-api.jar' finished in 0.54 s
+Time metrics:
+  Classpath entry snapshot transform: 0.54 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.53 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.47 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.3 MB
+    Size of jar classpath entry's snapshot: 89.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\02832e151f6443f3e0511d432de62d1c\transformed\jetified-material-icons-core-release-api.jar' finished in 0.52 s
+Time metrics:
+  Classpath entry snapshot transform: 0.52 s
+    Snapshot classes: 0.51 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.47 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.7 MB
+    Size of jar classpath entry's snapshot: 63.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ec7d95b85cbdb809296c72375fc08620\transformed\jetified-animation-release-api.jar' finished in 0.51 s
+Time metrics:
+  Classpath entry snapshot transform: 0.51 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.51 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.46 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 698.7 KB
+    Size of jar classpath entry's snapshot: 33.7 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ad784d057a1ccfdcce83f16c764848ab\transformed\jetified-activity-compose-1.8.2-api.jar' finished in 0.47 s
+Time metrics:
+  Classpath entry snapshot transform: 0.47 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.47 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.43 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 150.8 KB
+    Size of jar classpath entry's snapshot: 8.7 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ea0d964d6cdc32d5df4d5cc1fef9e008\transformed\jetified-ui-unit-release-api.jar' finished in 0.47 s
+Time metrics:
+  Classpath entry snapshot transform: 0.47 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.46 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.43 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 142.7 KB
+    Size of jar classpath entry's snapshot: 9.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a9bd685d08c0aa676dd696cb552bd8c4\transformed\jetified-ui-geometry-release-api.jar' finished in 0.45 s
+Time metrics:
+  Classpath entry snapshot transform: 0.45 s
+    Snapshot classes: 0.45 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.42 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 77.1 KB
+    Size of jar classpath entry's snapshot: 4.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\AppData\Local\Android\Sdk\platforms\android-34\android.jar' finished in 0.44 s
+Time metrics:
+  Classpath entry snapshot transform: 0.44 s
+    Load classes (paths only): 0.01 s
+    Snapshot classes: 0.42 s
+      Load contents of classes: 0.13 s
+      Snapshot Java classes: 0.21 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 25.1 MB
+    Size of jar classpath entry's snapshot: 1.4 MB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6e3380b21e5809b2e5860a7a7c2216a0\transformed\jetified-activity-ktx-1.8.2-api.jar' finished in 0.44 s
+Time metrics:
+  Classpath entry snapshot transform: 0.44 s
+    Snapshot classes: 0.44 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.40 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 56.3 KB
+    Size of jar classpath entry's snapshot: 3.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\3f27b913a38da7272f3ad7bace4a40e2\transformed\jetified-material-ripple-release-api.jar' finished in 0.42 s
+Time metrics:
+  Classpath entry snapshot transform: 0.42 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.41 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.38 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 176.4 KB
+    Size of jar classpath entry's snapshot: 9.1 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\35ede1134fe27aa2208d0ba3e6cb80b1\transformed\jetified-ui-tooling-preview-release-api.jar' finished in 0.42 s
+Time metrics:
+  Classpath entry snapshot transform: 0.42 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.41 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.37 s
+    Save classpath entry snapshot: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 25.0 KB
+    Size of jar classpath entry's snapshot: 4.3 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6f84a4de718198d1d45bec8fe154f046\transformed\jetified-ui-tooling-data-release-api.jar' finished in 0.42 s
+Time metrics:
+  Classpath entry snapshot transform: 0.42 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.41 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.38 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 82.9 KB
+    Size of jar classpath entry's snapshot: 4.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\f4459a1acecf9d13597a48bd599fc4ae\transformed\jetified-kotlin-stdlib-1.9.20.jar' finished in 0.39 s
+Time metrics:
+  Classpath entry snapshot transform: 0.39 s
+    Snapshot classes: 0.38 s
+      Load contents of classes: 0.03 s
+      Snapshot Kotlin classes: 0.33 s
+      Snapshot Java classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.6 MB
+    Size of jar classpath entry's snapshot: 249.7 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7ae0430b1984900d639ff62544f3b8d5\transformed\jetified-kotlinx-coroutines-core-jvm-1.7.3.jar' finished in 0.27 s
+Time metrics:
+  Classpath entry snapshot transform: 0.27 s
+    Snapshot classes: 0.26 s
+      Load contents of classes: 0.04 s
+      Snapshot Kotlin classes: 0.20 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.5 MB
+    Size of jar classpath entry's snapshot: 193.3 KB
+
+Task ':app:mergeProjectDexDebug' finished in 0.26 s
+Time metrics:
+  Total Gradle task time: 0.26 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\27c17fcebd1523f566a2b2ca7322ee07\transformed\material-1.10.0-api.jar' finished in 0.24 s
+Time metrics:
+  Classpath entry snapshot transform: 0.24 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.24 s
+      Load contents of classes: 0.02 s
+      Snapshot Java classes: 0.16 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 4.3 MB
+    Size of jar classpath entry's snapshot: 311.5 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1d11c756ca3852919ca0b7b56b684330\transformed\jetified-runtime-release-api.jar' finished in 0.22 s
+Time metrics:
+  Classpath entry snapshot transform: 0.22 s
+    Snapshot classes: 0.22 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.19 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.7 MB
+    Size of jar classpath entry's snapshot: 190.5 KB
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\R.jar' finished in 0.22 s
+Time metrics:
+  Classpath entry snapshot transform: 0.22 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.17 s
+      Load contents of classes: 0.01 s
+      Snapshot Java classes: 0.12 s
+    Save classpath entry snapshot: 0.05 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 839.6 KB
+    Size of jar classpath entry's snapshot: 1,001.0 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\931be5e6592c63becb2a25cbb84a18fd\transformed\jetified-activity-1.8.2-api.jar' finished in 0.18 s
+Time metrics:
+  Classpath entry snapshot transform: 0.18 s
+    Snapshot classes: 0.18 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.16 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 366.4 KB
+    Size of jar classpath entry's snapshot: 36.2 KB
+
+Task ':app:processDebugManifest' finished in 0.17 s
+Time metrics:
+  Total Gradle task time: 0.17 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.14 s
+Time metrics:
+  Total Gradle task time: 0.14 s
+
+Task ':app:mergeDebugAssets' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:packageDebugResources' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6e46e92009dda55de6fafb8662ee8a0e\transformed\core-1.12.0-api.jar' finished in 0.11 s
+Time metrics:
+  Classpath entry snapshot transform: 0.11 s
+    Load classes (paths only): 0.00 s
+    Snapshot classes: 0.08 s
+      Load contents of classes: 0.02 s
+      Snapshot Java classes: 0.05 s
+    Save classpath entry snapshot: 0.02 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.7 MB
+    Size of jar classpath entry's snapshot: 267.7 KB
+
+Task ':app:generateDebugBuildConfig' finished in 0.10 s
+Time metrics:
+  Total Gradle task time: 0.10 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.10 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\704a47f48d2efb843625cc9b94da9c8b\transformed\jetified-core-ktx-1.12.0-api.jar' finished in 0.08 s
+Time metrics:
+  Classpath entry snapshot transform: 0.08 s
+    Snapshot classes: 0.08 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.07 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 421.7 KB
+    Size of jar classpath entry's snapshot: 27.3 KB
+
+Task ':app:validateSigningDebug' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:mergeDebugGlobalSynthetics' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:javaPreCompileDebug' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common\2.7.0\85334205d65cca70ed0109c3acbd29e22a2d9cb1\lifecycle-common-2.7.0.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Snapshot classes: 0.02 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.02 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 55.3 KB
+    Size of jar classpath entry's snapshot: 8.6 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\f1bad9a4a85122e9f9e80e79c5db6323\transformed\appcompat-1.6.1-api.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Snapshot classes: 0.02 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.01 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 1.7 MB
+    Size of jar classpath entry's snapshot: 116.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\21ceb88813ec5acc57f38b82ca0ed2f5\transformed\lifecycle-livedata-2.7.0-api.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Snapshot classes: 0.02 s
+      Snapshot Kotlin classes: 0.02 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 128.5 KB
+    Size of jar classpath entry's snapshot: 6.2 KB
+
+Task ':app:processDebugJavaRes' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mergeLibDexDebug' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7d71600dd7071a0eae7efb897fea3105\transformed\jetified-annotation-jvm-1.6.0.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Snapshot classes: 0.02 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 53.9 KB
+    Size of jar classpath entry's snapshot: 19.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5e39f938eedf5ebb9c15d310ce216148\transformed\constraintlayout-2.0.1-api.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 899.6 KB
+    Size of jar classpath entry's snapshot: 51.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\fa6f0780c9a683607d9a63899f65eeb2\transformed\jetified-ui-tooling-release-api.jar' finished in 0.02 s
+Time metrics:
+  Classpath entry snapshot transform: 0.02 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Kotlin classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 556.9 KB
+    Size of jar classpath entry's snapshot: 31.9 KB
+
+Task ':app:extractDeepLinksDebug' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a34e1cf0775d98ed3cd7a44923655fb2\transformed\lifecycle-viewmodel-2.7.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Snapshot Kotlin classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 82.6 KB
+    Size of jar classpath entry's snapshot: 9.4 KB
+
+Task ':app:compressDebugAssets' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.constraintlayout\constraintlayout-solver\2.0.1\30988fe2d77f3fe3bf7551bb8a8b795fad7e7226\constraintlayout-solver-2.0.1.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 197.9 KB
+    Size of jar classpath entry's snapshot: 25.6 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\AppData\Local\Android\Sdk\build-tools\33.0.1\core-lambda-stubs.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Snapshot Java classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 14.8 KB
+    Size of jar classpath entry's snapshot: 6.5 KB
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\bb0e104819fa4318d1032bbab2d696d5\transformed\recyclerview-1.1.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 812.2 KB
+    Size of jar classpath entry's snapshot: 48.3 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e1326564a8901094c5f62517628301a9\transformed\jetified-lifecycle-runtime-ktx-2.7.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Snapshot Kotlin classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 77.8 KB
+    Size of jar classpath entry's snapshot: 3.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7dd17fd1ddf518422470d26346fb451d\transformed\jetified-core-splashscreen-1.0.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 60.2 KB
+    Size of jar classpath entry's snapshot: 5.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7c2b7a53c41c2f8dee6c789ca703d43f\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Snapshot Kotlin classes: 0.01 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 82.8 KB
+    Size of jar classpath entry's snapshot: 6.0 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e40d4bc2d776cc92d193f0a6384ca2e6\transformed\jetified-runtime-saveable-release-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 118.1 KB
+    Size of jar classpath entry's snapshot: 8.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6a72437dfb398a7927ea276772be93c9\transformed\fragment-1.3.6-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.01 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 624.2 KB
+    Size of jar classpath entry's snapshot: 32.0 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\57601d76fc95b43c1bffbc73c4ff891c\transformed\jetified-lifecycle-viewmodel-compose-2.7.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 43.3 KB
+    Size of jar classpath entry's snapshot: 2.3 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\fb0ab634517c025aa8702ca404305fea\transformed\jetified-savedstate-1.2.1-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 37.2 KB
+    Size of jar classpath entry's snapshot: 4.1 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\c0f0b1db8ab803ee0f0d42dde524bc08\transformed\transition-1.2.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Load contents of classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 373.3 KB
+    Size of jar classpath entry's snapshot: 29.6 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ec2fc6152383bc81399d874b11e83158\transformed\lifecycle-runtime-2.7.0-api.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 41.9 KB
+    Size of jar classpath entry's snapshot: 3.7 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6933b0e065853a2460b5aed6c21ff24d\transformed\jetified-annotations-23.0.0.jar' finished in 0.01 s
+Time metrics:
+  Classpath entry snapshot transform: 0.01 s
+    Snapshot classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 28.7 KB
+    Size of jar classpath entry's snapshot: 17.6 KB
+
+Task ':app:createDebugApkListingFileRedirect' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1588df73ea6b846c5064583c95c1d2e1\transformed\customview-1.1.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 79.2 KB
+    Size of jar classpath entry's snapshot: 5.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\41454149513372be6cfc01c13f27f766\transformed\jetified-kotlinx-coroutines-android-1.7.3.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 20.2 KB
+    Size of jar classpath entry's snapshot: 2.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.collection\collection\1.1.0\1f27220b47669781457de0d600849a5de0e89909\collection-1.1.0.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 41.9 KB
+    Size of jar classpath entry's snapshot: 3.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\1cac767958ba62bad8ce7caf44211aa2\transformed\jetified-appcompat-resources-1.6.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 152.9 KB
+    Size of jar classpath entry's snapshot: 14.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\fec00bda00ded288da0f1c0ba793153c\transformed\dynamicanimation-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 84.2 KB
+    Size of jar classpath entry's snapshot: 11.0 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\778de848a102ef39dc7eb4fe30f6fdc8\transformed\legacy-support-core-utils-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 13.9 KB
+    Size of jar classpath entry's snapshot: 2.5 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6db47c2684226c9cb6b9febb2019ffee\transformed\loader-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 82.2 KB
+    Size of jar classpath entry's snapshot: 7.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e411d3a4d6586d07fb56f1d01d75cc87\transformed\lifecycle-livedata-core-2.7.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 18.3 KB
+    Size of jar classpath entry's snapshot: 1.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\8118492236e4110e2b2335c797540e8c\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 4.3 KB
+    Size of jar classpath entry's snapshot: 758 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e8f74bae9e6e5ff2e9412c06e4b0ba89\transformed\versionedparcelable-1.1.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Java classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 69.3 KB
+    Size of jar classpath entry's snapshot: 4.1 KB
+
+Task ':app:preBuild' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\de7063b26b71f588755c94d952abb9a6\transformed\jetified-ui-test-manifest-1.5.4-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 518 B
+    Size of jar classpath entry's snapshot: 218 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6ab08637fc21f02a031a57909c730664\transformed\jetified-viewpager2-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 146.3 KB
+    Size of jar classpath entry's snapshot: 13.5 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d38b9eede001685acadfba420242e00b\transformed\drawerlayout-1.1.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 76.0 KB
+    Size of jar classpath entry's snapshot: 5.3 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\5c0dcbe5f5d4e6a241eec336aeae0ea6\transformed\coordinatorlayout-1.1.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 105.0 KB
+    Size of jar classpath entry's snapshot: 7.0 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\0a76f65a3eac7a34dd9655333713fe89\transformed\vectordrawable-animated-1.1.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 86.2 KB
+    Size of jar classpath entry's snapshot: 7.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\ecd2a09987ed8e9c2c37e15554b789c8\transformed\viewpager-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 111.2 KB
+    Size of jar classpath entry's snapshot: 7.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\62229c91c78a627d7b42a486bef2c3f2\transformed\vectordrawable-1.1.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 85.9 KB
+    Size of jar classpath entry's snapshot: 6.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\e6ef7d05b8a0da4c501fa993f944fd93\transformed\jetified-annotation-experimental-1.3.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Snapshot classes: 0.00 s
+      Snapshot Kotlin classes: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 9.9 KB
+    Size of jar classpath entry's snapshot: 1.9 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7185c1723c8785fd928c284a0ce7bfc3\transformed\jetified-savedstate-ktx-1.2.1-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.0 KB
+    Size of jar classpath entry's snapshot: 395 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d1f259dbebd3875b9f82c18cac2a89a3\transformed\cursoradapter-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 22.5 KB
+    Size of jar classpath entry's snapshot: 3.2 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.arch.core\core-common\2.2.0\5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3\core-common-2.2.0.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 11.4 KB
+    Size of jar classpath entry's snapshot: 3.0 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7a1c49b4bb224b51fef41922c6095a79\transformed\core-runtime-2.2.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 10.8 KB
+    Size of jar classpath entry's snapshot: 1.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\90531bcdc60297b6c0794d584c85d30e\transformed\documentfile-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 24.4 KB
+    Size of jar classpath entry's snapshot: 1.6 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\3f2ad581eeeb31aed3658c425131dbd4\transformed\print-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 32.5 KB
+    Size of jar classpath entry's snapshot: 1.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\03519258fac2bc873961cfb7c787c150\transformed\jetified-resourceinspection-annotation-1.0.1.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.3 KB
+    Size of jar classpath entry's snapshot: 1.1 KB
+
+Task ':app:preDebugBuild' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\7cdee7006d9bbca46788d55293ad6b35\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 4.7 KB
+    Size of jar classpath entry's snapshot: 530 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common-java8\2.7.0\2ad14aed781c4a73ed4dbb421966d408a0a06686\lifecycle-common-java8-2.7.0.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+    Save classpath entry snapshot: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 261 B
+    Size of jar classpath entry's snapshot: 4 B
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\58dd39bc8bce0cbe6fde0deb722b1a55\transformed\cardview-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 48.0 KB
+    Size of jar classpath entry's snapshot: 3.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\d9378960a2d056dad6681a6fd94cf79f\transformed\interpolator-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 10.6 KB
+    Size of jar classpath entry's snapshot: 1.8 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\6cba49b8ce6193db92728c483723e0d4\transformed\localbroadcastmanager-1.0.0-api.jar' finished in 0.00 s
+Time metrics:
+  Classpath entry snapshot transform: 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 13.0 KB
+    Size of jar classpath entry's snapshot: 1.4 KB
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\a32929dccc1af3c5dfb8fab4f9e5579f\transformed\jetified-kotlin-stdlib-jdk7-1.8.22.jar' finished in 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 963 B
+    Size of jar classpath entry's snapshot: 4 B
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task 'ClasspathEntrySnapshotTransform for C:\Users\preda\.gradle\caches\transforms-3\daccf57ff6f51eecc7327f12c3c67004\transformed\jetified-kotlin-stdlib-jdk8-1.8.22.jar' finished in 0.00 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 969 B
+    Size of jar classpath entry's snapshot: 4 B
+
+Task ':app:assembleDebug' finished in 0.00 s
+

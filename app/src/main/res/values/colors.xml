@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 baseline colors -->
+    <color name="purple_80">#FFD0BCFF</color>
+    <color name="purple_grey_80">#FFCCC2DC</color>
+    <color name="pink_80">#FFEFB8C8</color>
+    <color name="purple_40">#FF6650a4</color>
+    <color name="purple_grey_40">#FF625b71</color>
+    <color name="pink_40">#FF7D5260</color>
+
+    <!-- Toddler-optimized primary colors -->
+    <color name="toddler_primary">#FF4CAF50</color>
+    <color name="toddler_secondary">#FF2196F3</color>
+    <color name="toddler_tertiary">#FFFF9800</color>
+
+    <!-- Background and surface colors -->
+    <color name="toddler_background">#FFFFFBFE</color>
+    <color name="toddler_surface">#FFF8F9FA</color>
+
+    <!-- Text colors -->
+    <color name="toddler_on_primary">#FFFFFFFF</color>
+    <color name="toddler_on_secondary">#FFFFFFFF</color>
+    <color name="toddler_on_tertiary">#FF000000</color>
+    <color name="toddler_on_background">#FF1C1B1F</color>
+    <color name="toddler_on_surface">#FF1C1B1F</color>
+
+    <!-- Accent colors for interactive elements -->
+    <color name="toddler_accent_1">#FFE91E63</color>
+    <color name="toddler_accent_2">#FF9C27B0</color>
+    <color name="toddler_accent_3">#FFFFEB3B</color>
+
+    <!-- Feedback colors -->
+    <color name="toddler_success">#FF4CAF50</color>
+    <color name="toddler_error">#FFFF5722</color>
+    <color name="toddler_warning">#FFFF9800</color>
+
+    <!-- Alphabet-specific colors -->
+    <color name="alphabet_red">#FFE53935</color>
+    <color name="alphabet_blue">#FF1E88E5</color>
+    <color name="alphabet_green">#FF43A047</color>
+    <color name="alphabet_orange">#FFFF7043</color>
+    <color name="alphabet_purple">#FF8E24AA</color>
+    <color name="alphabet_teal">#FF00ACC1</color>
+    <color name="alphabet_pink">#FFD81B60</color>
+    <color name="alphabet_indigo">#FF3949AB</color>
+    <color name="alphabet_amber">#FFFFB300</color>
+
+    <!-- Age-specific colors -->
+    <!-- Colors for 1-2 year olds -->
+    <color name="toddler_age_1_primary">#FFFF5722</color>
+    <color name="toddler_age_1_secondary">#FF4CAF50</color>
+    <color name="toddler_age_1_accent">#FFFFEB3B</color>
+
+    <!-- Colors for 3-4 year olds -->
+    <color name="toddler_age_3_primary">#FF3F51B5</color>
+    <color name="toddler_age_3_secondary">#FF009688</color>
+    <color name="toddler_age_3_accent">#FFE91E63</color>
+
+    <!-- Windows emulator optimized colors -->
+    <color name="windows_emulator_primary">#FF2E7D32</color>
+    <color name="windows_emulator_secondary">#FF1565C0</color>
+    <color name="windows_emulator_background">#FFFAFAFA</color>
+
+    <!-- Accessibility colors -->
+    <color name="accessibility_high_contrast">#FF000000</color>
+    <color name="accessibility_background">#FFFFFFFF</color>
+    <color name="accessibility_focus">#FF0066CC</color>
+
+    <!-- Interactive element colors -->
+    <color name="button_primary">#FF4CAF50</color>
+    <color name="button_secondary">#FF2196F3</color>
+    <color name="button_disabled">#FFBDBDBD</color>
+    <color name="button_pressed">#FF388E3C</color>
+
+    <!-- Progress and achievement colors -->
+    <color name="progress_empty">#FFE0E0E0</color>
+    <color name="progress_filled">#FF4CAF50</color>
+    <color name="achievement_gold">#FFFFD700</color>
+    <color name="achievement_silver">#FFC0C0C0</color>
+    <color name="achievement_bronze">#FFCD7F32</color>
+
+    <!-- Tracing activity colors -->
+    <color name="tracing_path">#FF9E9E9E</color>
+    <color name="tracing_correct">#FF4CAF50</color>
+    <color name="tracing_active">#FF2196F3</color>
+
+    <!-- Speech recognition colors -->
+    <color name="speech_listening">#FF2196F3</color>
+    <color name="speech_recognized">#FF4CAF50</color>
+    <color name="speech_error">#FFFF5722</color>
+
+    <!-- Parental control colors -->
+    <color name="parental_primary">#FF37474F</color>
+    <color name="parental_secondary">#FF546E7A</color>
+    <color name="parental_background">#FFF5F5F5</color>
+
+    <!-- Notification colors -->
+    <color name="notification_color">#FF4CAF50</color>
+
+    <!-- Status bar and navigation colors -->
+    <color name="status_bar_color">#FF4CAF50</color>
+    <color name="navigation_bar_color">#FFFFFFFF</color>
+
+    <!-- Common UI colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+
+    <!-- Shadow and elevation colors -->
+    <color name="shadow_light">#1A000000</color>
+    <color name="shadow_medium">#33000000</color>
+    <color name="shadow_dark">#4D000000</color>
+
+    <!-- Divider colors -->
+    <color name="divider_light">#FFE0E0E0</color>
+    <color name="divider_medium">#FFBDBDBD</color>
+    <color name="divider_dark">#FF9E9E9E</color>
+</resources>

@@ -1,0 +1,452 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 26.76 s
+  Spent time before task action: 0.03 s
+  Task action before worker execution: 0.69 s
+    Backup output: 0.62 s
+  Run compilation in Gradle worker: 4.76 s
+    Connect to Kotlin daemon: 0.02 s
+    Calculate output size: 0.00 s
+    Run compilation: 4.73 s
+      Incremental compilation in daemon: 4.70 s
+        Calculate initial dirty sources set: 0.02 s
+          Detect removed classes: 0.02 s
+        Update caches: 0.06 s
+        Sources compilation round: 3.85 s
+          Compiler initialization time: 0.32 s
+          Compiler code analysis: 1.74 s
+          Compiler code generation: 1.11 s
+        Shrink and save current classpath snapshot after compilation: 0.05 s
+          Shrink current classpath snapshot incrementally: 0.04 s
+            Load current classpath snapshot: 0.02 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+
+Size metrics:
+  Total size of the cache directory: 2.9 MB
+    ABI snapshot size: 550 B
+  Increase memory usage: -486615848 B
+  Total memory usage at the end of build: 1,000.5 MB
+  Total compiler iteration: 2
+    Number of lines analyzed: 2188
+    Number of lines for code generation: 1094
+    Analysis lines per second: 2524
+    Code generation lines per second: 990
+  Number of times classpath snapshot is shrunk and saved after compilation: 2
+    Number of classpath entries: 219
+    Size of classpath snapshot: 19.0 MB
+    Size of shrunk classpath snapshot: 169.9 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 110
+  Start time of task action: 2080-10-18T08:10:23
+
+
+Total time for Kotlin tasks: 6.06 s (22.6 % of all tasks time)
+Time  |% of Kotlin time|Task                             
+3.83 s|63.3 %          |:app:compileDebugKotlin          
+2.22 s|36.7 %          |:app:kaptGenerateStubsDebugKotlin
+
+Task ':app:kaptDebugKotlin' finished in 5.80 s
+Time metrics:
+  Total Gradle task time: 5.80 s
+
+Task ':app:transformDebugClassesWithAsm' finished in 3.84 s
+Time metrics:
+  Total Gradle task time: 3.84 s
+
+Task ':app:compileDebugKotlin' finished in 3.83 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.LiveLiterals.AnalyticsRepositoryKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.generateProgressReport.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel.loadAnalytics.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel.initializeAchievements.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.generateDashboardSummary.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository.getOverallStatistics.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository.recordLearningSession.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.calculateCurrentLearningStreak.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.calculateWeeklyImprovement..inlined.sortedBy.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.getMonthlyAnalytics.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.LiveLiterals.AnalyticsViewModelKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.WhenMappings)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.calculateLearningVelocity..inlined.sortedBy.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.generateParentInsights.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel.cleanupOldData.1)
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel.exportLearningData.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.exportLearningData.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.calculateStreakFromDailyStats..inlined.sortedByDescending.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.generateParentRecommendations.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository.generatePersonalizedLearningPath.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.getWeeklyAnalytics.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository.getContentAnalytics.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.LiveLiterals.ParentDashboardAnalyticsKt)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\LiveLiterals$AnalyticsRepositoryKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\OverallStatistics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\AnalyticsRepository$recordLearningSession$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\AnalyticsRepository$getOverallStatistics$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\AnalyticsRepository$getContentAnalytics$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\AnalyticsRepository$generatePersonalizedLearningPath$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\AnalyticsRepository.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\ContentAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$generateProgressReport$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\RecommendationType.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$getWeeklyAnalytics$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$generateDashboardSummary$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ProgressReport.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$WhenMappings.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$calculateStreakFromDailyStats$$inlined$sortedByDescending$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$getMonthlyAnalytics$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ExportFormat.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$calculateLearningVelocity$$inlined$sortedBy$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ReportTimeframe.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\DateRange.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardSummary.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\AccuracyTrend.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$generateParentRecommendations$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\WeeklyAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentRecommendation.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\RecommendationPriority.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\AchievementExportData.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$generateParentInsights$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\MonthlyAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\LiveLiterals$ParentDashboardAnalyticsKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$exportLearningData$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\SessionExportData.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$calculateCurrentLearningStreak$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$calculateWeeklyImprovement$$inlined$sortedBy$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\SummaryStatistics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\analytics\LearningDataExport.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel$loadAnalytics$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel$cleanupOldData$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel$exportLearningData$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\analytics\LiveLiterals$AnalyticsViewModelKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel$initializeAchievements$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository, names = [initializeSampleData])
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsUnchangedClasspath), retained 464 / 27538 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 3.83 s
+  Spent time before task action: 0.01 s
+  Task action before worker execution: 0.24 s
+    Backup output: 0.21 s
+  Run compilation in Gradle worker: 3.31 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 3.30 s
+      Incremental compilation in daemon: 3.29 s
+        Calculate initial dirty sources set: 0.01 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.03 s
+        Sources compilation round: 2.74 s
+          Compiler initialization time: 0.11 s
+          Compiler code analysis: 0.83 s
+          Compiler code generation: 1.11 s
+        Shrink and save current classpath snapshot after compilation: 0.04 s
+          Shrink current classpath snapshot incrementally: 0.04 s
+            Load current classpath snapshot: 0.02 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 1.8 MB
+    ABI snapshot size: 275 B
+  Increase memory usage: -28408744 B
+  Total memory usage at the end of build: 487.2 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1094
+    Number of lines for code generation: 1094
+    Analysis lines per second: 1314
+    Code generation lines per second: 990
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 110
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 107.2 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 110
+  Start time of task action: 2025-05-26T04:05:15
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.18 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:dexBuilderDebug' finished in 3.40 s
+Time metrics:
+  Total Gradle task time: 3.40 s
+
+Task ':app:hiltJavaCompileDebug' finished in 2.68 s
+Time metrics:
+  Total Gradle task time: 2.68 s
+
+Task ':app:jacocoDebug' finished in 2.24 s
+Time metrics:
+  Total Gradle task time: 2.24 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 2.22 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = .kotlin_module)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\ContentAnalytics.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\ContentAnalytics.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\OverallStatistics.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\repository\AnalyticsRepository.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\AnalyticsRepository.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\repository\OverallStatistics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\AnalyticsRepository.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\OverallStatistics.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\repository\ContentAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\RecommendationType.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\SessionExportData.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\SessionExportData.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\AccuracyTrend.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ExportFormat.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\WeeklyAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ParentDashboardSummary.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\DateRange.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\MonthlyAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ParentDashboardSummary.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\AchievementExportData.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\SummaryStatistics.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\RecommendationType.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ParentRecommendation.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\LearningDataExport.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ProgressReport.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\RecommendationPriority.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\AccuracyTrend.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ProgressReport.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\SessionExportData.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ParentDashboardSummary.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\LearningDataExport.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ParentRecommendation.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\MonthlyAnalytics.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\DateRange.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\RecommendationPriority.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\RecommendationPriority.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ReportTimeframe.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\DateRange.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\LearningDataExport.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ReportTimeframe.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\AchievementExportData.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\MonthlyAnalytics.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\AchievementExportData.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\SummaryStatistics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\WeeklyAnalytics.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ReportTimeframe.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ParentRecommendation.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\SummaryStatistics.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ProgressReport.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\AccuracyTrend.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\analytics\ExportFormat.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\ExportFormat.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\WeeklyAnalytics.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\analytics\RecommendationType.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository, names = [initializeSampleData])
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = UnchangedLookupsUnchangedClasspath), no updates since previous run
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 2.22 s
+  Spent time before task action: 0.02 s
+  Task action before worker execution: 0.45 s
+    Backup output: 0.42 s
+  Run compilation in Gradle worker: 1.44 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 1.43 s
+      Incremental compilation in daemon: 1.41 s
+        Calculate initial dirty sources set: 0.01 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.03 s
+        Sources compilation round: 1.11 s
+          Compiler initialization time: 0.21 s
+          Compiler code analysis: 0.90 s
+        Shrink and save current classpath snapshot after compilation: 0.00 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 1.1 MB
+    ABI snapshot size: 275 B
+  Increase memory usage: -458207104 B
+  Total memory usage at the end of build: 513.3 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 1094
+    Analysis lines per second: 1210
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 109
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 62.7 KB
+  Start time of task action: 2025-05-26T04:05:07
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.06 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 1.28 s
+Time metrics:
+  Total Gradle task time: 1.28 s
+
+Task ':app:mergeDebugJavaResource' finished in 1.05 s
+Time metrics:
+  Total Gradle task time: 1.05 s
+
+Task ':app:mergeProjectDexDebug' finished in 0.21 s
+Time metrics:
+  Total Gradle task time: 0.21 s
+
+Task ':app:packageDebug' finished in 0.10 s
+Time metrics:
+  Total Gradle task time: 0.10 s
+
+Task ':app:hiltAggregateDepsDebug' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:processDebugJavaRes' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:processDebugResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:processDebugMainManifest' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:packageDebugResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:parseDebugLocalResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeExtDexDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugGlobalSynthetics' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:createDebugApkListingFileRedirect' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+
+Task ':app:javaPreCompileDebug' finished in 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+
+Task ':app:mergeLibDexDebug' finished in 0.00 s
+
+Task ':app:assembleDebug' finished in 0.00 s
+

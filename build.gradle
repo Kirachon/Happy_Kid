@@ -1,0 +1,95 @@
+// Top-level build file for Happy_Kid Android project
+// Windows-optimized Gradle configuration
+
+buildscript {
+    ext {
+        compose_bom_version = '2023.10.01'
+        kotlin_version = '1.9.20'
+        hilt_version = '2.48.1'
+        room_version = '2.6.1'
+        navigation_version = '2.7.5'
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.1.4' apply false
+    id 'com.android.library' version '8.1.4' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.20' apply false
+    id 'com.google.dagger.hilt.android' version '2.48.1' apply false
+}
+
+// Windows-specific Gradle configurations
+allprojects {
+    // Windows file encoding
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
+        kotlinOptions {
+            jvmTarget = '17'  // Phase 6: Updated to match app module JVM target
+            freeCompilerArgs += [
+                "-opt-in=kotlin.RequiresOptIn",
+                "-Xjvm-default=all"
+            ]
+        }
+    }
+}
+
+// Windows-specific task for environment verification
+task verifyWindowsEnvironment {
+    doLast {
+        println "Verifying Windows Android Development Environment..."
+
+        def androidHome = System.getenv("ANDROID_HOME")
+        def javaHome = System.getenv("JAVA_HOME")
+
+        if (androidHome) {
+            println "✓ ANDROID_HOME: $androidHome"
+        } else {
+            throw new GradleException("✗ ANDROID_HOME not set")
+        }
+
+        if (javaHome) {
+            println "✓ JAVA_HOME: $javaHome"
+        } else {
+            println "⚠ JAVA_HOME not set (using embedded JDK)"
+        }
+
+        // Check Windows-specific paths
+        def windowsPaths = [
+            "$androidHome\\platform-tools",
+            "$androidHome\\tools",
+            System.getProperty("user.home") + "\\.gradle"
+        ]
+
+        windowsPaths.each { path ->
+            if (new File(path).exists()) {
+                println "✓ Path exists: $path"
+            } else {
+                println "⚠ Path missing: $path"
+            }
+        }
+
+        println "Windows environment verification complete!"
+    }
+}
+
+// Clean task with Windows-specific cleanup
+task cleanWindows(type: Delete) {
+    delete rootProject.buildDir
+    delete fileTree(dir: '.', include: '**/*.tmp')
+    delete fileTree(dir: '.', include: '**/*.log')
+
+    // Windows-specific cleanup
+    doLast {
+        println "Cleaned Windows-specific temporary files"
+    }
+}

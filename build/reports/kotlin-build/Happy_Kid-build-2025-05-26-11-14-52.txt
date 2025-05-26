@@ -1,0 +1,384 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Build failed: [Execution failed for task ':app:kaptDebugKotlin'.]
+
+Time metrics:
+  Total Gradle task time: 34.72 s
+  Spent time before task action: 0.50 s
+  Task action before worker execution: 0.97 s
+    Backup output: 0.28 s
+  Run compilation in Gradle worker: 11.02 s
+    Clear jar cache: 0.00 s
+    Connect to Kotlin daemon: 0.49 s
+    Calculate output size: 0.00 s
+    Run compilation: 10.51 s
+      Incremental compilation in daemon: 10.36 s
+        Store build info: 0.00 s
+        Calculate initial dirty sources set: 0.68 s
+          Detect removed classes: 0.65 s
+        Update caches: 0.20 s
+        Sources compilation round: 8.46 s
+          Compiler initialization time: 0.24 s
+          Compiler code analysis: 8.20 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.39 s
+          Shrink current classpath snapshot incrementally: 0.35 s
+            Load current classpath snapshot: 0.26 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.02 s
+  Start gradle worker: 0.09 s
+
+Size metrics:
+  Total size of the cache directory: 1.2 MB
+    ABI snapshot size: 7.4 KB
+  Increase memory usage: 70.9 MB
+  Total memory usage at the end of build: 93.8 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 3923
+    Analysis lines per second: 478
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 108
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 62.5 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache misses when loading classpath entry snapshots: 108
+  Start time of task action: 2025-05-26T03:14:24
+
+
+Total time for Kotlin tasks: 13.14 s (37.8 % of all tasks time)
+Time   |% of Kotlin time|Task                             
+13.14 s|100.0 %         |:app:kaptGenerateStubsDebugKotlin
+
+Task ':app:kaptDebugKotlin' finished in 14.38 s
+Time metrics:
+  Total Gradle task time: 14.38 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 13.14 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.screens.HomeScreenKt)
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidNavigationKt)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\ui\screens\HomeScreenKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$HappyKidDatabaseCallback.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\HappyKidDatabase.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\HappyKidDatabase.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidDestinations.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\navigation\HappyKidNavigationKt.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\data\AnalyticsTypeConverters.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\LearningAnalyticsDao.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\screens\HomeScreen.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\analytics\ParentDashboardAnalytics.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\di\AnalyticsModule.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\repository\AnalyticsRepository.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\analytics\AdaptiveLearningEngine.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\model\LearningAnalytics.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsViewModel.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\ui\analytics\AnalyticsScreen.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\analytics\AchievementManager.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\navigation\HappyKidNavigation.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.analytics.AchievementManager, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion, names = [MIGRATION_4_5])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase, names = [learningAnalyticsDao])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.ui.analytics, names = [AnalyticsScreen])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.ui.screens, names = [HomeScreen])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.analytics.AdaptiveLearningEngine, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics, names = [Companion])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.navigation.HappyKidDestinations, names = [ANALYTICS_ROUTE])
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.ContentMastery)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.AchievementExportData)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ProgressReport)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.SessionExportData)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.di.AnalyticsModule)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.MonthlyAnalytics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ReportTimeframe)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.AnalyticsTypeConverters)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.LearningPathType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.DailySessionCount)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ExportFormat)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.DifficultyAdjustmentReason)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.AchievementManager)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.DateRange)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.RecommendationUi)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.InsightPriority)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.RecommendationType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.LearningActivityType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.EngagementTrend)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState.Success)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.EngagementRecommendation)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.Achievement)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AchievementUi)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.LearningDataExport)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.EngagementRecommendationType)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.AdaptiveLearningEngine)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.AccuracyTrend)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AchievementCategory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LearningAnalyticsDao)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.SummaryStatistics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.EngagementPriority)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.ContentAnalytics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.LearningPrediction)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardSummary)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.MasteryDistributionUi)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.WeeklyAnalytics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState.Error)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.MasteryLevelCount)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.LearningPath)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.OverallStatistics)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.ParentRecommendation)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.TimeOfDayPerformance)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.DifficultyRecommendation)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState.Loading)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.OverallStatisticsUi)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.TrendUi)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.ui.analytics.WeeklyProgressUi)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AchievementRequirement)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ParentInsight)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.MasteryLevel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.DailyLearningStats)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.analytics.RecommendationPriority)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.InsightCategory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.LearningAnalytics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.ContentMastery)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.AchievementExportData)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.AchievementManager.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ProgressReport)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.AdaptiveLearningEngine.Companion)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.SessionExportData)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.di.AnalyticsModule)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.MonthlyAnalytics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ReportTimeframe)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.AnalyticsTypeConverters)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.LearningPathType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.DailySessionCount)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ExportFormat)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.DifficultyAdjustmentReason)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.AchievementManager)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.DateRange)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.RecommendationUi)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsViewModel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardAnalytics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.InsightPriority)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.RecommendationType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.LearningActivityType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.EngagementTrend)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState.Success)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.EngagementRecommendation)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.Achievement)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.AchievementUi)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.LearningDataExport)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.EngagementRecommendationType)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.AdaptiveLearningEngine)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.AccuracyTrend)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AchievementCategory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.LearningAnalyticsDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.SummaryStatistics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.EngagementPriority)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.ContentAnalytics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.LearningPrediction)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ParentDashboardSummary)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.MasteryDistributionUi)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.WeeklyAnalytics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState.Error)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.MasteryLevelCount)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.LearningPath)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.OverallStatistics)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.ParentRecommendation)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.TimeOfDayPerformance)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.DifficultyRecommendation)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.AnalyticsUiState.Loading)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.AnalyticsRepository)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.OverallStatisticsUi)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.TrendUi)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.ui.analytics.WeeklyProgressUi)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AchievementRequirement)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ParentInsight)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.MasteryLevel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.DailyLearningStats)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.analytics.RecommendationPriority)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.InsightCategory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.LearningAnalytics)
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsUnchangedClasspath), retained 256 / 27530 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 13.14 s
+  Spent time before task action: 0.50 s
+  Task action before worker execution: 0.97 s
+    Backup output: 0.28 s
+  Run compilation in Gradle worker: 11.02 s
+    Clear jar cache: 0.00 s
+    Connect to Kotlin daemon: 0.49 s
+    Calculate output size: 0.00 s
+    Run compilation: 10.51 s
+      Incremental compilation in daemon: 10.36 s
+        Store build info: 0.00 s
+        Calculate initial dirty sources set: 0.68 s
+          Detect removed classes: 0.65 s
+        Update caches: 0.20 s
+        Sources compilation round: 8.46 s
+          Compiler initialization time: 0.24 s
+          Compiler code analysis: 8.20 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.39 s
+          Shrink current classpath snapshot incrementally: 0.35 s
+            Load current classpath snapshot: 0.26 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.02 s
+  Start gradle worker: 0.09 s
+Size metrics:
+  Total size of the cache directory: 1.2 MB
+    ABI snapshot size: 7.4 KB
+  Increase memory usage: 70.9 MB
+  Total memory usage at the end of build: 93.8 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 3923
+    Analysis lines per second: 478
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 108
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 62.5 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache misses when loading classpath entry snapshots: 108
+  Start time of task action: 2025-05-26T03:14:24
+GC metrics:
+  G1 Young Generation:
+    GC count: 16
+    GC time: 0.08 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 1.39 s
+Time metrics:
+  Total Gradle task time: 1.39 s
+
+Task ':app:checkDebugAarMetadata' finished in 1.38 s
+Time metrics:
+  Total Gradle task time: 1.38 s
+
+Task ':app:mergeDebugResources' finished in 1.30 s
+Time metrics:
+  Total Gradle task time: 1.30 s
+
+Task ':app:processDebugMainManifest' finished in 1.25 s
+Time metrics:
+  Total Gradle task time: 1.25 s
+
+Task ':app:processDebugResources' finished in 0.88 s
+Time metrics:
+  Total Gradle task time: 0.88 s
+
+Task ':app:mergeDebugAssets' finished in 0.24 s
+Time metrics:
+  Total Gradle task time: 0.24 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.24 s
+Time metrics:
+  Total Gradle task time: 0.24 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task ':app:packageDebugResources' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.08 s
+Time metrics:
+  Total Gradle task time: 0.08 s
+
+Task ':app:parseDebugLocalResources' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:javaPreCompileDebug' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+

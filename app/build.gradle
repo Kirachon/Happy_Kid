@@ -1,0 +1,266 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    // Re-enable KAPT for Room database (Phase 1)
+    id 'kotlin-kapt'
+    // Phase 2: Enable Hilt dependency injection
+    id 'dagger.hilt.android.plugin'
+    // Firebase plugins temporarily disabled for demo
+    // id 'com.google.gms.google-services'
+    // id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.happykid.toddlerabc'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.happykid.toddlerabc"
+        minSdk 21  // Android 5.0+ as specified
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Windows-specific configurations
+        vectorDrawables {
+            useSupportLibrary true
+        }
+
+        // Windows emulator optimizations
+        if (project.hasProperty("windowsEmulator")) {
+            resConfigs "en", "xxhdpi"
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            testCoverageEnabled true
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+
+            // Windows debugging optimizations
+            buildConfigField "boolean", "WINDOWS_DEBUG", "true"
+
+            // Phase 6: Enhanced Windows emulator debug optimizations
+            buildConfigField "boolean", "ENABLE_PERFORMANCE_MONITORING", "true"
+            buildConfigField "boolean", "ENABLE_TOUCH_OPTIMIZATION", "true"
+            buildConfigField "long", "BUILD_TIMESTAMP", "${System.currentTimeMillis()}L"
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            // Windows release optimizations
+            buildConfigField "boolean", "WINDOWS_DEBUG", "false"
+        }
+    }
+
+    // Windows-specific build features
+    buildFeatures {
+        compose true
+        buildConfig true
+        viewBinding false
+        dataBinding false
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.5'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+
+        // Windows file encoding
+        encoding = 'UTF-8'
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+
+        // Windows-specific Kotlin compiler options
+        freeCompilerArgs += [
+            "-opt-in=kotlin.RequiresOptIn",
+            "-opt-in=androidx.compose.material3.ExperimentalMaterial3Api",
+            "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi",
+            "-Xjvm-default=all"
+        ]
+    }
+
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+    // Windows-specific test options
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+
+        // Windows emulator configuration
+        managedDevices {
+            devices {
+                windowsEmulator(com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = "Pixel 4"
+                    apiLevel = 30
+                    systemImageSource = "google"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    // Core Android dependencies
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.7.0'
+    implementation 'androidx.activity:activity-compose:1.8.2'
+
+    // AppCompat for theme compatibility
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    // Jetpack Compose BOM for version alignment
+    implementation platform("androidx.compose:compose-bom:$compose_bom_version")
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material:material-icons-extended'
+
+    // Phase 3: Navigation Component enabled
+    implementation "androidx.navigation:navigation-compose:$navigation_version"
+
+    // Room database - Phase 1 re-enabled
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Phase 2: Hilt dependency injection enabled
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.1.0'
+
+    // Phase 4: Media3 and audio (Windows-compatible versions) enabled
+    implementation 'androidx.media3:media3-exoplayer:1.2.0'
+    implementation 'androidx.media3:media3-ui:1.2.0'
+    implementation 'androidx.media3:media3-common:1.2.0'
+
+    // Image loading - temporarily disabled for initial build
+    // implementation 'io.coil-kt:coil-compose:2.5.0'
+
+    // Phase 7: Permissions for speech recognition
+    implementation 'com.google.accompanist:accompanist-permissions:0.32.0'
+
+    // Phase 11: Biometric authentication for parental controls
+    implementation 'androidx.biometric:biometric:1.1.0'
+
+    // Phase 11b: Vico charts for parent dashboard analytics visualization
+    implementation 'com.patrykandpatryk.vico:compose:1.15.0'
+    implementation 'com.patrykandpatryk.vico:compose-m3:1.15.0'
+    implementation 'com.patrykandpatryk.vico:core:1.15.0'
+
+    // Firebase temporarily disabled for demo
+    // implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    // implementation 'com.google.firebase:firebase-analytics-ktx'
+    // implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    // DataStore (for preferences) - temporarily disabled for initial build
+    // implementation 'androidx.datastore:datastore-preferences:1.0.0'
+
+    // Work Manager (for background tasks) - temporarily disabled for initial build
+    // implementation 'androidx.work:work-runtime-ktx:2.9.0'
+    // implementation 'androidx.hilt:hilt-work:1.1.0'  // Temporarily disabled
+
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:5.7.0'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:5.2.1'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
+    testImplementation "androidx.room:room-testing:$room_version"  // Phase 1 re-enabled
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    // testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"  // Temporarily disabled
+    // kaptTest "com.google.dagger:hilt-compiler:$hilt_version"  // Temporarily disabled
+
+    // Android instrumented tests
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation platform("androidx.compose:compose-bom:$compose_bom_version")
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    androidTestImplementation "androidx.navigation:navigation-testing:$navigation_version"
+    // androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"  // Temporarily disabled
+    // kaptAndroidTest "com.google.dagger:hilt-compiler:$hilt_version"  // Temporarily disabled
+
+    // Debug dependencies
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}
+
+// Windows-specific Kapt configurations - Phase 1 & 2 enabled
+kapt {
+    correctErrorTypes true
+    useBuildCache = true
+
+    // Windows-specific annotation processor options
+    arguments {
+        arg("room.schemaLocation", "$projectDir/schemas")
+        arg("room.incremental", "true")
+        arg("room.expandProjection", "true")
+        // Phase 2: Hilt-specific arguments
+        arg("dagger.hilt.android.internal.disableAndroidSuperclassValidation", "true")
+    }
+}
+
+// Windows-specific tasks
+task generateWindowsAssets {
+    doLast {
+        println "Generating Windows-optimized assets..."
+        // Custom asset generation logic for Windows development
+    }
+}
+
+// Windows build performance optimization
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        // Windows-specific compiler optimizations
+        jvmTarget = '17'  // Match Java target
+        allWarningsAsErrors = false
+        freeCompilerArgs += [
+            "-Xopt-in=kotlin.RequiresOptIn",
+            "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi"
+        ]
+    }
+}
+
+// Phase 6: Enhanced Windows emulator build optimizations
+android.applicationVariants.all { variant ->
+    if (variant.buildType.name == "debug") {
+        variant.outputs.all { output ->
+            def buildTime = new Date().format('HH:mm:ss')
+            def buildDate = new Date().format('yyyy-MM-dd')
+            output.versionNameOverride = "${variant.versionName}-${buildDate}-${buildTime}"
+        }
+    }
+}
+
+// Windows-specific task optimizations
+tasks.whenTaskAdded { task ->
+    if (task.name.contains("lint") && System.getProperty("os.name").toLowerCase().contains("windows")) {
+        task.enabled = false // Disable lint for faster Windows builds during development
+    }
+}

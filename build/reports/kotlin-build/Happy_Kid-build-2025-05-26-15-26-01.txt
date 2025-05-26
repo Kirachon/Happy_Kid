@@ -1,0 +1,369 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Build failed: [Execution failed for task ':app:hiltJavaCompileDebug'.]
+
+Time metrics:
+  Total Gradle task time: 33.86 s
+  Spent time before task action: 0.12 s
+  Task action before worker execution: 1.85 s
+    Backup output: 1.47 s
+  Run compilation in Gradle worker: 8.24 s
+    Connect to Kotlin daemon: 0.03 s
+    Calculate output size: 0.01 s
+    Run compilation: 8.20 s
+      Incremental compilation in daemon: 8.15 s
+        Store build info: 0.00 s
+        Calculate initial dirty sources set: 0.37 s
+          Analyze Java file changes: 0.32 s
+          Detect removed classes: 0.04 s
+        Update caches: 0.15 s
+        Sources compilation round: 6.85 s
+          Compiler initialization time: 0.75 s
+          Compiler code analysis: 4.53 s
+          Compiler code generation: 0.55 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.09 s
+          Shrink current classpath snapshot incrementally: 0.06 s
+            Load current classpath snapshot: 0.01 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+
+Size metrics:
+  Total size of the cache directory: 3.8 MB
+    ABI snapshot size: 17.4 KB
+  Increase memory usage: -176872120 B
+  Total memory usage at the end of build: 718.4 MB
+  Total compiler iteration: 3
+    Number of lines analyzed: 2135
+    Number of lines for code generation: 1439
+    Analysis lines per second: 1503
+    Code generation lines per second: 5061
+  Number of times classpath snapshot is shrunk and saved after compilation: 2
+    Number of classpath entries: 229
+    Size of classpath snapshot: 20.4 MB
+    Size of shrunk classpath snapshot: 191.3 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 115
+  Start time of task action: 2080-10-18T14:51:10
+
+
+Total time for Kotlin tasks: 12.33 s (36.4 % of all tasks time)
+Time  |% of Kotlin time|Task                             
+8.76 s|71.0 %          |:app:compileDebugKotlin          
+3.57 s|29.0 %          |:app:kaptGenerateStubsDebugKotlin
+
+Task ':app:kaptDebugKotlin' finished in 9.92 s
+Time metrics:
+  Total Gradle task time: 9.92 s
+
+Task ':app:compileDebugKotlin' finished in 8.76 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository.getRecommendedStories.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LiveLiterals.VocabularyDaoKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository.getStoriesForLetterPractice.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository.getStoriesForLetterPractice..inlined.sortedBy.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository.getStoriesForPhonicsWords..inlined.sortedBy.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.LiveLiterals.StoryRepositoryKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository.getRecommendedStories..inlined.sortedBy.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository.getStoriesForPhonicsWords.1)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\LiveLiterals$VocabularyDaoKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\VocabularyDao.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository$getRecommendedStories$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository$getStoriesForPhonicsWords$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\LiveLiterals$StoryRepositoryKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository$getStoriesForLetterPractice$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository$getStoriesForPhonicsWords$$inlined$sortedBy$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository$getRecommendedStories$$inlined$sortedBy$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\repository\StoryRepository$getStoriesForLetterPractice$$inlined$sortedBy$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\repository\VocabularyRepository.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\repository\StoryRepository.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.PhonicsDao_Impl, names = [getHighFrequencyWordsFlow, getMostChallengingWords, getMasteredWords, searchWords, getCVCWordsFlow, insertPhonicsWord, getTotalWordCount, getMasteredSightWordCount, resetWordProgress, getRequiredConverters, getWordsForAge, insertPhonicsWords, deleteAllPhonicsWords, getAllPhonicsWords, getPhonicsWordCount, getPhonicsWordById, getWordsNeedingPractice, getWordsByFamily, recordWordPresentation, getAverageRecognitionAccuracy, getWordsByCategory, recordWordRecognition, deletePhonicsWord, getWordsByDifficulty, getMasteredWordCount, getRecentlyPracticedWords, <init>, resetAllWordProgress, getPhonicsWordByText, getAllPhonicsWordsFlow, getRandomWordsForPractice, getSightWordsFlow, getWordFamiliesByPractice, updatePhonicsWord, getMasteredCVCWordCount])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.VocabularyDao_Impl, names = [getVocabularyWordsByFrequencyRange])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.PhonicsProgressDao_Impl, names = [getHighAccuracyWordIds, getWordsByAverageAccuracy, getAverageEngagementScore, getProgressForWordList, getAverageAccuracyForWord, getSuccessfulSessionCountForWord, insertPhonicsSession, getBestSuccessStreak, getMilestonesForWord, getSuccessfulSessions, getWordsByPracticeFrequency, getRequiredConverters, getSessionsWithMilestones, getSessionsByCategory, getSessionCountForWordCheck, getPerformanceMetrics, deletePhonicsSession, getAllPhonicsProgressFlow, updatePhonicsSession, getCurrentSuccessStreak, insertPhonicsSessions, getProgressForWord, getPracticedWordIds, getOverallAverageAccuracy, deletePhonicsProgressForWord, deleteOldSessions, getRecentSessions, <init>, getSessionCountForWord, getSessionsRequiringAssistance, getLatestSessionPerWord, getRecentImprovementTrend, deleteAllPhonicsProgress, getActivityTypePerformance, getTotalSessionCount, getTotalPracticeTime, getAverageSessionDuration, getSessionsByActivity])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.TracingProgressDao_Impl, names = [getSuccessfulSessionCountForLetter, getBestAccuracyForLetter, insertTracingSession, getSuccessfulSessionsForLetter, deleteTracingProgressForLetter, getCompletionCountForLetter, deleteTracingSession, updateTracingSession, deleteAllTracingProgress, getRequiredConverters, getSessionsByDifficulty, getTotalPracticeTimeForLetter, getHighAccuracyLetters, getPerformanceMetrics, getAverageAccuracyForLetter, getCurrentSuccessStreak, getCurrentDifficultyForLetter, getLettersByPracticeFrequency, getMilestonesForLetter, getLettersByAverageAccuracy, getAllTracingSessions, getOverallAverageAccuracy, getTracingSessionsForLetter, <init>, getSessionCountForLetter, insertTracingSessions, getSessionsInDateRange, getTotalSessionCount, getRecentSessionsForAnalysis, getRecentSessionsForLetter, getTotalPracticeTime, getPracticedLetters])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.FontPreferenceDao_Impl, names = [updateFontFamily, updateFontSize, getRequiredConverters, resetFontPreferences, getFontPreference, <init>, getFontPreferenceFlow, insertFontPreference])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository_Factory, names = [create, newInstance, InstanceHolder])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.LearningAnalyticsDao_Impl, names = [unlockAchievement, updateLearningPathProgress, getAllAchievementsFlow, getImprovementRateForContent, getLearningVelocity, getAllLearningPathsFlow, getMasteryLevelDistribution, getRequiredConverters, getAchievementsNearCompletion, completeLearningPath, getAverageAccuracyForContent, getTotalLearningTime, getRecentlyUnlockedAchievements, insertAchievement, getEngagementTrends, getContentMasterySummary, updateAchievementProgress, getOverallAccuracy, getRecentSessions, <init>, getAchievementsByCategory, getActiveLearningPaths, deleteOldAnalyticsData, insertLearningSession, getPerformanceByTimeOfDay, getAllLearningSessionsFlow, getSessionsForContent, insertLearningPath, getUnlockedAchievements, getAverageSessionDuration, getLearningPath, getSessionsByActivityType, getLearningStreakData, getTotalSessionsCount])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.VocabularyDao, names = [getVocabularyWordsByFrequencyRange])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.repository.VocabularyRepository_Factory, names = [get, create, newInstance, <init>])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao_Impl, names = [completeSession, insertAppSession, updateAuthMethod, initializeDefaultAuth, updateBiometricEnabled, updateDailyTimeLimit, getParentalControlsFlow, setAuthEnabled, updateSessionTimeLimit, insertParentalControls, updateAllowedTimeWindow, getSessionsForDate, getTotalMinutesForDate, resetFailedAttempts, getRequiredConverters, updatePinHash, getSessionsInRange, setLockoutUntil, getParentalControls, updateFailedAttempts, getParentalAuth, updateLastAuthTimestamp, deleteOldSessions, <init>, updateContentFilterLevel, insertParentalAuth, updateActivityPermissions, initializeDefaultControls, getCurrentSession, getParentalAuthFlow])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.LetterDao_Impl, names = [deleteAllLetters, insertLetters, getAllLettersFlow, getLearnedLettersFlow, getPracticedLettersFlow, getLearnedLetterCount, <init>, getTotalPracticeCount, resetAllProgress, insertLetter, getRequiredConverters, getLetter, markLetterAsLearned, incrementPracticeCount, getAllLetters, updateLetter])
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.PhonicsDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.PhonicsProgressDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.TracingProgressDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.FontPreferenceDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository_Factory.InstanceHolder)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.VocabularyRepository)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository_Factory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LearningAnalyticsDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.repository.VocabularyRepository_Factory)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LetterDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.PhonicsDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.PhonicsProgressDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.TracingProgressDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.FontPreferenceDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.StoryRepository_Factory.InstanceHolder)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.VocabularyRepository)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.LearningAnalyticsDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.repository.VocabularyRepository_Factory)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.LetterDao_Impl)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$loadRecommendedStories$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$playStoryAudio$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$playInteractionFeedback$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$stopAudio$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$loadStoriesByDifficulty$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$toggleAudio$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$loadStories$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$searchStories$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$startReading$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\LiveLiterals$StoryViewModelKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$loadStoriesByCategory$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$loadStories$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\viewmodel\StoryViewModel$loadStoriesByCategory$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\viewmodel\StoryViewModel.kt <- dirty member com.happykid.toddlerabc.repository#StoryRepository
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsUnchangedClasspath), retained 547 / 29029 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 8.76 s
+  Spent time before task action: 0.07 s
+  Task action before worker execution: 0.96 s
+    Backup output: 0.72 s
+  Run compilation in Gradle worker: 6.49 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 6.48 s
+      Incremental compilation in daemon: 6.46 s
+        Calculate initial dirty sources set: 0.34 s
+          Analyze Java file changes: 0.32 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.10 s
+        Sources compilation round: 5.41 s
+          Compiler initialization time: 0.31 s
+          Compiler code analysis: 3.52 s
+          Compiler code generation: 0.55 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.08 s
+          Shrink current classpath snapshot incrementally: 0.06 s
+            Load current classpath snapshot: 0.01 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 2.6 MB
+    ABI snapshot size: 16.9 KB
+  Increase memory usage: 133.2 MB
+  Total memory usage at the end of build: 426.8 MB
+  Total compiler iteration: 2
+    Number of lines analyzed: 1439
+    Number of lines for code generation: 1439
+    Analysis lines per second: 812
+    Code generation lines per second: 5061
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 115
+    Size of classpath snapshot: 10.2 MB
+    Size of shrunk classpath snapshot: 122.2 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 115
+  Start time of task action: 2025-05-26T07:25:41
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.01 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:hiltJavaCompileDebug' finished in 5.76 s
+Time metrics:
+  Total Gradle task time: 5.76 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 5.53 s
+Time metrics:
+  Total Gradle task time: 5.53 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 3.57 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = .kotlin_module)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\VocabularyDao.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\VocabularyDao.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\VocabularyDao.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\VocabularyRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\VocabularyRepository.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\VocabularyRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\repository\VocabularyRepository.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\VocabularyRepository.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\repository\VocabularyRepository.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\repository\VocabularyRepository.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\data\VocabularyDao.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\repository\VocabularyRepository.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.VocabularyDao, names = [getVocabularyWordsByFrequencyRange])
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = UnchangedLookupsUnchangedClasspath), no updates since previous run
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 3.57 s
+  Spent time before task action: 0.06 s
+  Task action before worker execution: 0.89 s
+    Backup output: 0.75 s
+  Run compilation in Gradle worker: 1.75 s
+    Connect to Kotlin daemon: 0.02 s
+    Calculate output size: 0.01 s
+    Run compilation: 1.73 s
+      Incremental compilation in daemon: 1.69 s
+        Store build info: 0.00 s
+        Calculate initial dirty sources set: 0.04 s
+          Detect removed classes: 0.03 s
+        Update caches: 0.05 s
+        Sources compilation round: 1.44 s
+          Compiler initialization time: 0.44 s
+          Compiler code analysis: 1.01 s
+        Write history file: 0.00 s
+        Shrink and save current classpath snapshot after compilation: 0.01 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 1.2 MB
+    ABI snapshot size: 476 B
+  Increase memory usage: -316592168 B
+  Total memory usage at the end of build: 291.6 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 696
+    Analysis lines per second: 691
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 114
+    Size of classpath snapshot: 10.2 MB
+    Size of shrunk classpath snapshot: 69.1 KB
+  Start time of task action: 2025-05-26T07:25:28
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.02 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:hiltAggregateDepsDebug' finished in 0.18 s
+Time metrics:
+  Total Gradle task time: 0.18 s
+
+Task ':app:processDebugResources' finished in 0.06 s
+Time metrics:
+  Total Gradle task time: 0.06 s
+
+Task ':app:processDebugMainManifest' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugAssets' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:packageDebugResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:parseDebugLocalResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:javaPreCompileDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+

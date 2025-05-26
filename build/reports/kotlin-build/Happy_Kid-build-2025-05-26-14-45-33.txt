@@ -1,0 +1,89 @@
+Gradle start parameters:
+  tasks = [compileDebugKotlin]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 11.47 s
+
+
+
+No Kotlin task was run
+Task ':app:checkDebugAarMetadata' finished in 1.83 s
+Time metrics:
+  Total Gradle task time: 1.83 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 1.83 s
+Time metrics:
+  Total Gradle task time: 1.83 s
+
+Task ':app:mergeDebugResources' finished in 1.68 s
+Time metrics:
+  Total Gradle task time: 1.68 s
+
+Task ':app:compileDebugKotlin' finished in 1.45 s
+Time metrics:
+  Total Gradle task time: 1.45 s
+
+Task ':app:processDebugMainManifest' finished in 1.20 s
+Time metrics:
+  Total Gradle task time: 1.20 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 1.12 s
+Time metrics:
+  Total Gradle task time: 1.12 s
+
+Task ':app:processDebugResources' finished in 0.90 s
+Time metrics:
+  Total Gradle task time: 0.90 s
+
+Task ':app:kaptDebugKotlin' finished in 0.49 s
+Time metrics:
+  Total Gradle task time: 0.49 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.31 s
+Time metrics:
+  Total Gradle task time: 0.31 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.26 s
+Time metrics:
+  Total Gradle task time: 0.26 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.17 s
+Time metrics:
+  Total Gradle task time: 0.17 s
+
+Task ':app:parseDebugLocalResources' finished in 0.08 s
+Time metrics:
+  Total Gradle task time: 0.08 s
+
+Task ':app:packageDebugResources' finished in 0.06 s
+Time metrics:
+  Total Gradle task time: 0.06 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.03 s
+Time metrics:
+  Total Gradle task time: 0.03 s
+
+Task ':app:processDebugManifest' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:preBuild' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:generateDebugResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+

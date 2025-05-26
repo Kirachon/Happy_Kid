@@ -1,0 +1,442 @@
+Gradle start parameters:
+  tasks = [assembleDebug]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 33.31 s
+  Spent time before task action: 0.03 s
+  Task action before worker execution: 0.46 s
+    Backup output: 0.38 s
+  Run compilation in Gradle worker: 3.68 s
+    Connect to Kotlin daemon: 0.02 s
+    Calculate output size: 0.00 s
+    Run compilation: 3.65 s
+      Incremental compilation in daemon: 3.62 s
+        Calculate initial dirty sources set: 0.16 s
+          Analyze Java file changes: 0.14 s
+          Detect removed classes: 0.02 s
+        Update caches: 0.04 s
+        Sources compilation round: 2.50 s
+          Compiler initialization time: 0.31 s
+          Compiler code analysis: 1.28 s
+          Compiler code generation: 0.44 s
+        Shrink and save current classpath snapshot after compilation: 0.23 s
+          Shrink current classpath snapshot incrementally: 0.22 s
+            Load current classpath snapshot: 0.02 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+
+Size metrics:
+  Total size of the cache directory: 3.0 MB
+    ABI snapshot size: 8.5 KB
+  Increase memory usage: -32684072 B
+  Total memory usage at the end of build: 1.1 GB
+  Total compiler iteration: 2
+    Number of lines analyzed: 1544
+    Number of lines for code generation: 772
+    Analysis lines per second: 2408
+    Code generation lines per second: 1758
+  Number of times classpath snapshot is shrunk and saved after compilation: 2
+    Number of classpath entries: 219
+    Size of classpath snapshot: 19.0 MB
+    Size of shrunk classpath snapshot: 169.9 KB
+  Number of times classpath snapshot is loaded: 2
+    Number of cache hits when loading classpath entry snapshots: 219
+  Start time of task action: 2080-10-18T08:53:11
+
+
+Total time for Kotlin tasks: 5.20 s (15.6 % of all tasks time)
+Time  |% of Kotlin time|Task                             
+3.14 s|60.5 %          |:app:compileDebugKotlin          
+2.05 s|39.5 %          |:app:kaptGenerateStubsDebugKotlin
+
+Task ':app:dexBuilderDebug' finished in 13.27 s
+Time metrics:
+  Total Gradle task time: 13.27 s
+
+Task ':app:kaptDebugKotlin' finished in 5.53 s
+Time metrics:
+  Total Gradle task time: 5.53 s
+
+Task ':app:compileDebugKotlin' finished in 3.14 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:compileDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion.HappyKidDatabaseCallback.populateDatabase.1)
+  Process SignatureChanged(fqName = .kotlin_module)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion.HappyKidDatabaseCallback.onCreate.1.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.LiveLiterals.HappyKidDatabaseKt)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion.MIGRATION_3_4.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion.MIGRATION_1_2.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion.MIGRATION_2_3.1)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase.Companion.MIGRATION_4_5.1)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$MIGRATION_1_2$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$MIGRATION_3_4$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$HappyKidDatabaseCallback$populateDatabase$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$MIGRATION_4_5$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$HappyKidDatabaseCallback$onCreate$1$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\LiveLiterals$HappyKidDatabaseKt.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$HappyKidDatabaseCallback.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kotlin-classes\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$MIGRATION_2_3$1.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\model\ParentalAuth.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\ParentalAuthDao.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase_Impl, names = [getRequiredTypeConverters, clearAllTables, phonicsDao, getRequiredAutoMigrationSpecs, phonicsProgressDao, getAutoMigrations, learningAnalyticsDao, parentalAuthDao, <init>, createOpenHelper, letterDao, tracingProgressDao, createInvalidationTracker, fontPreferenceDao])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase, names = [parentalAuthDao])
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao_Impl, names = [completeSession, insertAppSession, updateAuthMethod, initializeDefaultAuth, updateBiometricEnabled, updateDailyTimeLimit, getParentalControlsFlow, setAuthEnabled, updateSessionTimeLimit, insertParentalControls, updateAllowedTimeWindow, getSessionsForDate, getTotalMinutesForDate, resetFailedAttempts, getRequiredConverters, updatePinHash, getSessionsInRange, setLockoutUntil, getParentalControls, updateFailedAttempts, getParentalAuth, updateLastAuthTimestamp, deleteOldSessions, <init>, updateContentFilterLevel, insertParentalAuth, updateActivityPermissions, initializeDefaultControls, getCurrentSession, getParentalAuthFlow])
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ParentalAuth)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.TimeLimitStatus)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotAuthenticated)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.Authenticated)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ContentFilterLevel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotConfigured)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricNotAvailable)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthConfig)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricError)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Error)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.InvalidCredentials)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotAvailable)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AppSession)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.Failed)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao_Impl)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotEnrolled)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthMethod)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.TooManyAttempts)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.LockedOut)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Success)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ParentalControls)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ParentalAuth)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.TimeLimitStatus)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotAuthenticated)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.Authenticated)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ContentFilterLevel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotConfigured)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricNotAvailable)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthConfig)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricError)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Error)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.InvalidCredentials)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotAvailable)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AppSession)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.Failed)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao_Impl)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotEnrolled)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthMethod)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.TooManyAttempts)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.LockedOut)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Success)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ParentalControls)
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsUnchangedClasspath), retained 464 / 27538 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 3.14 s
+  Spent time before task action: 0.01 s
+  Task action before worker execution: 0.17 s
+    Backup output: 0.12 s
+  Run compilation in Gradle worker: 2.53 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 2.52 s
+      Incremental compilation in daemon: 2.50 s
+        Calculate initial dirty sources set: 0.15 s
+          Analyze Java file changes: 0.14 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.02 s
+        Sources compilation round: 1.71 s
+          Compiler initialization time: 0.15 s
+          Compiler code analysis: 0.65 s
+          Compiler code generation: 0.44 s
+        Shrink and save current classpath snapshot after compilation: 0.16 s
+          Shrink current classpath snapshot incrementally: 0.16 s
+            Load current classpath snapshot: 0.00 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 1.9 MB
+    ABI snapshot size: 6.0 KB
+  Increase memory usage: -235061288 B
+  Total memory usage at the end of build: 462.0 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 772
+    Number of lines for code generation: 772
+    Analysis lines per second: 1185
+    Code generation lines per second: 1758
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 110
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 107.2 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 110
+  Start time of task action: 2025-05-26T04:26:39
+GC metrics:
+  G1 Young Generation:
+    GC count: 1
+    GC time: 0.12 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:transformDebugClassesWithAsm' finished in 3.08 s
+Time metrics:
+  Total Gradle task time: 3.08 s
+
+Task ':app:jacocoDebug' finished in 2.41 s
+Time metrics:
+  Total Gradle task time: 2.41 s
+
+Task ':app:hiltJavaCompileDebug' finished in 2.33 s
+Time metrics:
+  Total Gradle task time: 2.33 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 2.05 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = .kotlin_module)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion$HappyKidDatabaseCallback.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\HappyKidDatabase.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\HappyKidDatabase.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase$Companion.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\HappyKidDatabase.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\model\ParentalAuth.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\HappyKidDatabase.kt <- was modified since last time
+    app\src\main\java\com\happykid\toddlerabc\data\ParentalAuthDao.kt <- was modified since last time
+  Process MembersChanged(fqName = com.happykid.toddlerabc.data.HappyKidDatabase, names = [parentalAuthDao])
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ParentalAuth)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotEnrolled)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.TimeLimitStatus)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthMethod)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotAuthenticated)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.Authenticated)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.TooManyAttempts)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ContentFilterLevel)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotConfigured)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.LockedOut)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricNotAvailable)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthConfig)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricError)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Error)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Success)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult.InvalidCredentials)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthResult)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotAvailable)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.ParentalControls)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AppSession)
+  Process SignatureChanged(fqName = com.happykid.toddlerabc.model.AuthState.Failed)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ParentalAuth)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotEnrolled)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.TimeLimitStatus)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthMethod)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotAuthenticated)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.Authenticated)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.TooManyAttempts)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ContentFilterLevel)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.data.ParentalAuthDao)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.NotConfigured)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.LockedOut)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricNotAvailable)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthConfig)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.BiometricError)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Error)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.Success)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult.InvalidCredentials)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthResult)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.BiometricNotAvailable)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.ParentalControls)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AppSession)
+  Process ParentsChanged(fqName = com.happykid.toddlerabc.model.AuthState.Failed)
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = ChangedLookupsUnchangedClasspath), retained 257 / 27538 classes
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 2.05 s
+  Spent time before task action: 0.01 s
+  Task action before worker execution: 0.29 s
+    Backup output: 0.25 s
+  Run compilation in Gradle worker: 1.15 s
+    Connect to Kotlin daemon: 0.01 s
+    Calculate output size: 0.00 s
+    Run compilation: 1.14 s
+      Incremental compilation in daemon: 1.12 s
+        Calculate initial dirty sources set: 0.01 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.02 s
+        Sources compilation round: 0.79 s
+          Compiler initialization time: 0.16 s
+          Compiler code analysis: 0.63 s
+        Shrink and save current classpath snapshot after compilation: 0.07 s
+          Shrink current classpath snapshot incrementally: 0.06 s
+            Load current classpath snapshot: 0.02 s
+            Load shrunk current classpath snapshot against previous lookups: 0.00 s
+          Save shrunk current classpath snapshot: 0.00 s
+  Start gradle worker: 0.00 s
+Size metrics:
+  Total size of the cache directory: 1.1 MB
+    ABI snapshot size: 2.5 KB
+  Increase memory usage: 193.0 MB
+  Total memory usage at the end of build: 685.2 MB
+  Total compiler iteration: 1
+    Number of lines analyzed: 772
+    Analysis lines per second: 1223
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 109
+    Size of classpath snapshot: 9.5 MB
+    Size of shrunk classpath snapshot: 62.7 KB
+  Number of times classpath snapshot is loaded: 1
+    Number of cache hits when loading classpath entry snapshots: 109
+  Start time of task action: 2025-05-26T04:26:31
+GC metrics:
+  G1 Young Generation:
+    GC count: 0
+    GC time: 0.00 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 0.97 s
+Time metrics:
+  Total Gradle task time: 0.97 s
+
+Task ':app:mergeProjectDexDebug' finished in 0.28 s
+Time metrics:
+  Total Gradle task time: 0.28 s
+
+Task ':app:packageDebug' finished in 0.12 s
+Time metrics:
+  Total Gradle task time: 0.12 s
+
+Task ':app:hiltAggregateDepsDebug' finished in 0.04 s
+Time metrics:
+  Total Gradle task time: 0.04 s
+
+Task ':app:processDebugResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mergeDebugResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:mergeDebugJavaResource' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:processDebugMainManifest' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkDebugDuplicateClasses' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugNativeLibs' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugAssets' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:javaPreCompileDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:parseDebugLocalResources' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:stripDebugDebugSymbols' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugJavaRes' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeDebugGlobalSynthetics' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeLibDexDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:mergeExtDexDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:preBuild' finished in 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:mergeDebugNativeDebugMetadata' was skipped: NO-SOURCE
+
+Task ':app:generateDebugBuildConfig' finished in 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+
+Task ':app:packageDebugResources' finished in 0.00 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+
+Task ':app:compressDebugAssets' finished in 0.00 s
+
+Task ':app:mergeDebugJniLibFolders' finished in 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+
+Task ':app:validateSigningDebug' finished in 0.00 s
+
+Task ':app:writeDebugAppMetadata' finished in 0.00 s
+
+Task ':app:writeDebugSigningConfigVersions' finished in 0.00 s
+
+Task ':app:assembleDebug' finished in 0.00 s
+
+Task ':app:createDebugApkListingFileRedirect' finished in 0.00 s
+

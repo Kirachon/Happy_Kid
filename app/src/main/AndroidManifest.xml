@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions for Happy_Kid Toddler ABC Learning App -->
+    <!-- Microphone permission for speech recognition features -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Internet permission for Firebase analytics and crash reporting -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Network state permission for connectivity checks -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Wake lock for preventing sleep during activities -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Vibration permission for haptic feedback -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Hardware features -->
+    <!-- Microphone is required for speech recognition -->
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+
+    <!-- Touchscreen is required for tracing activities -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="true" />
+
+    <!-- Audio output is required for sound playback -->
+    <uses-feature
+        android:name="android.hardware.audio.output"
+        android:required="true" />
+
+    <!-- Target Android 5.0+ (API 21+) as specified in requirements -->
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:name=".HappyKidApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HappyKid"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        tools:targetApi="31">
+
+        <!-- Main Activity with Windows development optimizations -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HappyKid"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Deep linking support for Windows development testing -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="happykid" />
+            </intent-filter>
+        </activity>
+
+        <!-- Services temporarily disabled for Phase 1 -->
+        <!-- <service
+            android:name=".service.SpeechRecognitionService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".service.AudioPlaybackService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".service.ProgressTrackingService"
+            android:enabled="true"
+            android:exported="false" /> -->
+
+        <!-- File Provider for sharing content -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Firebase and Broadcast Receiver temporarily disabled for Phase 1 -->
+        <!-- <service
+            android:name=".service.HappyKidFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.SystemEventReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver> -->
+
+        <!-- Content Provider for progress data - temporarily disabled for Phase 1 -->
+        <!-- <provider
+            android:name=".data.provider.ProgressContentProvider"
+            android:authorities="${applicationId}.progress"
+            android:enabled="true"
+            android:exported="false" /> -->
+
+        <!-- Meta-data for Firebase -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/notification_color" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <!-- Windows development meta-data -->
+        <meta-data
+            android:name="windows.development.mode"
+            android:value="true" />
+
+        <meta-data
+            android:name="windows.emulator.optimization"
+            android:value="true" />
+
+    </application>
+
+    <!-- Queries for speech recognition -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+</manifest>

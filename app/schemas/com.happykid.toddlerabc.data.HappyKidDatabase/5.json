@@ -1,0 +1,1080 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "c86341c3671055a3e172f7c989e75617",
+    "entities": [
+      {
+        "tableName": "letters",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`character` INTEGER NOT NULL, `name` TEXT NOT NULL, `soundDescription` TEXT NOT NULL, `isLearned` INTEGER NOT NULL, `colorHex` TEXT NOT NULL, `practiceCount` INTEGER NOT NULL, `lastPracticedTimestamp` INTEGER NOT NULL, PRIMARY KEY(`character`))",
+        "fields": [
+          {
+            "fieldPath": "character",
+            "columnName": "character",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "soundDescription",
+            "columnName": "soundDescription",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isLearned",
+            "columnName": "isLearned",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHex",
+            "columnName": "colorHex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "practiceCount",
+            "columnName": "practiceCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastPracticedTimestamp",
+            "columnName": "lastPracticedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "character"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "font_preferences",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `selectedFontFamily` TEXT NOT NULL, `fontSize` REAL NOT NULL, `lastUpdated` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "selectedFontFamily",
+            "columnName": "selectedFontFamily",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fontSize",
+            "columnName": "fontSize",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "tracing_progress",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `character` INTEGER NOT NULL, `sessionTimestamp` INTEGER NOT NULL, `sessionDurationMs` INTEGER NOT NULL, `accuracyPercentage` REAL NOT NULL, `completionPercentage` REAL NOT NULL, `strokeAccuracy` REAL NOT NULL, `totalStrokes` INTEGER NOT NULL, `completedStrokes` INTEGER NOT NULL, `correctStrokeOrder` INTEGER NOT NULL, `averageStrokeSpeed` REAL NOT NULL, `totalTouchPoints` INTEGER NOT NULL, `accurateTouchPoints` INTEGER NOT NULL, `averagePressure` REAL NOT NULL, `smoothnessScore` REAL NOT NULL, `difficultyLevel` INTEGER NOT NULL, `guidanceUsed` INTEGER NOT NULL, `hintsUsed` INTEGER NOT NULL, `attemptsCount` INTEGER NOT NULL, `isCompleted` INTEGER NOT NULL, `isSuccessful` INTEGER NOT NULL, `milestoneAchieved` TEXT, `frameRate` REAL NOT NULL, `touchLatencyMs` REAL NOT NULL, `renderingPerformance` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "character",
+            "columnName": "character",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionTimestamp",
+            "columnName": "sessionTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionDurationMs",
+            "columnName": "sessionDurationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracyPercentage",
+            "columnName": "accuracyPercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completionPercentage",
+            "columnName": "completionPercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strokeAccuracy",
+            "columnName": "strokeAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalStrokes",
+            "columnName": "totalStrokes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedStrokes",
+            "columnName": "completedStrokes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctStrokeOrder",
+            "columnName": "correctStrokeOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "averageStrokeSpeed",
+            "columnName": "averageStrokeSpeed",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalTouchPoints",
+            "columnName": "totalTouchPoints",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accurateTouchPoints",
+            "columnName": "accurateTouchPoints",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "averagePressure",
+            "columnName": "averagePressure",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "smoothnessScore",
+            "columnName": "smoothnessScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyLevel",
+            "columnName": "difficultyLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "guidanceUsed",
+            "columnName": "guidanceUsed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hintsUsed",
+            "columnName": "hintsUsed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attemptsCount",
+            "columnName": "attemptsCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCompleted",
+            "columnName": "isCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSuccessful",
+            "columnName": "isSuccessful",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "milestoneAchieved",
+            "columnName": "milestoneAchieved",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "frameRate",
+            "columnName": "frameRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "touchLatencyMs",
+            "columnName": "touchLatencyMs",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "renderingPerformance",
+            "columnName": "renderingPerformance",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "phonics_words",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `word` TEXT NOT NULL, `category` TEXT NOT NULL, `difficultyLevel` INTEGER NOT NULL, `phonemes` TEXT NOT NULL, `syllables` TEXT NOT NULL, `letterSounds` TEXT NOT NULL, `isSightWord` INTEGER NOT NULL, `isHighFrequency` INTEGER NOT NULL, `ageAppropriate` TEXT NOT NULL, `audioFileName` TEXT, `pronunciationGuide` TEXT NOT NULL, `imageFileName` TEXT, `colorHex` TEXT NOT NULL, `timesPresented` INTEGER NOT NULL, `timesRecognized` INTEGER NOT NULL, `lastPresentedTimestamp` INTEGER NOT NULL, `blendingSteps` TEXT NOT NULL, `rhymingWords` TEXT NOT NULL, `wordFamily` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "word",
+            "columnName": "word",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyLevel",
+            "columnName": "difficultyLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phonemes",
+            "columnName": "phonemes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syllables",
+            "columnName": "syllables",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "letterSounds",
+            "columnName": "letterSounds",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSightWord",
+            "columnName": "isSightWord",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isHighFrequency",
+            "columnName": "isHighFrequency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ageAppropriate",
+            "columnName": "ageAppropriate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "audioFileName",
+            "columnName": "audioFileName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pronunciationGuide",
+            "columnName": "pronunciationGuide",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageFileName",
+            "columnName": "imageFileName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "colorHex",
+            "columnName": "colorHex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timesPresented",
+            "columnName": "timesPresented",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timesRecognized",
+            "columnName": "timesRecognized",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastPresentedTimestamp",
+            "columnName": "lastPresentedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blendingSteps",
+            "columnName": "blendingSteps",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rhymingWords",
+            "columnName": "rhymingWords",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wordFamily",
+            "columnName": "wordFamily",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "phonics_progress",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `wordId` INTEGER NOT NULL, `word` TEXT NOT NULL, `category` TEXT NOT NULL, `sessionTimestamp` INTEGER NOT NULL, `sessionDurationMs` INTEGER NOT NULL, `activityType` TEXT NOT NULL, `recognitionAccuracy` REAL NOT NULL, `recognitionTimeMs` INTEGER NOT NULL, `attemptsRequired` INTEGER NOT NULL, `blendingAccuracy` REAL NOT NULL, `blendingStepsCompleted` INTEGER NOT NULL, `blendingTimeMs` INTEGER NOT NULL, `pronunciationAccuracy` REAL NOT NULL, `pronunciationAttempts` INTEGER NOT NULL, `speechRecognitionSuccess` INTEGER NOT NULL, `comprehensionAccuracy` REAL NOT NULL, `contextualUsage` INTEGER NOT NULL, `isFirstAttempt` INTEGER NOT NULL, `isImprovement` INTEGER NOT NULL, `milestoneAchieved` TEXT, `difficultyLevel` INTEGER NOT NULL, `hintsUsed` INTEGER NOT NULL, `assistanceRequired` INTEGER NOT NULL, `engagementScore` REAL NOT NULL, `sessionCompleted` INTEGER NOT NULL, `voluntaryRepetition` INTEGER NOT NULL, `isSuccessful` INTEGER NOT NULL, `confidenceLevel` REAL NOT NULL, `frustrationLevel` REAL NOT NULL, `frameRate` REAL NOT NULL, `touchLatencyMs` REAL NOT NULL, `audioLatencyMs` REAL NOT NULL, `renderingPerformance` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wordId",
+            "columnName": "wordId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "word",
+            "columnName": "word",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionTimestamp",
+            "columnName": "sessionTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionDurationMs",
+            "columnName": "sessionDurationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activityType",
+            "columnName": "activityType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recognitionAccuracy",
+            "columnName": "recognitionAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recognitionTimeMs",
+            "columnName": "recognitionTimeMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attemptsRequired",
+            "columnName": "attemptsRequired",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blendingAccuracy",
+            "columnName": "blendingAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blendingStepsCompleted",
+            "columnName": "blendingStepsCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blendingTimeMs",
+            "columnName": "blendingTimeMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pronunciationAccuracy",
+            "columnName": "pronunciationAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pronunciationAttempts",
+            "columnName": "pronunciationAttempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "speechRecognitionSuccess",
+            "columnName": "speechRecognitionSuccess",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "comprehensionAccuracy",
+            "columnName": "comprehensionAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contextualUsage",
+            "columnName": "contextualUsage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFirstAttempt",
+            "columnName": "isFirstAttempt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isImprovement",
+            "columnName": "isImprovement",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "milestoneAchieved",
+            "columnName": "milestoneAchieved",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "difficultyLevel",
+            "columnName": "difficultyLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hintsUsed",
+            "columnName": "hintsUsed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assistanceRequired",
+            "columnName": "assistanceRequired",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "engagementScore",
+            "columnName": "engagementScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionCompleted",
+            "columnName": "sessionCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voluntaryRepetition",
+            "columnName": "voluntaryRepetition",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSuccessful",
+            "columnName": "isSuccessful",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidenceLevel",
+            "columnName": "confidenceLevel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frustrationLevel",
+            "columnName": "frustrationLevel",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frameRate",
+            "columnName": "frameRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "touchLatencyMs",
+            "columnName": "touchLatencyMs",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "audioLatencyMs",
+            "columnName": "audioLatencyMs",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "renderingPerformance",
+            "columnName": "renderingPerformance",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "learning_analytics",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT NOT NULL, `userId` TEXT NOT NULL, `activityType` TEXT NOT NULL, `sessionTimestamp` INTEGER NOT NULL, `sessionDurationMs` INTEGER NOT NULL, `accuracyPercentage` REAL NOT NULL, `completionPercentage` REAL NOT NULL, `attemptsCount` INTEGER NOT NULL, `hintsUsed` INTEGER NOT NULL, `errorsCount` INTEGER NOT NULL, `contentId` TEXT NOT NULL, `difficultyLevel` INTEGER NOT NULL, `adaptiveDifficultyAdjustment` INTEGER NOT NULL, `engagementScore` REAL NOT NULL, `focusTimeMs` INTEGER NOT NULL, `distractionEvents` INTEGER NOT NULL, `masteryLevel` TEXT NOT NULL, `improvementRate` REAL NOT NULL, `retentionScore` REAL NOT NULL, `recommendedNextActivity` TEXT, `suggestedDifficultyLevel` INTEGER NOT NULL, `learningPathProgress` REAL NOT NULL, `timeOfDay` INTEGER NOT NULL, `dayOfWeek` INTEGER NOT NULL, `sessionSequenceNumber` INTEGER NOT NULL, `frameRate` REAL NOT NULL, `responseTimeMs` REAL NOT NULL, `devicePerformanceScore` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionId",
+            "columnName": "sessionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activityType",
+            "columnName": "activityType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionTimestamp",
+            "columnName": "sessionTimestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionDurationMs",
+            "columnName": "sessionDurationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracyPercentage",
+            "columnName": "accuracyPercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completionPercentage",
+            "columnName": "completionPercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attemptsCount",
+            "columnName": "attemptsCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hintsUsed",
+            "columnName": "hintsUsed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "errorsCount",
+            "columnName": "errorsCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentId",
+            "columnName": "contentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyLevel",
+            "columnName": "difficultyLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "adaptiveDifficultyAdjustment",
+            "columnName": "adaptiveDifficultyAdjustment",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "engagementScore",
+            "columnName": "engagementScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "focusTimeMs",
+            "columnName": "focusTimeMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distractionEvents",
+            "columnName": "distractionEvents",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "masteryLevel",
+            "columnName": "masteryLevel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "improvementRate",
+            "columnName": "improvementRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "retentionScore",
+            "columnName": "retentionScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendedNextActivity",
+            "columnName": "recommendedNextActivity",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedDifficultyLevel",
+            "columnName": "suggestedDifficultyLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "learningPathProgress",
+            "columnName": "learningPathProgress",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeOfDay",
+            "columnName": "timeOfDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayOfWeek",
+            "columnName": "dayOfWeek",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionSequenceNumber",
+            "columnName": "sessionSequenceNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frameRate",
+            "columnName": "frameRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "responseTimeMs",
+            "columnName": "responseTimeMs",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "devicePerformanceScore",
+            "columnName": "devicePerformanceScore",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "achievements",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `achievementId` TEXT NOT NULL, `userId` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `category` TEXT NOT NULL, `iconResource` TEXT NOT NULL, `badgeColor` TEXT NOT NULL, `pointsAwarded` INTEGER NOT NULL, `difficultyTier` INTEGER NOT NULL, `isUnlocked` INTEGER NOT NULL, `unlockedTimestamp` INTEGER, `progressCurrent` INTEGER NOT NULL, `progressTarget` INTEGER NOT NULL, `progressPercentage` REAL NOT NULL, `requirementType` TEXT NOT NULL, `requirementValue` TEXT NOT NULL, `prerequisiteAchievements` TEXT, `celebrationMessage` TEXT NOT NULL, `celebrationAnimation` TEXT NOT NULL, `shareableText` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "achievementId",
+            "columnName": "achievementId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iconResource",
+            "columnName": "iconResource",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "badgeColor",
+            "columnName": "badgeColor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pointsAwarded",
+            "columnName": "pointsAwarded",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyTier",
+            "columnName": "difficultyTier",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isUnlocked",
+            "columnName": "isUnlocked",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unlockedTimestamp",
+            "columnName": "unlockedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "progressCurrent",
+            "columnName": "progressCurrent",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progressTarget",
+            "columnName": "progressTarget",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progressPercentage",
+            "columnName": "progressPercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requirementType",
+            "columnName": "requirementType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requirementValue",
+            "columnName": "requirementValue",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prerequisiteAchievements",
+            "columnName": "prerequisiteAchievements",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "celebrationMessage",
+            "columnName": "celebrationMessage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "celebrationAnimation",
+            "columnName": "celebrationAnimation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shareableText",
+            "columnName": "shareableText",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "learning_paths",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pathId` TEXT NOT NULL, `userId` TEXT NOT NULL, `pathName` TEXT NOT NULL, `pathDescription` TEXT NOT NULL, `pathType` TEXT NOT NULL, `currentStepIndex` INTEGER NOT NULL, `totalSteps` INTEGER NOT NULL, `progressPercentage` REAL NOT NULL, `estimatedCompletionDays` INTEGER NOT NULL, `isAdaptive` INTEGER NOT NULL, `difficultyLevel` INTEGER NOT NULL, `personalizedContent` TEXT, `startedTimestamp` INTEGER, `lastAccessedTimestamp` INTEGER, `completedTimestamp` INTEGER, `averageAccuracy` REAL NOT NULL, `totalTimeSpentMs` INTEGER NOT NULL, `masteredSteps` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pathId",
+            "columnName": "pathId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pathName",
+            "columnName": "pathName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pathDescription",
+            "columnName": "pathDescription",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pathType",
+            "columnName": "pathType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentStepIndex",
+            "columnName": "currentStepIndex",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalSteps",
+            "columnName": "totalSteps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progressPercentage",
+            "columnName": "progressPercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estimatedCompletionDays",
+            "columnName": "estimatedCompletionDays",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isAdaptive",
+            "columnName": "isAdaptive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficultyLevel",
+            "columnName": "difficultyLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "personalizedContent",
+            "columnName": "personalizedContent",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "startedTimestamp",
+            "columnName": "startedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastAccessedTimestamp",
+            "columnName": "lastAccessedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "completedTimestamp",
+            "columnName": "completedTimestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "averageAccuracy",
+            "columnName": "averageAccuracy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalTimeSpentMs",
+            "columnName": "totalTimeSpentMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "masteredSteps",
+            "columnName": "masteredSteps",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c86341c3671055a3e172f7c989e75617')"
+    ]
+  }
+}

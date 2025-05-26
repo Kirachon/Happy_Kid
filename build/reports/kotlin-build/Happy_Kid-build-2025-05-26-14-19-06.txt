@@ -1,0 +1,168 @@
+Gradle start parameters:
+  tasks = [compileDebugKotlin]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Build failed: [Execution failed for task ':app:kaptDebugKotlin'.]
+
+Time metrics:
+  Total Gradle task time: 18.59 s
+  Spent time before task action: 0.25 s
+  Task action before worker execution: 1.03 s
+    Backup output: 0.38 s
+  Run compilation in Gradle worker: 0.92 s
+    Connect to Kotlin daemon: 0.07 s
+    Calculate output size: 0.00 s
+    Run compilation: 0.84 s
+      Incremental compilation in daemon: 0.82 s
+        Calculate initial dirty sources set: 0.01 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.03 s
+        Sources compilation round: 0.67 s
+          Compiler initialization time: 0.17 s
+          Compiler code analysis: 0.50 s
+        Shrink and save current classpath snapshot after compilation: 0.01 s
+  Start gradle worker: 0.04 s
+
+Size metrics:
+  Total size of the cache directory: 1.1 MB
+    ABI snapshot size: 5.4 KB
+  Increase memory usage: 102.0 MB
+  Total memory usage at the end of build: 1.0 GB
+  Total compiler iteration: 1
+    Number of lines analyzed: 83
+    Analysis lines per second: 165
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 114
+    Size of classpath snapshot: 10.2 MB
+    Size of shrunk classpath snapshot: 68.4 KB
+  Start time of task action: 2025-05-26T06:18:52
+
+
+Total time for Kotlin tasks: 2.81 s (15.1 % of all tasks time)
+Time  |% of Kotlin time|Task                             
+2.81 s|100.0 %         |:app:kaptGenerateStubsDebugKotlin
+
+Task ':app:kaptDebugKotlin' finished in 11.64 s
+Time metrics:
+  Total Gradle task time: 11.64 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 2.81 s
+Task info:
+  Kotlin language version: 1.9
+Compilation log for task ':app:kaptGenerateStubsDebugKotlin':
+  Classpath changes info passed from Gradle task: NoChanges
+  Process SignatureChanged(fqName = .kotlin_module)
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\ContentTypeConverters.java on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\ContentTypeConverters.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\META-INF\app_debug.kotlin_module on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\ContentTypeConverters.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\stubs\debug\com\happykid\toddlerabc\data\ContentTypeConverters.kapt_metadata on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\ContentTypeConverters.kt
+  Deleting D:\GitProjects\Happy_Kid\app\build\tmp\kapt3\incrementalData\debug\com\happykid\toddlerabc\data\ContentTypeConverters.class on clearing cache for D:\GitProjects\Happy_Kid\app\src\main\java\com\happykid\toddlerabc\data\ContentTypeConverters.kt
+  Compile iteration:
+    app\src\main\java\com\happykid\toddlerabc\data\ContentTypeConverters.kt <- was modified since last time
+  [ClasspathSnapshot] Shrunk current classpath snapshot after compilation (shrink mode = UnchangedLookupsUnchangedClasspath), no updates since previous run
+  Incremental compilation completed
+Time metrics:
+  Total Gradle task time: 2.81 s
+  Spent time before task action: 0.25 s
+  Task action before worker execution: 1.03 s
+    Backup output: 0.38 s
+  Run compilation in Gradle worker: 0.92 s
+    Connect to Kotlin daemon: 0.07 s
+    Calculate output size: 0.00 s
+    Run compilation: 0.84 s
+      Incremental compilation in daemon: 0.82 s
+        Calculate initial dirty sources set: 0.01 s
+          Detect removed classes: 0.01 s
+        Update caches: 0.03 s
+        Sources compilation round: 0.67 s
+          Compiler initialization time: 0.17 s
+          Compiler code analysis: 0.50 s
+        Shrink and save current classpath snapshot after compilation: 0.01 s
+  Start gradle worker: 0.04 s
+Size metrics:
+  Total size of the cache directory: 1.1 MB
+    ABI snapshot size: 5.4 KB
+  Increase memory usage: 102.0 MB
+  Total memory usage at the end of build: 1.0 GB
+  Total compiler iteration: 1
+    Number of lines analyzed: 83
+    Analysis lines per second: 165
+  Number of times classpath snapshot is shrunk and saved after compilation: 1
+    Number of classpath entries: 114
+    Size of classpath snapshot: 10.2 MB
+    Size of shrunk classpath snapshot: 68.4 KB
+  Start time of task action: 2025-05-26T06:18:52
+GC metrics:
+  G1 Young Generation:
+    GC count: 0
+    GC time: 0.00 s
+  G1 Old Generation:
+    GC count: 0
+    GC time: 0.00 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.89 s
+Time metrics:
+  Total Gradle task time: 0.89 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.89 s
+Time metrics:
+  Total Gradle task time: 0.89 s
+
+Task ':app:mergeDebugResources' finished in 0.81 s
+Time metrics:
+  Total Gradle task time: 0.81 s
+
+Task ':app:processDebugMainManifest' finished in 0.68 s
+Time metrics:
+  Total Gradle task time: 0.68 s
+
+Task ':app:processDebugResources' finished in 0.52 s
+Time metrics:
+  Total Gradle task time: 0.52 s
+
+Task ':app:packageDebugResources' finished in 0.10 s
+Time metrics:
+  Total Gradle task time: 0.10 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.10 s
+Time metrics:
+  Total Gradle task time: 0.10 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.09 s
+Time metrics:
+  Total Gradle task time: 0.09 s
+
+Task ':app:parseDebugLocalResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:generateDebugResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:preBuild' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+

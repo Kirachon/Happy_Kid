@@ -1,0 +1,217 @@
+Gradle start parameters:
+  tasks = [testDebugUnitTest, --tests, *FontManager*]
+  excluded tasks = [lintVitalRelease]
+  current dir = D:\GitProjects\Happy_Kid
+  project properties args = []
+  system properties args = []
+
+Time metrics:
+  Total Gradle task time: 4.07 s
+  Spent time before task action: 0.95 s
+  Task action before worker execution: 0.03 s
+  Clear output: 0.00 s
+  Classpath entry snapshot transform: 0.76 s
+    Load classes (paths only): 0.01 s
+    Snapshot classes: 0.62 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.36 s
+      Snapshot Java classes: 0.17 s
+    Save classpath entry snapshot: 0.12 s
+
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.3 MB
+    Size of jar classpath entry's snapshot: 1.2 MB
+  Start time of task action: 2025-05-25T14:47:32
+
+
+Total time for Kotlin tasks: 1.74 s (36.1 % of all tasks time)
+Time  |% of Kotlin time|Task                                                                                                                          
+0.98 s|56.3 %          |:app:kaptGenerateStubsDebugUnitTestKotlin                                                                                     
+0.76 s|43.8 %          |ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_app_classes_jar\debug\classes.jar
+
+Task ':app:kaptGenerateStubsDebugUnitTestKotlin' finished in 0.98 s
+Time metrics:
+  Total Gradle task time: 0.98 s
+  Spent time before task action: 0.95 s
+  Task action before worker execution: 0.03 s
+  Clear output: 0.00 s
+Size metrics:
+  Start time of task action: 2025-05-25T14:47:32
+
+Task 'ClasspathEntrySnapshotTransform for D:\GitProjects\Happy_Kid\app\build\intermediates\compile_app_classes_jar\debug\classes.jar' finished in 0.76 s
+Time metrics:
+  Classpath entry snapshot transform: 0.76 s
+    Load classes (paths only): 0.01 s
+    Snapshot classes: 0.62 s
+      Load contents of classes: 0.01 s
+      Snapshot Kotlin classes: 0.36 s
+      Snapshot Java classes: 0.17 s
+    Save classpath entry snapshot: 0.12 s
+Size metrics:
+  Number of times 'ClasspathEntrySnapshotTransform' ran: 1
+    Size of jar classpath entry: 2.3 MB
+    Size of jar classpath entry's snapshot: 1.2 MB
+
+Task ':app:kaptDebugUnitTestKotlin' finished in 0.43 s
+Time metrics:
+  Total Gradle task time: 0.43 s
+
+Task ':app:bundleDebugClassesToRuntimeJar' finished in 0.39 s
+Time metrics:
+  Total Gradle task time: 0.39 s
+
+Task ':app:checkDebugAarMetadata' finished in 0.31 s
+Time metrics:
+  Total Gradle task time: 0.31 s
+
+Task ':app:hiltAggregateDepsDebugUnitTest' finished in 0.31 s
+Time metrics:
+  Total Gradle task time: 0.31 s
+
+Task ':app:kaptGenerateStubsDebugKotlin' finished in 0.22 s
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task ':app:transformDebugUnitTestClassesWithAsm' finished in 0.22 s
+Time metrics:
+  Total Gradle task time: 0.22 s
+
+Task ':app:processDebugResources' finished in 0.17 s
+Time metrics:
+  Total Gradle task time: 0.17 s
+
+Task ':app:bundleDebugClassesToCompileJar' finished in 0.14 s
+Time metrics:
+  Total Gradle task time: 0.14 s
+
+Task ':app:jacocoDebug' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:kaptDebugKotlin' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:hiltAggregateDepsDebug' finished in 0.11 s
+Time metrics:
+  Total Gradle task time: 0.11 s
+
+Task ':app:mergeDebugResources' finished in 0.09 s
+Time metrics:
+  Total Gradle task time: 0.09 s
+
+Task ':app:processDebugMainManifest' finished in 0.08 s
+Time metrics:
+  Total Gradle task time: 0.08 s
+
+Task ':app:mapDebugSourceSetPaths' finished in 0.06 s
+Time metrics:
+  Total Gradle task time: 0.06 s
+
+Task ':app:transformDebugClassesWithAsm' finished in 0.05 s
+Time metrics:
+  Total Gradle task time: 0.05 s
+
+Task ':app:compileDebugKotlin' finished in 0.05 s
+Time metrics:
+  Total Gradle task time: 0.05 s
+
+Task ':app:hiltJavaCompileDebug' finished in 0.05 s
+Time metrics:
+  Total Gradle task time: 0.05 s
+
+Task ':app:compileDebugJavaWithJavac' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:mergeDebugAssets' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:parseDebugLocalResources' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:checkKotlinGradlePluginConfigurationErrors' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:generateDebugBuildConfig' finished in 0.02 s
+Time metrics:
+  Total Gradle task time: 0.02 s
+
+Task ':app:compileDebugUnitTestKotlin' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:javaPreCompileDebug' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:preBuild' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:javaPreCompileDebugUnitTest' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:packageDebugResources' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:packageDebugUnitTestForUnitTest' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:processDebugJavaRes' finished in 0.01 s
+Time metrics:
+  Total Gradle task time: 0.01 s
+
+Task ':app:extractDeepLinksDebug' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifest' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugManifestForPackage' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:compileDebugUnitTestJavaWithJavac' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:testDebugUnitTest' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:createDebugCompatibleScreenManifests' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:generateDebugUnitTestConfig' finished in 0.00 s
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:hiltJavaCompileDebugUnitTest' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:processDebugUnitTestJavaRes' was skipped: NO-SOURCE
+Time metrics:
+  Total Gradle task time: 0.00 s
+
+Task ':app:preDebugBuild' finished in 0.00 s
+
+Task ':app:generateDebugResources' finished in 0.00 s
+
+Task ':app:generateDebugAssets' finished in 0.00 s
+
+Task ':app:preDebugUnitTestBuild' finished in 0.00 s
+
+Task ':app:generateDebugJacocoPropertiesFile' finished in 0.00 s
+
